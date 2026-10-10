@@ -24,6 +24,9 @@ const char *SPIELER = "/usr/bin/gst-launch-0.10";
 const char *BAUTEIL = "playbin2";
 #endif
 
+// Wie viele Toene liegen bleiben duerfen.
+const int VORRAT_HOECHSTENS = 10;
+
 }  // namespace
 
 Lautsprecher::Lautsprecher(QObject *eltern)
@@ -59,10 +62,15 @@ QString Lautsprecher::vorratsdatei(const QString &adresse) const
 void Lautsprecher::vorratAufraeumen()
 {
     // Der Vorrat darf nicht wachsen, bis die kleine Benutzerpartition
-    // voll ist. Ueber 300 Stueck fliegt das Aelteste raus.
+    // voll ist: **ueber zehn Dateien fliegt das Aelteste raus.**
+    //
+    // Aufgeraeumt wird beim Start, nicht waehrend einer Lektion -- die
+    // haelt ihre vierzig Toene, solange sie laeuft, sonst muesste sie
+    // sich selbst nachladen. Beim naechsten Aufmachen bleibt davon die
+    // letzte Handvoll uebrig.
     QDir ordner(m_vorrat);
-    QFileInfoList dateien = ordner.entryInfoList(QDir::Files, QDir::Time);
-    for (int i = 300; i < dateien.size(); ++i)
+    const QFileInfoList dateien = ordner.entryInfoList(QDir::Files, QDir::Time);
+    for (int i = VORRAT_HOECHSTENS; i < dateien.size(); ++i)
         QFile::remove(dateien.at(i).absoluteFilePath());
 }
 
