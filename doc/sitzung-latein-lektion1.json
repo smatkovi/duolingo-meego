@@ -1,0 +1,5436 @@
+{
+ "id": "fGEZEak2QhEHomrb",
+ "learningLanguage": "la",
+ "fromLanguage": "en",
+ "type": "LESSON",
+ "sessionScreens": {},
+ "challenges": [
+  {
+   "prompt": "woman",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "phrase": "puella",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852",
+     "hint": "girl"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "phrase": "vir",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c",
+     "hint": "man"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "phrase": "femina",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a",
+     "hint": "woman"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "phrase": "puer",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8",
+     "hint": "boy"
+    }
+   ],
+   "correctIndex": 2,
+   "type": "select",
+   "id": "ad1c40483139475cad478b7c049a8ce0",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "femina",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_0b3b1372ab0ff48028824de5e3e11de9"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.8714066,
+    "content_length": 6.0,
+    "tagged_kc_ids": [
+     "lex_0b3b1372ab0ff48028824de5e3e11de9"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.8714066,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 6,
+     "best_solution": "femina",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_0b3b1372ab0ff48028824de5e3e11de9"
+     ],
+     "teaching_kc_ids": [
+      "lex_0b3b1372ab0ff48028824de5e3e11de9"
+     ],
+     "content_versions": []
+    },
+    "highlight": [
+     "femina"
+    ],
+    "hint": "woman",
+    "phrase": "femina",
+    "solution_key": "0b3b1372ab0ff48028824de5e3e11de9",
+    "source_language": "la",
+    "specific_type": "name_example",
+    "language": "la",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "0b3b1372ab0ff48028824de5e3e11de9"
+    ],
+    "lexemes_to_update": [
+     "0b3b1372ab0ff48028824de5e3e11de9"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "femina"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": "0b3b1372ab0ff48028824de5e3e11de9"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "prompt": "girl",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "phrase": "puella",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852",
+     "hint": "girl"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "phrase": "vir",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c",
+     "hint": "man"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "phrase": "femina",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a",
+     "hint": "woman"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "phrase": "puer",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8",
+     "hint": "boy"
+    }
+   ],
+   "correctIndex": 0,
+   "type": "select",
+   "id": "ce5b4d26a371402bbe50bf035e4fdbab",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "puella",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.84884405,
+    "content_length": 6.0,
+    "tagged_kc_ids": [
+     "lex_613498f62b2776f5113c4fd7b195bb5f"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.84884405,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 6,
+     "best_solution": "puella",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_613498f62b2776f5113c4fd7b195bb5f"
+     ],
+     "teaching_kc_ids": [
+      "lex_613498f62b2776f5113c4fd7b195bb5f"
+     ],
+     "content_versions": []
+    },
+    "highlight": [
+     "puella"
+    ],
+    "hint": "girl",
+    "phrase": "puella",
+    "solution_key": "613498f62b2776f5113c4fd7b195bb5f",
+    "source_language": "la",
+    "specific_type": "name_example",
+    "language": "la",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "lexemes_to_update": [
+     "613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "puella"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": "613498f62b2776f5113c4fd7b195bb5f"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/61e19bb4a1ff1d94e58d58b33db58c36",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/61e19bb4a1ff1d94e58d58b33db58c36",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/52a5a774c4de18f4a4e8c91d91788347"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Vikram_CORRECT_Cropped_Disco.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Dan_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Vikram_IDLE_Cropped.json",
+    "name": "VIKRAM",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/vikram_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/vikram_avatar_icon.svg"
+    }
+   },
+   "prompt": "woman",
+   "choices": [
+    "femina",
+    "vir",
+    "puella"
+   ],
+   "correctIndex": 0,
+   "options": [
+    {
+     "text": "femina",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a"
+    },
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c"
+    },
+    {
+     "text": "puella",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852"
+    }
+   ],
+   "type": "assist",
+   "id": "8014efd101894d81ae6df5e27c016bb8",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "femina",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_0b3b1372ab0ff48028824de5e3e11de9"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.9055785,
+    "content_length": 6.0,
+    "tagged_kc_ids": [
+     "lex_0b3b1372ab0ff48028824de5e3e11de9"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.9055785,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 6,
+     "best_solution": "femina",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_0b3b1372ab0ff48028824de5e3e11de9"
+     ],
+     "teaching_kc_ids": [
+      "lex_0b3b1372ab0ff48028824de5e3e11de9"
+     ],
+     "content_versions": []
+    },
+    "highlight": [],
+    "learning_language": "la",
+    "other_options": [
+     "vir",
+     "puella"
+    ],
+    "solution_key": "0b3b1372ab0ff48028824de5e3e11de9",
+    "translation": "woman",
+    "ui_language": "en",
+    "word": "femina",
+    "language": "la",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "0b3b1372ab0ff48028824de5e3e11de9"
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     "0b3b1372ab0ff48028824de5e3e11de9"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": "0b3b1372ab0ff48028824de5e3e11de9"
+   }
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/0f284113af41f7f7296263183701a13b"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Bear_CORRECT_Cropped.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Bear_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Falstaff_IDLE_Cropped.json",
+    "name": "FALSTAFF",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.svg"
+    }
+   },
+   "prompt": "girl",
+   "choices": [
+    "ego",
+    "vir",
+    "puella"
+   ],
+   "correctIndex": 2,
+   "options": [
+    {
+     "text": "ego",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/3c6f6c3b7b37017463d78034a9e5fbe1"
+    },
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c"
+    },
+    {
+     "text": "puella",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852"
+    }
+   ],
+   "type": "assist",
+   "id": "9cd47a7c90f34dc4a99aa6ffa9a343f6",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "puella",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.7926075,
+    "content_length": 6.0,
+    "tagged_kc_ids": [
+     "lex_613498f62b2776f5113c4fd7b195bb5f"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.7926075,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 6,
+     "best_solution": "puella",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_613498f62b2776f5113c4fd7b195bb5f"
+     ],
+     "teaching_kc_ids": [
+      "lex_613498f62b2776f5113c4fd7b195bb5f"
+     ],
+     "content_versions": []
+    },
+    "highlight": [],
+    "learning_language": "la",
+    "other_options": [
+     "ego",
+     "vir"
+    ],
+    "solution_key": "613498f62b2776f5113c4fd7b195bb5f",
+    "translation": "girl",
+    "ui_language": "en",
+    "word": "puella",
+    "language": "la",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     "613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": "613498f62b2776f5113c4fd7b195bb5f"
+   }
+  },
+  {
+   "prompt": "man",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "phrase": "femina",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a",
+     "hint": "woman"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "phrase": "puella",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852",
+     "hint": "girl"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "phrase": "puer",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8",
+     "hint": "boy"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "phrase": "vir",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c",
+     "hint": "man"
+    }
+   ],
+   "correctIndex": 3,
+   "type": "select",
+   "id": "b4977ddc5527414b90d3cc0ac6b461f8",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "vir",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.8349875,
+    "content_length": 3.0,
+    "tagged_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.8349875,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 3,
+     "best_solution": "vir",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb"
+     ],
+     "teaching_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb"
+     ],
+     "content_versions": []
+    },
+    "highlight": [
+     "vir"
+    ],
+    "hint": "man",
+    "phrase": "vir",
+    "solution_key": "12aa169ed2dba07256e4c586be1a18fb",
+    "source_language": "la",
+    "specific_type": "name_example",
+    "language": "la",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "lexemes_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "vir"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": "12aa169ed2dba07256e4c586be1a18fb"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "prompt": "boy",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "phrase": "puella",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/a443582c1eb03f3fcebfff4febdba3e4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852",
+     "hint": "girl"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "phrase": "puer",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d6508c5ea6ebcb4859df33c80acd8d8c",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8",
+     "hint": "boy"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "phrase": "vir",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/b40a713e2c973cb54c3c5bb67ef19af4",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c",
+     "hint": "man"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "phrase": "femina",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/f296fd3c77d9410538450890ba2b5f61",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a",
+     "hint": "woman"
+    }
+   ],
+   "correctIndex": 1,
+   "type": "select",
+   "id": "8e146972ae194cbe97375a705803377b",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "puer",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.83801055,
+    "content_length": 4.0,
+    "tagged_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.83801055,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 4,
+     "best_solution": "puer",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4"
+     ],
+     "teaching_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4"
+     ],
+     "content_versions": []
+    },
+    "highlight": [
+     "puer"
+    ],
+    "hint": "boy",
+    "phrase": "puer",
+    "solution_key": "0c502e5500423bf74c83db2db78e4fa4",
+    "source_language": "la",
+    "specific_type": "name_example",
+    "language": "la",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "lexemes_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "puer"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": "0c502e5500423bf74c83db2db78e4fa4"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/122480f3b6c86522d5715c920764dc44",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/122480f3b6c86522d5715c920764dc44",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/ad178aebb8dfd890ab602527440e685c"
+    },
+    "gender": "FEMALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Gma_CORRECT_Cropped.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Gma_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Lucy_IDLE_Cropped.json",
+    "name": "LUCY",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/lucy_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/lucy_avatar_icon.svg"
+    }
+   },
+   "prompt": "man",
+   "choices": [
+    "vir",
+    "femina",
+    "ego"
+   ],
+   "correctIndex": 0,
+   "options": [
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c"
+    },
+    {
+     "text": "femina",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a"
+    },
+    {
+     "text": "ego",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/3c6f6c3b7b37017463d78034a9e5fbe1"
+    }
+   ],
+   "type": "assist",
+   "id": "8b526bfd5b1844d1afc801596c60f870",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "vir",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.8006957,
+    "content_length": 3.0,
+    "tagged_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.8006957,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 3,
+     "best_solution": "vir",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb"
+     ],
+     "teaching_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb"
+     ],
+     "content_versions": []
+    },
+    "highlight": [],
+    "learning_language": "la",
+    "other_options": [
+     "femina",
+     "ego"
+    ],
+    "solution_key": "12aa169ed2dba07256e4c586be1a18fb",
+    "translation": "man",
+    "ui_language": "en",
+    "word": "vir",
+    "language": "la",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": "12aa169ed2dba07256e4c586be1a18fb"
+   }
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/0f284113af41f7f7296263183701a13b"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Falstaff_CORRECT_Cropped_NotBad.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Bear_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Falstaff_IDLE_Cropped.json",
+    "name": "FALSTAFF",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.svg"
+    }
+   },
+   "prompt": "boy",
+   "choices": [
+    "puer",
+    "femina",
+    "vir"
+   ],
+   "correctIndex": 0,
+   "options": [
+    {
+     "text": "puer",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8"
+    },
+    {
+     "text": "femina",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a"
+    },
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c"
+    }
+   ],
+   "type": "assist",
+   "id": "c8651d77f5654dde945e969981939b4d",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "puer",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.8468801,
+    "content_length": 4.0,
+    "tagged_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.8468801,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 4,
+     "best_solution": "puer",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4"
+     ],
+     "teaching_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4"
+     ],
+     "content_versions": []
+    },
+    "highlight": [],
+    "learning_language": "la",
+    "other_options": [
+     "femina",
+     "vir"
+    ],
+    "solution_key": "0c502e5500423bf74c83db2db78e4fa4",
+    "translation": "boy",
+    "ui_language": "en",
+    "word": "puer",
+    "language": "la",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": "0c502e5500423bf74c83db2db78e4fa4"
+   }
+  },
+  {
+   "prompt": "Puer sum.",
+   "correctSolutions": [
+    "I am a boy."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "I",
+    "am",
+    "a",
+    "boy"
+   ],
+   "wrongTokens": [
+    "who"
+   ],
+   "choices": [
+    {
+     "text": "I"
+    },
+    {
+     "text": "am"
+    },
+    {
+     "text": "a"
+    },
+    {
+     "text": "boy"
+    },
+    {
+     "text": "who"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "sourceLanguage": "la",
+   "targetLanguage": "en",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "i",
+       "orig": "I"
+      },
+      {
+       "to": 2,
+       "lenient": "ı"
+      },
+      {
+       "to": 2,
+       "lenient": "i̇",
+       "orig": "İ"
+      },
+      {
+       "to": 2,
+       "lenient": "i̇"
+      },
+      {
+       "to": 4,
+       "lenient": "i'm",
+       "auto": true,
+       "orig": "I'm"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇'m"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇'m",
+       "orig": "İ'm"
+      },
+      {
+       "to": 4,
+       "lenient": "i'm",
+       "orig": "i’m"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇'m",
+       "orig": "i̇’m"
+      },
+      {
+       "to": 4,
+       "lenient": "ı'm",
+       "orig": "ı’m"
+      },
+      {
+       "to": 4,
+       "lenient": "i'm",
+       "orig": "I’m"
+      },
+      {
+       "to": 4,
+       "lenient": "ı'm"
+      },
+      {
+       "to": 4,
+       "lenient": "im",
+       "orig": "Im"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇'m",
+       "orig": "İ’m"
+      },
+      {
+       "to": 8,
+       "lenient": "i'",
+       "auto": true,
+       "orig": "I'"
+      },
+      {
+       "to": 8,
+       "lenient": "i'",
+       "orig": "I’"
+      },
+      {
+       "to": 8,
+       "lenient": "i̇'",
+       "orig": "İ'"
+      },
+      {
+       "to": 8,
+       "lenient": "i̇'",
+       "orig": "İ’"
+      },
+      {
+       "auto": true,
+       "to": 10,
+       "lenient": "i",
+       "orig": "I",
+       "type": "typo"
+      },
+      {
+       "to": 10,
+       "lenient": "i̇",
+       "orig": "İ"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "am"
+      }
+     ],
+     [
+      {
+       "to": 5,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": "a"
+      },
+      {
+       "to": 6,
+       "lenient": "an",
+       "type": "typo",
+       "orig": "a"
+      },
+      {
+       "to": 6,
+       "lenient": "the"
+      },
+      {
+       "to": 6,
+       "lenient": "teh",
+       "type": "typo",
+       "orig": "the"
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 12,
+       "lenient": "boy",
+       "orig": "boy."
+      },
+      {
+       "to": 12,
+       "lenient": "child",
+       "orig": "child."
+      },
+      {
+       "to": 12,
+       "lenient": "chi̇ld",
+       "orig": "chi̇ld."
+      },
+      {
+       "to": 12,
+       "lenient": "chıld"
+      },
+      {
+       "to": 12,
+       "lenient": "chıld",
+       "orig": "chıld."
+      },
+      {
+       "to": 12,
+       "lenient": "chi̇ld"
+      },
+      {
+       "to": 12,
+       "lenient": "kid",
+       "orig": "kid."
+      },
+      {
+       "to": 12,
+       "lenient": "ki̇d",
+       "orig": "ki̇d."
+      },
+      {
+       "to": 12,
+       "lenient": "ki̇d"
+      },
+      {
+       "to": 12,
+       "lenient": "kıd",
+       "orig": "kıd."
+      },
+      {
+       "to": 12,
+       "lenient": "kıd"
+      }
+     ],
+     [
+      {
+       "to": 9,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "m",
+       "auto": true
+      }
+     ],
+     [
+      {
+       "to": 11,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "m",
+       "type": "typo",
+       "auto": true
+      }
+     ],
+     []
+    ],
+    "language": "en",
+    "whitespaceDelimited": true
+   },
+   "taggedKcIds": [
+    {
+     "legacyId": "0c502e5500423bf74c83db2db78e4fa4",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "976ce7917a4a157e4cea576f0eb49a56",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "Puer",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "a boy"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "boy"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "the boy"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "sum",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/704547a695b69fcc641ba806235bfafb",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "(I) am"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/638f42e7bcf0f9650cecda19e2e71ae4",
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/3749d548da7d349c89c158483beaff29"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_CORRECT_Cropped_Excited.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_IDLE_Cropped.json",
+    "name": "JUNIOR",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "a87693c3301149268835b1600b19b4d0",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "I am a boy.",
+    "level_session_index": 0,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "grading_graph_size": 1689,
+    "forward_sentence_id": "093f8360075cad9025421f1b4645b582",
+    "teaching_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 4.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.8322483,
+    "has_non_adjacent_highlights": false,
+    "content_length": 9.0,
+    "tagged_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.8322483,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 9,
+     "best_solution": "I am a boy.",
+     "num_correct_answer_tokens": 4,
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "teaching_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "093f8360075cad9025421f1b4645b582",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [
+     "sum"
+    ],
+    "sentence": "Puer sum.",
+    "solution_key": "093f8360075cad9025421f1b4645b582",
+    "source_language": "la",
+    "target_language": "en",
+    "tokens": [
+     "I",
+     "am",
+     "a",
+     "boy"
+    ],
+    "translation": "I am a boy.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "who"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "0c502e5500423bf74c83db2db78e4fa4",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "Puer sum.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "specific_type": "tap",
+    "lexemes_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "sum"
+   ],
+   "progressUpdates": [],
+   "sentenceId": "093f8360075cad9025421f1b4645b582",
+   "challengeGeneratorIdentifier": {
+    "specificType": "tap",
+    "generatorId": "093f8360075cad9025421f1b4645b582"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "prompt": "Ego sum Livia.",
+   "correctSolutions": [
+    "I am Livia."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "I",
+    "am",
+    "Livia"
+   ],
+   "wrongTokens": [
+    "she"
+   ],
+   "choices": [
+    {
+     "text": "I"
+    },
+    {
+     "text": "am"
+    },
+    {
+     "text": "Livia"
+    },
+    {
+     "text": "she"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1,
+    2
+   ],
+   "sourceLanguage": "la",
+   "targetLanguage": "en",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "i'm",
+       "orig": "I'm"
+      },
+      {
+       "to": 2,
+       "lenient": "i̇'m"
+      },
+      {
+       "to": 2,
+       "lenient": "i̇'m",
+       "orig": "İ'm"
+      },
+      {
+       "to": 2,
+       "lenient": "i'm",
+       "orig": "i’m"
+      },
+      {
+       "to": 2,
+       "lenient": "i̇'m",
+       "orig": "i̇’m"
+      },
+      {
+       "to": 2,
+       "lenient": "ı'm",
+       "orig": "ı’m"
+      },
+      {
+       "to": 2,
+       "lenient": "i'm",
+       "orig": "I’m"
+      },
+      {
+       "to": 2,
+       "lenient": "ı'm"
+      },
+      {
+       "to": 2,
+       "lenient": "im",
+       "orig": "Im"
+      },
+      {
+       "to": 2,
+       "lenient": "i̇'m",
+       "orig": "İ’m"
+      },
+      {
+       "to": 4,
+       "lenient": "i'",
+       "auto": true,
+       "orig": "I'"
+      },
+      {
+       "to": 4,
+       "lenient": "i'",
+       "orig": "I’"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇'",
+       "orig": "İ'"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇'",
+       "orig": "İ’"
+      },
+      {
+       "auto": true,
+       "to": 6,
+       "lenient": "i",
+       "orig": "I",
+       "type": "typo"
+      },
+      {
+       "to": 6,
+       "lenient": "i̇",
+       "orig": "İ"
+      },
+      {
+       "to": 8,
+       "lenient": "i",
+       "orig": "I"
+      },
+      {
+       "to": 8,
+       "lenient": "ı"
+      },
+      {
+       "to": 8,
+       "lenient": "i̇",
+       "orig": "İ"
+      },
+      {
+       "to": 8,
+       "lenient": "i̇"
+      },
+      {
+       "to": 10,
+       "lenient": "i",
+       "auto": true,
+       "orig": "I"
+      },
+      {
+       "to": 10,
+       "lenient": "ı"
+      },
+      {
+       "to": 10,
+       "lenient": "i̇",
+       "orig": "İ"
+      },
+      {
+       "to": 10,
+       "lenient": "i̇"
+      },
+      {
+       "to": 2,
+       "lenient": "i'm",
+       "auto": true,
+       "orig": "I'm"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 12,
+       "lenient": "livia",
+       "orig": "Livia."
+      },
+      {
+       "to": 12,
+       "lenient": "li̇vıa",
+       "orig": "Li̇vıa."
+      },
+      {
+       "to": 12,
+       "lenient": "livıa"
+      },
+      {
+       "to": 12,
+       "lenient": "li̇via"
+      },
+      {
+       "to": 12,
+       "lenient": "livi̇a",
+       "orig": "Livi̇a."
+      },
+      {
+       "to": 12,
+       "lenient": "li̇via",
+       "orig": "Li̇via."
+      },
+      {
+       "to": 12,
+       "lenient": "lıvia",
+       "orig": "Lıvia."
+      },
+      {
+       "to": 12,
+       "lenient": "lıvia"
+      },
+      {
+       "to": 12,
+       "lenient": "lıvi̇a"
+      },
+      {
+       "to": 12,
+       "lenient": "lıvıa",
+       "orig": "Lıvıa."
+      },
+      {
+       "to": 12,
+       "lenient": "li̇vi̇a"
+      },
+      {
+       "to": 12,
+       "lenient": "lıvıa"
+      },
+      {
+       "to": 12,
+       "lenient": "lıvi̇a",
+       "orig": "Lıvi̇a."
+      },
+      {
+       "to": 12,
+       "lenient": "livi̇a"
+      },
+      {
+       "to": 12,
+       "lenient": "livıa",
+       "orig": "Livıa."
+      },
+      {
+       "to": 12,
+       "lenient": "li̇vıa"
+      },
+      {
+       "to": 12,
+       "lenient": "li̇vi̇a",
+       "orig": "Li̇vi̇a."
+      }
+     ],
+     [
+      {
+       "to": 5,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "m",
+       "auto": true
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "m",
+       "type": "typo",
+       "auto": true
+      }
+     ],
+     [
+      {
+       "to": 9,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "am"
+      }
+     ],
+     [
+      {
+       "to": 11,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "am",
+       "auto": true
+      }
+     ],
+     []
+    ],
+    "language": "en",
+    "whitespaceDelimited": true
+   },
+   "taggedKcIds": [
+    {
+     "legacyId": "5e7859fa809de2102e25bd8c3450aae6",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "976ce7917a4a157e4cea576f0eb49a56",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "a8da0d1cf95bbc1680d4e2616e80c8df",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "Ego",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/3c6f6c3b7b37017463d78034a9e5fbe1",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "I"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "sum",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/b0dde1bb460f064c3f9c34dac7d06498",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "(I) am"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "Livia",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/e693dfc1771284d452c33866f9753ae9",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "Livia"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/bcd303212f7d003656c7dc515b00892a",
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/3f4adf80c0b6e9a0dc438f3ba8119703",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/3f4adf80c0b6e9a0dc438f3ba8119703",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/6d99bc8306bdaacc3c8acc911214c557"
+    },
+    "gender": "FEMALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Pink_CORRECT_Cropped.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Pink_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Zari_IDLE_Cropped.json",
+    "name": "ZARI",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/zari_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/zari_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "4425ad3c95d34c23b06987eca4f229ea",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "I am Livia.",
+    "level_session_index": 0,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "grading_graph_size": 2005,
+    "forward_sentence_id": "df834c4b0d16f71cef9532afec037a3f",
+    "teaching_kc_ids": [
+     "lex_5e7859fa809de2102e25bd8c3450aae6",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 3.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.9207694,
+    "has_non_adjacent_highlights": false,
+    "content_length": 14.0,
+    "tagged_kc_ids": [
+     "lex_5e7859fa809de2102e25bd8c3450aae6",
+     "lex_976ce7917a4a157e4cea576f0eb49a56",
+     "lex_a8da0d1cf95bbc1680d4e2616e80c8df"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.9207694,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 14,
+     "best_solution": "I am Livia.",
+     "num_correct_answer_tokens": 3,
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_5e7859fa809de2102e25bd8c3450aae6",
+      "lex_976ce7917a4a157e4cea576f0eb49a56",
+      "lex_a8da0d1cf95bbc1680d4e2616e80c8df"
+     ],
+     "teaching_kc_ids": [
+      "lex_5e7859fa809de2102e25bd8c3450aae6",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "df834c4b0d16f71cef9532afec037a3f",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [
+     "Ego"
+    ],
+    "sentence": "Ego sum Livia.",
+    "solution_key": "df834c4b0d16f71cef9532afec037a3f",
+    "source_language": "la",
+    "target_language": "en",
+    "tokens": [
+     "I",
+     "am",
+     "Livia"
+    ],
+    "translation": "I am Livia.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "she"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "5e7859fa809de2102e25bd8c3450aae6",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "Ego sum Livia.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "5e7859fa809de2102e25bd8c3450aae6",
+     "976ce7917a4a157e4cea576f0eb49a56",
+     "a8da0d1cf95bbc1680d4e2616e80c8df"
+    ],
+    "specific_type": "tap",
+    "lexemes_to_update": [
+     "5e7859fa809de2102e25bd8c3450aae6",
+     "976ce7917a4a157e4cea576f0eb49a56",
+     "a8da0d1cf95bbc1680d4e2616e80c8df"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "Ego"
+   ],
+   "progressUpdates": [],
+   "sentenceId": "df834c4b0d16f71cef9532afec037a3f",
+   "challengeGeneratorIdentifier": {
+    "specificType": "tap",
+    "generatorId": "df834c4b0d16f71cef9532afec037a3f"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/3749d548da7d349c89c158483beaff29"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_CORRECT_Cropped_Excited.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_IDLE_Cropped.json",
+    "name": "JUNIOR",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.svg"
+    }
+   },
+   "prompt": "I",
+   "choices": [
+    "puella",
+    "ego",
+    "vir"
+   ],
+   "correctIndex": 1,
+   "options": [
+    {
+     "text": "puella",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852"
+    },
+    {
+     "text": "ego",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/3c6f6c3b7b37017463d78034a9e5fbe1"
+    },
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c"
+    }
+   ],
+   "type": "assist",
+   "id": "8780d2bfb1214ef1ad1ac527e348e133",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "ego",
+    "level_session_index": 0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_5e7859fa809de2102e25bd8c3450aae6"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.8922215,
+    "content_length": 3.0,
+    "tagged_kc_ids": [
+     "lex_5e7859fa809de2102e25bd8c3450aae6"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.8922215,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 3,
+     "best_solution": "ego",
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_5e7859fa809de2102e25bd8c3450aae6"
+     ],
+     "teaching_kc_ids": [
+      "lex_5e7859fa809de2102e25bd8c3450aae6"
+     ],
+     "content_versions": []
+    },
+    "highlight": [],
+    "learning_language": "la",
+    "other_options": [
+     "puella",
+     "vir"
+    ],
+    "solution_key": "5e7859fa809de2102e25bd8c3450aae6",
+    "translation": "I",
+    "ui_language": "en",
+    "word": "ego",
+    "language": "la",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "5e7859fa809de2102e25bd8c3450aae6"
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     "5e7859fa809de2102e25bd8c3450aae6"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": "5e7859fa809de2102e25bd8c3450aae6"
+   }
+  },
+  {
+   "prompt": "Marcus est vir.",
+   "correctSolutions": [
+    "Marcus is a man."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "Marcus",
+    "is",
+    "a",
+    "man"
+   ],
+   "wrongTokens": [
+    "brother"
+   ],
+   "choices": [
+    {
+     "text": "Marcus"
+    },
+    {
+     "text": "is"
+    },
+    {
+     "text": "a"
+    },
+    {
+     "text": "man"
+    },
+    {
+     "text": "brother"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "sourceLanguage": "la",
+   "targetLanguage": "en",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      },
+      {
+       "to": 8,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "is"
+      },
+      {
+       "to": 4,
+       "lenient": "s",
+       "type": "typo",
+       "orig": "is"
+      },
+      {
+       "to": 4,
+       "lenient": "ıs"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇s"
+      }
+     ],
+     [
+      {
+       "to": 5,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": "a"
+      },
+      {
+       "to": 6,
+       "lenient": "an",
+       "type": "typo",
+       "orig": "a"
+      },
+      {
+       "to": 6,
+       "lenient": "the"
+      },
+      {
+       "to": 6,
+       "lenient": "teh",
+       "type": "typo",
+       "orig": "the"
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 14,
+       "lenient": "man",
+       "orig": "man."
+      }
+     ],
+     [
+      {
+       "to": 9,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 10,
+       "lenient": "is"
+      },
+      {
+       "to": 10,
+       "lenient": "s",
+       "type": "typo",
+       "orig": "is"
+      },
+      {
+       "to": 10,
+       "lenient": "ıs"
+      },
+      {
+       "to": 10,
+       "lenient": "i̇s"
+      }
+     ],
+     [
+      {
+       "to": 11,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 12,
+       "lenient": "a"
+      },
+      {
+       "to": 12,
+       "lenient": "an",
+       "type": "typo",
+       "orig": "a"
+      }
+     ],
+     [
+      {
+       "to": 13,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 14,
+       "lenient": "man",
+       "orig": "man."
+      }
+     ],
+     []
+    ],
+    "language": "en",
+    "whitespaceDelimited": true
+   },
+   "taggedKcIds": [
+    {
+     "legacyId": "49ae5e70ea332aefa4c7c46640587714",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "e882282d8da3fccf97556873bce808d1",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "12aa169ed2dba07256e4c586be1a18fb",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "Marcus",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/ad1a030b27487928c8b205d27a2f6221",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "Marcus"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "est",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6e58f5d60b97a8ff74ca8ca01fe6b075",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "is"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "she is"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "he is"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "a man"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "man"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "the man"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/34310e15a7f31b86e555f742c7a32e4e",
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/b53f870ed38105349d4d83edf682d77f",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/b53f870ed38105349d4d83edf682d77f",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/096d0b1f6280b962cd7080a7736dd2bb"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Eddy_CORRECT_Cropped_Flex.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Coach_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Eddy_IDLE_Cropped.json",
+    "name": "EDDY",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/eddy_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/eddy_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "3507580ec36f45b099cabd106c8d8c76",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "Marcus is a man.",
+    "level_session_index": 0,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "grading_graph_size": 905,
+    "forward_sentence_id": "7f2c5c875ded0eaadc25e8b37ae21753",
+    "teaching_kc_ids": [
+     "lex_e882282d8da3fccf97556873bce808d1",
+     "lex_12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 4.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.91299754,
+    "has_non_adjacent_highlights": false,
+    "content_length": 15.0,
+    "tagged_kc_ids": [
+     "lex_49ae5e70ea332aefa4c7c46640587714",
+     "lex_e882282d8da3fccf97556873bce808d1",
+     "lex_12aa169ed2dba07256e4c586be1a18fb"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.91299754,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 15,
+     "best_solution": "Marcus is a man.",
+     "num_correct_answer_tokens": 4,
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_49ae5e70ea332aefa4c7c46640587714",
+      "lex_e882282d8da3fccf97556873bce808d1",
+      "lex_12aa169ed2dba07256e4c586be1a18fb"
+     ],
+     "teaching_kc_ids": [
+      "lex_e882282d8da3fccf97556873bce808d1",
+      "lex_12aa169ed2dba07256e4c586be1a18fb"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "7f2c5c875ded0eaadc25e8b37ae21753",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [
+     "est"
+    ],
+    "sentence": "Marcus est vir.",
+    "solution_key": "7f2c5c875ded0eaadc25e8b37ae21753",
+    "source_language": "la",
+    "target_language": "en",
+    "tokens": [
+     "Marcus",
+     "is",
+     "a",
+     "man"
+    ],
+    "translation": "Marcus is a man.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "brother"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "e882282d8da3fccf97556873bce808d1",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "12aa169ed2dba07256e4c586be1a18fb",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "Marcus est vir.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "49ae5e70ea332aefa4c7c46640587714",
+     "e882282d8da3fccf97556873bce808d1",
+     "12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "specific_type": "tap",
+    "lexemes_to_update": [
+     "49ae5e70ea332aefa4c7c46640587714",
+     "e882282d8da3fccf97556873bce808d1",
+     "12aa169ed2dba07256e4c586be1a18fb"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [
+    "est"
+   ],
+   "progressUpdates": [],
+   "sentenceId": "7f2c5c875ded0eaadc25e8b37ae21753",
+   "challengeGeneratorIdentifier": {
+    "specificType": "tap",
+    "generatorId": "7f2c5c875ded0eaadc25e8b37ae21753"
+   },
+   "canBeSkipped": false
+  },
+  {
+   "prompt": "Marcus est puer.",
+   "correctSolutions": [
+    "Marcus is a boy."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "Marcus",
+    "is",
+    "a",
+    "boy"
+   ],
+   "wrongTokens": [
+    "man"
+   ],
+   "choices": [
+    {
+     "text": "Marcus"
+    },
+    {
+     "text": "is"
+    },
+    {
+     "text": "a"
+    },
+    {
+     "text": "boy"
+    },
+    {
+     "text": "man"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "sourceLanguage": "la",
+   "targetLanguage": "en",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "is"
+      },
+      {
+       "to": 4,
+       "lenient": "s",
+       "type": "typo",
+       "orig": "is"
+      },
+      {
+       "to": 4,
+       "lenient": "ıs"
+      },
+      {
+       "to": 4,
+       "lenient": "i̇s"
+      }
+     ],
+     [
+      {
+       "to": 5,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": "a"
+      },
+      {
+       "to": 6,
+       "lenient": "an",
+       "type": "typo",
+       "orig": "a"
+      },
+      {
+       "to": 6,
+       "lenient": "the"
+      },
+      {
+       "to": 6,
+       "lenient": "teh",
+       "type": "typo",
+       "orig": "the"
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 8,
+       "lenient": "boy",
+       "orig": "boy."
+      },
+      {
+       "to": 8,
+       "lenient": "child",
+       "orig": "child."
+      },
+      {
+       "to": 8,
+       "lenient": "chi̇ld",
+       "orig": "chi̇ld."
+      },
+      {
+       "to": 8,
+       "lenient": "chıld"
+      },
+      {
+       "to": 8,
+       "lenient": "chıld",
+       "orig": "chıld."
+      },
+      {
+       "to": 8,
+       "lenient": "chi̇ld"
+      },
+      {
+       "to": 8,
+       "lenient": "kid",
+       "orig": "kid."
+      },
+      {
+       "to": 8,
+       "lenient": "ki̇d",
+       "orig": "ki̇d."
+      },
+      {
+       "to": 8,
+       "lenient": "ki̇d"
+      },
+      {
+       "to": 8,
+       "lenient": "kıd",
+       "orig": "kıd."
+      },
+      {
+       "to": 8,
+       "lenient": "kıd"
+      }
+     ],
+     []
+    ],
+    "language": "en",
+    "whitespaceDelimited": true
+   },
+   "taggedKcIds": [
+    {
+     "legacyId": "49ae5e70ea332aefa4c7c46640587714",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "e882282d8da3fccf97556873bce808d1",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "0c502e5500423bf74c83db2db78e4fa4",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "Marcus",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/ad1a030b27487928c8b205d27a2f6221",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "Marcus"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "est",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6e58f5d60b97a8ff74ca8ca01fe6b075",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "is"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "she is"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "he is"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "puer",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "a boy"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "boy"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "the boy"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/0e3dc35d93de406886acb33a99ead0d7",
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/3749d548da7d349c89c158483beaff29"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_CORRECT_Cropped.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_IDLE_Cropped.json",
+    "name": "JUNIOR",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "e147b2dcd43a4eee8fcb0b30f1fe23c6",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "Marcus is a boy.",
+    "level_session_index": 0,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "grading_graph_size": 903,
+    "forward_sentence_id": "717ab2b7243386022390337a49614613",
+    "teaching_kc_ids": [
+     "lex_e882282d8da3fccf97556873bce808d1",
+     "lex_0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 4.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.94232994,
+    "has_non_adjacent_highlights": false,
+    "content_length": 16.0,
+    "tagged_kc_ids": [
+     "lex_49ae5e70ea332aefa4c7c46640587714",
+     "lex_e882282d8da3fccf97556873bce808d1",
+     "lex_0c502e5500423bf74c83db2db78e4fa4"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.94232994,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 16,
+     "best_solution": "Marcus is a boy.",
+     "num_correct_answer_tokens": 4,
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_49ae5e70ea332aefa4c7c46640587714",
+      "lex_e882282d8da3fccf97556873bce808d1",
+      "lex_0c502e5500423bf74c83db2db78e4fa4"
+     ],
+     "teaching_kc_ids": [
+      "lex_e882282d8da3fccf97556873bce808d1",
+      "lex_0c502e5500423bf74c83db2db78e4fa4"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "717ab2b7243386022390337a49614613",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [],
+    "sentence": "Marcus est puer.",
+    "solution_key": "717ab2b7243386022390337a49614613",
+    "source_language": "la",
+    "target_language": "en",
+    "tokens": [
+     "Marcus",
+     "is",
+     "a",
+     "boy"
+    ],
+    "translation": "Marcus is a boy.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "man"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "e882282d8da3fccf97556873bce808d1",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "0c502e5500423bf74c83db2db78e4fa4",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "Marcus est puer.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "49ae5e70ea332aefa4c7c46640587714",
+     "e882282d8da3fccf97556873bce808d1",
+     "0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "specific_type": "tap",
+    "lexemes_to_update": [
+     "49ae5e70ea332aefa4c7c46640587714",
+     "e882282d8da3fccf97556873bce808d1",
+     "0c502e5500423bf74c83db2db78e4fa4"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "sentenceId": "717ab2b7243386022390337a49614613",
+   "challengeGeneratorIdentifier": {
+    "specificType": "tap",
+    "generatorId": "717ab2b7243386022390337a49614613"
+   }
+  },
+  {
+   "prompt": "Vir sum.",
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/b53f870ed38105349d4d83edf682d77f",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/b53f870ed38105349d4d83edf682d77f",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/096d0b1f6280b962cd7080a7736dd2bb"
+    },
+    "gender": "MALE",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Eddy_CORRECT_Cropped_Cheer.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Coach_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Eddy_IDLE_Cropped.json",
+    "name": "EDDY",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/eddy_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/eddy_avatar_icon.svg"
+    }
+   },
+   "correctTokens": [
+    "Vir",
+    "sum"
+   ],
+   "wrongTokens": [
+    "femina"
+   ],
+   "choices": [
+    {
+     "text": "Vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c"
+    },
+    {
+     "text": "sum",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/704547a695b69fcc641ba806235bfafb"
+    },
+    {
+     "text": "femina",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1
+   ],
+   "solutionTranslation": "I am a man.",
+   "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bdad46e99bf9b574e803623ce150f5c7",
+   "slowTts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bdad46e99bf9b574e803623ce150f5c7",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "vir",
+       "orig": "Vir"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     []
+    ],
+    "language": "la",
+    "whitespaceDelimited": true
+   },
+   "type": "listenTap",
+   "id": "06715c13ebe84116b26236683bdeda21",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "Vir sum.",
+    "level_session_index": 0,
+    "num_tap_distractors": 1.0,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": false,
+    "grading_graph_size": 202,
+    "forward_sentence_id": "c15c02019de3e20d039216f1ce37975e",
+    "teaching_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 2.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.91566926,
+    "has_non_adjacent_highlights": false,
+    "content_length": 8.0,
+    "tagged_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.91566926,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 8,
+     "best_solution": "Vir sum.",
+     "num_correct_answer_tokens": 2,
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "teaching_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "c15c02019de3e20d039216f1ce37975e",
+     "has_non_adjacent_highlights": false
+    },
+    "highlight": [],
+    "language": "la",
+    "solution_key": "c15c02019de3e20d039216f1ce37975e",
+    "solution_translation": "I am a man.",
+    "source_language": "la",
+    "text": "Vir sum.",
+    "tokens": [
+     "Vir",
+     "sum"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "12aa169ed2dba07256e4c586be1a18fb",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+      "kc_type_str": "lex"
+     }
+    ],
+    "wrong_tokens": [
+     "femina"
+    ],
+    "type": "listen_tap",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "specific_type": "listen_tap",
+    "lexemes_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "sentenceId": "c15c02019de3e20d039216f1ce37975e",
+   "challengeGeneratorIdentifier": {
+    "specificType": "listen_tap",
+    "generatorId": "c15c02019de3e20d039216f1ce37975e"
+   }
+  },
+  {
+   "pairs": [
+    {
+     "learningToken": "femina",
+     "fromToken": "woman",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/6647a44516778d11af31039079218b0a"
+    },
+    {
+     "learningToken": "ego",
+     "fromToken": "I",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/3c6f6c3b7b37017463d78034a9e5fbe1"
+    },
+    {
+     "learningToken": "puella",
+     "fromToken": "girl",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/f78556098cbe733be88082c870852852"
+    },
+    {
+     "learningToken": "vir",
+     "fromToken": "man",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c"
+    },
+    {
+     "learningToken": "puer",
+     "fromToken": "boy",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8"
+    }
+   ],
+   "type": "match",
+   "id": "93c4a3a685674c10a393f39ba77760a8",
+   "challengeResponseTrackingProperties": {
+    "cefr_level": "CEFR_UNKNOWN",
+    "level_session_index": 0,
+    "is_adaptive": false,
+    "teaching_kc_ids": [
+     "lex_613498f62b2776f5113c4fd7b195bb5f",
+     "lex_12aa169ed2dba07256e4c586be1a18fb",
+     "lex_0b3b1372ab0ff48028824de5e3e11de9",
+     "lex_0c502e5500423bf74c83db2db78e4fa4",
+     "lex_5e7859fa809de2102e25bd8c3450aae6"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "is_v2": true,
+    "birdbrain_probability": 0.84884405,
+    "content_length": 6.0,
+    "tagged_kc_ids": [
+     "lex_613498f62b2776f5113c4fd7b195bb5f",
+     "lex_12aa169ed2dba07256e4c586be1a18fb",
+     "lex_0b3b1372ab0ff48028824de5e3e11de9",
+     "lex_0c502e5500423bf74c83db2db78e4fa4",
+     "lex_5e7859fa809de2102e25bd8c3450aae6"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.84884405,
+     "birdbrain_source": "birdbrain_v2",
+     "content_length": 6,
+     "is_adaptive": false,
+     "cefr_level": "CEFR_UNKNOWN",
+     "tagged_kc_ids": [
+      "lex_613498f62b2776f5113c4fd7b195bb5f",
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_0b3b1372ab0ff48028824de5e3e11de9",
+      "lex_0c502e5500423bf74c83db2db78e4fa4",
+      "lex_5e7859fa809de2102e25bd8c3450aae6"
+     ],
+     "teaching_kc_ids": [
+      "lex_613498f62b2776f5113c4fd7b195bb5f",
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_0b3b1372ab0ff48028824de5e3e11de9",
+      "lex_0c502e5500423bf74c83db2db78e4fa4",
+      "lex_5e7859fa809de2102e25bd8c3450aae6"
+     ],
+     "content_versions": []
+    },
+    "highlight": [],
+    "learning_language": "la",
+    "memory_style": false,
+    "pairs": [
+     {
+      "learning_word": "femina",
+      "translation": "woman",
+      "learning_word_kc_id": {
+       "legacy_id": "0b3b1372ab0ff48028824de5e3e11de9",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "ego",
+      "translation": "I",
+      "learning_word_kc_id": {
+       "legacy_id": "5e7859fa809de2102e25bd8c3450aae6",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "puella",
+      "translation": "girl",
+      "learning_word_kc_id": {
+       "legacy_id": "613498f62b2776f5113c4fd7b195bb5f",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "vir",
+      "translation": "man",
+      "learning_word_kc_id": {
+       "legacy_id": "12aa169ed2dba07256e4c586be1a18fb",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "puer",
+      "translation": "boy",
+      "learning_word_kc_id": {
+       "legacy_id": "0c502e5500423bf74c83db2db78e4fa4",
+       "kc_type_str": "lex"
+      }
+     }
+    ],
+    "solution_key": "613498f62b2776f5113c4fd7b195bb5f",
+    "ui_language": "en",
+    "language": "la",
+    "type": "match",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "specific_type": "match",
+    "lexemes_to_update": [
+     "613498f62b2776f5113c4fd7b195bb5f"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "match",
+    "generatorId": "613498f62b2776f5113c4fd7b195bb5f"
+   }
+  }
+ ],
+ "adaptiveChallenges": [
+  {
+   "prompt": "I am a man.",
+   "correctSolutions": [
+    "Vir sum."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "Vir",
+    "sum"
+   ],
+   "wrongTokens": [
+    "ego"
+   ],
+   "choices": [
+    {
+     "text": "Vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c"
+    },
+    {
+     "text": "sum",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/b0dde1bb460f064c3f9c34dac7d06498"
+    },
+    {
+     "text": "ego",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/35608e030b780264d334a6528515c888"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1
+   ],
+   "sourceLanguage": "en",
+   "targetLanguage": "la",
+   "solutionTts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/146e40fd22607477f066597ae4bd3ebb",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": ""
+      },
+      {
+       "to": 9,
+       "lenient": "ego",
+       "orig": "Ego"
+      },
+      {
+       "to": 11,
+       "lenient": "ego",
+       "orig": "Ego"
+      },
+      {
+       "to": 7,
+       "lenient": "sum",
+       "orig": "Sum"
+      },
+      {
+       "to": 3,
+       "lenient": "vir",
+       "orig": "Vir"
+      },
+      {
+       "to": 13,
+       "lenient": "vir",
+       "orig": "Vir"
+      },
+      {
+       "to": 17,
+       "lenient": "sum",
+       "orig": "Sum"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": "homo"
+      },
+      {
+       "to": 5,
+       "lenient": "sum"
+      },
+      {
+       "to": 7,
+       "lenient": "sum"
+      },
+      {
+       "to": 3,
+       "lenient": "vir"
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 19,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 19,
+       "lenient": "homo",
+       "orig": "homo."
+      }
+     ],
+     [
+      {
+       "to": 8,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 19,
+       "lenient": "vir",
+       "orig": "vir."
+      }
+     ],
+     [
+      {
+       "to": 10,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": "homo"
+      },
+      {
+       "to": 5,
+       "lenient": "sum"
+      },
+      {
+       "to": 7,
+       "lenient": "sum"
+      },
+      {
+       "to": 3,
+       "lenient": "vir"
+      }
+     ],
+     [
+      {
+       "to": 12,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": "sum"
+      }
+     ],
+     [
+      {
+       "to": 14,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": "ego"
+      },
+      {
+       "to": 15,
+       "lenient": "sum"
+      },
+      {
+       "to": 19,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 16,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 19,
+       "lenient": "ego",
+       "orig": "ego."
+      }
+     ],
+     [
+      {
+       "to": 18,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": "ego"
+      },
+      {
+       "to": 15,
+       "lenient": "vir"
+      },
+      {
+       "to": 19,
+       "lenient": "vir",
+       "orig": "vir."
+      }
+     ],
+     []
+    ],
+    "language": "la",
+    "whitespaceDelimited": true
+   },
+   "speechContextTokens": [
+    "Vir",
+    "sum"
+   ],
+   "taggedKcIds": [
+    {
+     "legacyId": "12aa169ed2dba07256e4c586be1a18fb",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "976ce7917a4a157e4cea576f0eb49a56",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "I",
+     "hintTable": {
+      "headers": [
+       "I",
+       "am"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "ego sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "me habeo"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "ego"
+        },
+        {
+         "colspan": 1
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "ago"
+        },
+        {
+         "colspan": 1
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "am",
+     "hintTable": {
+      "headers": [
+       "I",
+       "am"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "ego sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "me habeo"
+        }
+       ],
+       [
+        {
+         "colspan": 1
+        },
+        {
+         "colspan": 1,
+         "hint": "sum"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "a",
+     "hintTable": {
+      "headers": [
+       "a",
+       "man"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "vir"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "(no articles in Latin)"
+        },
+        {
+         "colspan": 1
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "man",
+     "hintTable": {
+      "headers": [
+       "a",
+       "man"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "vir"
+        }
+       ],
+       [
+        {
+         "colspan": 1
+        },
+        {
+         "colspan": 1,
+         "hint": "vir"
+        }
+       ],
+       [
+        {
+         "colspan": 1
+        },
+        {
+         "colspan": 1,
+         "hint": "virum"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/0f284113af41f7f7296263183701a13b"
+    },
+    "gender": "male",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Bear_CORRECT_Cropped.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Bear_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Falstaff_IDLE_Cropped.json",
+    "name": "FALSTAFF",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "93c654496c7f4d30b14703e681bfbaaf",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "Vir sum.",
+    "level_session_index": 0,
+    "birdbrain_target": 0.75,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": true,
+    "grading_graph_size": 1145,
+    "forward_sentence_id": "c15c02019de3e20d039216f1ce37975e",
+    "teaching_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 2.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.7322641,
+    "has_non_adjacent_highlights": false,
+    "content_length": 8.0,
+    "tagged_kc_ids": [
+     "lex_12aa169ed2dba07256e4c586be1a18fb",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.7322641,
+     "birdbrain_target": 0.75,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 8,
+     "best_solution": "Vir sum.",
+     "num_correct_answer_tokens": 2,
+     "is_adaptive": true,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "teaching_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "c15c02019de3e20d039216f1ce37975e",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [],
+    "indicator_type": {
+     "name": "HARD_CHALLENGE"
+    },
+    "sentence": "I am a man.",
+    "solution_key": "e471bf53c3982b14f4d9b171f8169021",
+    "source_language": "en",
+    "target_language": "la",
+    "tokens": [
+     "Vir",
+     "sum"
+    ],
+    "translation": "Vir sum.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "ego"
+    ],
+    "speech_context_tokens": [
+     "Vir",
+     "sum"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "12aa169ed2dba07256e4c586be1a18fb",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "I am a man.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "specific_type": "reverse_tap",
+    "lexemes_to_update": [
+     "12aa169ed2dba07256e4c586be1a18fb",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "sentenceId": "e471bf53c3982b14f4d9b171f8169021",
+   "challengeGeneratorIdentifier": {
+    "specificType": "reverse_tap",
+    "generatorId": "e471bf53c3982b14f4d9b171f8169021"
+   },
+   "indicatorType": "HARD_CHALLENGE"
+  },
+  {
+   "prompt": "I am a boy.",
+   "correctSolutions": [
+    "Puer sum."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "Puer",
+    "sum"
+   ],
+   "wrongTokens": [
+    "vir"
+   ],
+   "choices": [
+    {
+     "text": "Puer",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/00cd09ab2e4752f79876b1279377d3c8"
+    },
+    {
+     "text": "sum",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/b0dde1bb460f064c3f9c34dac7d06498"
+    },
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/52df76fd9a3a16fa813ab2fe50c1e90c"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1
+   ],
+   "sourceLanguage": "en",
+   "targetLanguage": "la",
+   "solutionTts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/2301c373b0efb735e1d2d16d9d5a68a1",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "ego",
+       "orig": "Ego"
+      },
+      {
+       "to": 8,
+       "lenient": "ego",
+       "orig": "Ego"
+      },
+      {
+       "to": 4,
+       "lenient": "puer",
+       "orig": "Puer"
+      },
+      {
+       "to": 6,
+       "lenient": "sum",
+       "orig": "Sum"
+      },
+      {
+       "to": 10,
+       "lenient": "puer",
+       "orig": "Puer"
+      },
+      {
+       "to": 14,
+       "lenient": "sum",
+       "orig": "Sum"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "puer"
+      },
+      {
+       "to": 6,
+       "lenient": "sum"
+      }
+     ],
+     [
+      {
+       "to": 5,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 16,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 16,
+       "lenient": "puer",
+       "orig": "puer."
+      }
+     ],
+     [
+      {
+       "to": 9,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": "sum"
+      }
+     ],
+     [
+      {
+       "to": 11,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "ego"
+      },
+      {
+       "to": 12,
+       "lenient": "sum"
+      },
+      {
+       "to": 16,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 13,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 16,
+       "lenient": "ego",
+       "orig": "ego."
+      }
+     ],
+     [
+      {
+       "to": 15,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": "ego"
+      },
+      {
+       "to": 12,
+       "lenient": "puer"
+      },
+      {
+       "to": 16,
+       "lenient": "puer",
+       "orig": "puer."
+      }
+     ],
+     []
+    ],
+    "language": "la",
+    "whitespaceDelimited": true
+   },
+   "speechContextTokens": [
+    "Puer",
+    "sum"
+   ],
+   "taggedKcIds": [
+    {
+     "legacyId": "0c502e5500423bf74c83db2db78e4fa4",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "976ce7917a4a157e4cea576f0eb49a56",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "I",
+     "hintTable": {
+      "headers": [
+       "I",
+       "am"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "ego sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "me habeo"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "ego"
+        },
+        {
+         "colspan": 1
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "ago"
+        },
+        {
+         "colspan": 1
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "am",
+     "hintTable": {
+      "headers": [
+       "I",
+       "am"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "ego sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "me habeo"
+        }
+       ],
+       [
+        {
+         "colspan": 1
+        },
+        {
+         "colspan": 1,
+         "hint": "sum"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "a",
+     "hintTable": {
+      "headers": [
+       "a",
+       "boy"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "puer"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "(no articles in Latin)"
+        },
+        {
+         "colspan": 1
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "boy",
+     "hintTable": {
+      "headers": [
+       "a",
+       "boy"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "puer"
+        }
+       ],
+       [
+        {
+         "colspan": 1
+        },
+        {
+         "colspan": 1,
+         "hint": "puer"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/244cf36bd8b473a3e76edfd4b917b9cb",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/3749d548da7d349c89c158483beaff29"
+    },
+    "gender": "male",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_CORRECT_Cropped_Burp.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Junior_IDLE_Cropped.json",
+    "name": "JUNIOR",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/junior_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "fa02941ca9094d79bde61c31a1277bf1",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "Puer sum.",
+    "level_session_index": 0,
+    "birdbrain_target": 0.75,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": true,
+    "grading_graph_size": 907,
+    "forward_sentence_id": "093f8360075cad9025421f1b4645b582",
+    "teaching_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 2.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.72443825,
+    "has_non_adjacent_highlights": false,
+    "content_length": 9.0,
+    "tagged_kc_ids": [
+     "lex_0c502e5500423bf74c83db2db78e4fa4",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.72443825,
+     "birdbrain_target": 0.75,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 9,
+     "best_solution": "Puer sum.",
+     "num_correct_answer_tokens": 2,
+     "is_adaptive": true,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "teaching_kc_ids": [
+      "lex_0c502e5500423bf74c83db2db78e4fa4",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "093f8360075cad9025421f1b4645b582",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [],
+    "indicator_type": {
+     "name": "HARD_CHALLENGE"
+    },
+    "sentence": "I am a boy.",
+    "solution_key": "776a563f1bb1a3fa54e08624a30d3e4c",
+    "source_language": "en",
+    "target_language": "la",
+    "tokens": [
+     "Puer",
+     "sum"
+    ],
+    "translation": "Puer sum.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "vir"
+    ],
+    "speech_context_tokens": [
+     "Puer",
+     "sum"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "0c502e5500423bf74c83db2db78e4fa4",
+      "kc_type_str": "lex"
+     },
+     {
+      "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "I am a boy.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "specific_type": "reverse_tap",
+    "lexemes_to_update": [
+     "0c502e5500423bf74c83db2db78e4fa4",
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "sentenceId": "776a563f1bb1a3fa54e08624a30d3e4c",
+   "challengeGeneratorIdentifier": {
+    "specificType": "reverse_tap",
+    "generatorId": "776a563f1bb1a3fa54e08624a30d3e4c"
+   },
+   "indicatorType": "HARD_CHALLENGE"
+  },
+  {
+   "prompt": "I am Marcus.",
+   "correctSolutions": [
+    "Marcus sum."
+   ],
+   "compactTranslations": [],
+   "correctTokens": [
+    "Marcus",
+    "sum"
+   ],
+   "wrongTokens": [
+    "vir"
+   ],
+   "choices": [
+    {
+     "text": "Marcus",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/ad1a030b27487928c8b205d27a2f6221"
+    },
+    {
+     "text": "sum",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/b0dde1bb460f064c3f9c34dac7d06498"
+    },
+    {
+     "text": "vir",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c"
+    }
+   ],
+   "correctIndices": [
+    0,
+    1
+   ],
+   "sourceLanguage": "en",
+   "targetLanguage": "la",
+   "solutionTts": "https://d1vq87e9lcf771.cloudfront.net/la_v2/37e39e65264ecb51bd7f8b3b24bcaa18",
+   "grader": {
+    "version": 0,
+    "vertices": [
+     [
+      {
+       "to": 1,
+       "lenient": ""
+      }
+     ],
+     [
+      {
+       "to": 2,
+       "lenient": "sum",
+       "orig": "Sum"
+      },
+      {
+       "to": 6,
+       "lenient": "sum",
+       "orig": "Sum"
+      },
+      {
+       "to": 8,
+       "lenient": "ego",
+       "orig": "Ego"
+      },
+      {
+       "to": 10,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      },
+      {
+       "to": 12,
+       "lenient": "ego",
+       "orig": "Ego"
+      },
+      {
+       "to": 14,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      },
+      {
+       "to": 16,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      },
+      {
+       "to": 18,
+       "lenient": "sum",
+       "orig": "Sum"
+      },
+      {
+       "to": 20,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      }
+     ],
+     [
+      {
+       "to": 3,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      }
+     ],
+     [
+      {
+       "to": 5,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 22,
+       "lenient": "ego",
+       "orig": "ego."
+      }
+     ],
+     [
+      {
+       "to": 7,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 22,
+       "lenient": "marcus",
+       "orig": "Marcus."
+      }
+     ],
+     [
+      {
+       "to": 9,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 10,
+       "lenient": "marcus",
+       "orig": "Marcus"
+      }
+     ],
+     [
+      {
+       "to": 11,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 22,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 13,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 6,
+       "lenient": "sum"
+      }
+     ],
+     [
+      {
+       "to": 15,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 22,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 17,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 14,
+       "lenient": "ego"
+      },
+      {
+       "to": 22,
+       "lenient": "sum",
+       "orig": "sum."
+      }
+     ],
+     [
+      {
+       "to": 19,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 22,
+       "lenient": "marcus",
+       "orig": "Marcus."
+      },
+      {
+       "to": 6,
+       "lenient": "ego"
+      }
+     ],
+     [
+      {
+       "to": 21,
+       "lenient": " "
+      }
+     ],
+     [
+      {
+       "to": 4,
+       "lenient": "sum"
+      }
+     ],
+     []
+    ],
+    "language": "la",
+    "whitespaceDelimited": true
+   },
+   "speechContextTokens": [
+    "Marcus",
+    "sum"
+   ],
+   "taggedKcIds": [
+    {
+     "legacyId": "49ae5e70ea332aefa4c7c46640587714",
+     "kcTypeStr": "lex"
+    },
+    {
+     "legacyId": "976ce7917a4a157e4cea576f0eb49a56",
+     "kcTypeStr": "lex"
+    }
+   ],
+   "challengeDisplaySettings": {
+    "canRequireUserToType": true,
+    "showInputModeToggle": false
+   },
+   "weakWordPromptRanges": [],
+   "tokens": [
+    {
+     "value": "I",
+     "hintTable": {
+      "headers": [
+       "I",
+       "am"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "ego sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "me habeo"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "ego"
+        },
+        {
+         "colspan": 1
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "ago"
+        },
+        {
+         "colspan": 1
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "am",
+     "hintTable": {
+      "headers": [
+       "I",
+       "am"
+      ],
+      "rows": [
+       [
+        {
+         "colspan": 2,
+         "hint": "sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "ego sum"
+        }
+       ],
+       [
+        {
+         "colspan": 2,
+         "hint": "me habeo"
+        }
+       ],
+       [
+        {
+         "colspan": 1
+        },
+        {
+         "colspan": 1,
+         "hint": "sum"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": " "
+    },
+    {
+     "value": "Marcus",
+     "hintTable": {
+      "headers": [],
+      "rows": [
+       [
+        {
+         "colspan": 1,
+         "hint": "Marcus"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "Marcum"
+        }
+       ],
+       [
+        {
+         "colspan": 1,
+         "hint": "Marce"
+        }
+       ]
+      ]
+     }
+    },
+    {
+     "value": "."
+    }
+   ],
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/61e19bb4a1ff1d94e58d58b33db58c36",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/61e19bb4a1ff1d94e58d58b33db58c36",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/52a5a774c4de18f4a4e8c91d91788347"
+    },
+    "gender": "male",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Vikram_CORRECT_Cropped_Disco.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Dan_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Vikram_IDLE_Cropped.json",
+    "name": "VIKRAM",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/vikram_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/vikram_avatar_icon.svg"
+    }
+   },
+   "isSpeakerUniversal": false,
+   "type": "translate",
+   "id": "655224311a1d41e5a302cb5aa322cffd",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "Marcus sum.",
+    "level_session_index": 0,
+    "birdbrain_target": 0.75,
+    "num_tap_distractors": 1.0,
+    "highlighted_l1_weak_word_in_prompt": false,
+    "is_v2": true,
+    "cefr_level": "CEFR_UNKNOWN",
+    "is_adaptive": true,
+    "grading_graph_size": 1188,
+    "forward_sentence_id": "bea62f40c10e6438079afb98db8391fd",
+    "teaching_kc_ids": [
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "birdbrain_source": "birdbrain_v2",
+    "num_correct_answer_tokens": 2.0,
+    "generation_timestamp": 1791619951168,
+    "session_type": "lesson",
+    "birdbrain_probability": 0.7847821,
+    "has_non_adjacent_highlights": false,
+    "content_length": 11.0,
+    "tagged_kc_ids": [
+     "lex_49ae5e70ea332aefa4c7c46640587714",
+     "lex_976ce7917a4a157e4cea576f0eb49a56"
+    ]
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "birdbrain_probability": 0.7847821,
+     "birdbrain_target": 0.75,
+     "birdbrain_source": "birdbrain_v2",
+     "num_tap_distractors": 1,
+     "content_length": 11,
+     "best_solution": "Marcus sum.",
+     "num_correct_answer_tokens": 2,
+     "is_adaptive": true,
+     "cefr_level": "CEFR_UNKNOWN",
+     "highlighted_l1_weak_word_in_prompt": false,
+     "tagged_kc_ids": [
+      "lex_49ae5e70ea332aefa4c7c46640587714",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "teaching_kc_ids": [
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "content_versions": [],
+     "forward_sentence_id": "bea62f40c10e6438079afb98db8391fd",
+     "has_non_adjacent_highlights": false
+    },
+    "challenge_display_settings": {
+     "can_require_user_to_type": true,
+     "show_input_mode_toggle": false
+    },
+    "highlight": [],
+    "indicator_type": {
+     "name": "HARD_CHALLENGE"
+    },
+    "sentence": "I am Marcus.",
+    "solution_key": "c4f035eef97b6c47973b53dd82ae9440",
+    "source_language": "en",
+    "target_language": "la",
+    "tokens": [
+     "Marcus",
+     "sum"
+    ],
+    "translation": "Marcus sum.",
+    "weak_word_prompt_ranges": [],
+    "wrong_tokens": [
+     "vir"
+    ],
+    "speech_context_tokens": [
+     "Marcus",
+     "sum"
+    ],
+    "teaching_kc_ids": [
+     {
+      "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+      "kc_type_str": "lex"
+     }
+    ],
+    "text": "I am Marcus.",
+    "type": "translate",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "specific_type": "reverse_tap",
+    "lexemes_to_update": [
+     "976ce7917a4a157e4cea576f0eb49a56"
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "la",
+    "from_language": "en",
+    "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "sentenceId": "c4f035eef97b6c47973b53dd82ae9440",
+   "challengeGeneratorIdentifier": {
+    "specificType": "reverse_tap",
+    "generatorId": "c4f035eef97b6c47973b53dd82ae9440"
+   },
+   "indicatorType": "HARD_CHALLENGE"
+  }
+ ],
+ "mistakesReplacementChallenges": [],
+ "adaptiveInterleavedChallenges": {
+  "challenges": [
+   {
+    "prompt": "Vir sum.",
+    "correctSolutions": [
+     "I am a man."
+    ],
+    "compactTranslations": [],
+    "correctTokens": [
+     "I",
+     "am",
+     "a",
+     "man"
+    ],
+    "wrongTokens": [
+     "father"
+    ],
+    "choices": [
+     {
+      "text": "I"
+     },
+     {
+      "text": "am"
+     },
+     {
+      "text": "a"
+     },
+     {
+      "text": "man"
+     },
+     {
+      "text": "father"
+     }
+    ],
+    "correctIndices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "sourceLanguage": "la",
+    "targetLanguage": "en",
+    "grader": {
+     "version": 0,
+     "vertices": [
+      [
+       {
+        "to": 1,
+        "lenient": ""
+       }
+      ],
+      [
+       {
+        "to": 2,
+        "lenient": "i",
+        "orig": "I"
+       },
+       {
+        "to": 2,
+        "lenient": "ı"
+       },
+       {
+        "to": 2,
+        "lenient": "i̇",
+        "orig": "İ"
+       },
+       {
+        "to": 2,
+        "lenient": "i̇"
+       },
+       {
+        "to": 8,
+        "lenient": "i",
+        "orig": "I"
+       },
+       {
+        "to": 8,
+        "lenient": "ı"
+       },
+       {
+        "to": 8,
+        "lenient": "i̇",
+        "orig": "İ"
+       },
+       {
+        "to": 8,
+        "lenient": "i̇"
+       },
+       {
+        "to": 10,
+        "lenient": "i'm",
+        "orig": "I'm"
+       },
+       {
+        "to": 10,
+        "lenient": "i̇'m"
+       },
+       {
+        "to": 10,
+        "lenient": "i̇'m",
+        "orig": "İ'm"
+       },
+       {
+        "to": 10,
+        "lenient": "i'm",
+        "orig": "i’m"
+       },
+       {
+        "to": 10,
+        "lenient": "i̇'m",
+        "orig": "i̇’m"
+       },
+       {
+        "to": 10,
+        "lenient": "ı'm",
+        "orig": "ı’m"
+       },
+       {
+        "to": 10,
+        "lenient": "i'm",
+        "orig": "I’m"
+       },
+       {
+        "to": 10,
+        "lenient": "ı'm"
+       },
+       {
+        "to": 10,
+        "lenient": "im",
+        "orig": "Im"
+       },
+       {
+        "to": 10,
+        "lenient": "i̇'m",
+        "orig": "İ’m"
+       },
+       {
+        "to": 14,
+        "lenient": "i'",
+        "auto": true,
+        "orig": "I'"
+       },
+       {
+        "to": 14,
+        "lenient": "i'",
+        "orig": "I’"
+       },
+       {
+        "to": 14,
+        "lenient": "i̇'",
+        "orig": "İ'"
+       },
+       {
+        "to": 14,
+        "lenient": "i̇'",
+        "orig": "İ’"
+       },
+       {
+        "auto": true,
+        "to": 16,
+        "lenient": "i",
+        "orig": "I",
+        "type": "typo"
+       },
+       {
+        "to": 16,
+        "lenient": "i̇",
+        "orig": "İ"
+       },
+       {
+        "to": 4,
+        "lenient": "i'm",
+        "auto": true,
+        "orig": "I'm"
+       },
+       {
+        "to": 4,
+        "lenient": "i̇'m"
+       },
+       {
+        "to": 4,
+        "lenient": "i̇'m",
+        "orig": "İ'm"
+       },
+       {
+        "to": 4,
+        "lenient": "i'm",
+        "orig": "i’m"
+       },
+       {
+        "to": 4,
+        "lenient": "i̇'m",
+        "orig": "i̇’m"
+       },
+       {
+        "to": 4,
+        "lenient": "ı'm",
+        "orig": "ı’m"
+       },
+       {
+        "to": 4,
+        "lenient": "i'm",
+        "orig": "I’m"
+       },
+       {
+        "to": 4,
+        "lenient": "ı'm"
+       },
+       {
+        "to": 4,
+        "lenient": "im",
+        "orig": "Im"
+       },
+       {
+        "to": 4,
+        "lenient": "i̇'m",
+        "orig": "İ’m"
+       },
+       {
+        "to": 18,
+        "lenient": "i'",
+        "auto": true,
+        "orig": "I'"
+       },
+       {
+        "to": 18,
+        "lenient": "i'",
+        "orig": "I’"
+       },
+       {
+        "to": 18,
+        "lenient": "i̇'",
+        "orig": "İ'"
+       },
+       {
+        "to": 18,
+        "lenient": "i̇'",
+        "orig": "İ’"
+       },
+       {
+        "auto": true,
+        "to": 20,
+        "lenient": "i",
+        "orig": "I",
+        "type": "typo"
+       },
+       {
+        "to": 20,
+        "lenient": "i̇",
+        "orig": "İ"
+       },
+       {
+        "to": 10,
+        "lenient": "i'm",
+        "auto": true,
+        "orig": "I'm"
+       },
+       {
+        "to": 22,
+        "lenient": "i",
+        "auto": true,
+        "orig": "I"
+       },
+       {
+        "to": 22,
+        "lenient": "ı"
+       },
+       {
+        "to": 22,
+        "lenient": "i̇",
+        "orig": "İ"
+       },
+       {
+        "to": 22,
+        "lenient": "i̇"
+       }
+      ],
+      [
+       {
+        "to": 3,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 4,
+        "lenient": "am"
+       }
+      ],
+      [
+       {
+        "to": 5,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 6,
+        "lenient": "a"
+       },
+       {
+        "to": 6,
+        "lenient": "an",
+        "type": "typo",
+        "orig": "a"
+       }
+      ],
+      [
+       {
+        "to": 7,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 24,
+        "lenient": "man",
+        "orig": "man."
+       }
+      ],
+      [
+       {
+        "to": 9,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 10,
+        "lenient": "am"
+       }
+      ],
+      [
+       {
+        "to": 11,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 12,
+        "lenient": "a"
+       },
+       {
+        "to": 12,
+        "lenient": "an",
+        "type": "typo",
+        "orig": "a"
+       },
+       {
+        "to": 12,
+        "lenient": "the"
+       },
+       {
+        "to": 12,
+        "lenient": "teh",
+        "type": "typo",
+        "orig": "the"
+       }
+      ],
+      [
+       {
+        "to": 13,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 24,
+        "lenient": "man",
+        "orig": "man."
+       }
+      ],
+      [
+       {
+        "to": 15,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 10,
+        "lenient": "m",
+        "auto": true
+       }
+      ],
+      [
+       {
+        "to": 17,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 10,
+        "lenient": "m",
+        "type": "typo",
+        "auto": true
+       }
+      ],
+      [
+       {
+        "to": 19,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 4,
+        "lenient": "m",
+        "auto": true
+       }
+      ],
+      [
+       {
+        "to": 21,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 4,
+        "lenient": "m",
+        "type": "typo",
+        "auto": true
+       }
+      ],
+      [
+       {
+        "to": 23,
+        "lenient": " "
+       }
+      ],
+      [
+       {
+        "to": 10,
+        "lenient": "am",
+        "auto": true
+       }
+      ],
+      []
+     ],
+     "language": "en",
+     "whitespaceDelimited": true
+    },
+    "taggedKcIds": [
+     {
+      "legacyId": "12aa169ed2dba07256e4c586be1a18fb",
+      "kcTypeStr": "lex"
+     },
+     {
+      "legacyId": "976ce7917a4a157e4cea576f0eb49a56",
+      "kcTypeStr": "lex"
+     }
+    ],
+    "challengeDisplaySettings": {
+     "canRequireUserToType": true,
+     "showInputModeToggle": false
+    },
+    "weakWordPromptRanges": [],
+    "tokens": [
+     {
+      "value": "Vir",
+      "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bf80930de0bfc28ae13a58d84bd8494c",
+      "hintTable": {
+       "headers": [],
+       "rows": [
+        [
+         {
+          "colspan": 1,
+          "hint": "a man"
+         }
+        ],
+        [
+         {
+          "colspan": 1,
+          "hint": "man"
+         }
+        ],
+        [
+         {
+          "colspan": 1,
+          "hint": "the man"
+         }
+        ]
+       ]
+      }
+     },
+     {
+      "value": " "
+     },
+     {
+      "value": "sum",
+      "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/704547a695b69fcc641ba806235bfafb",
+      "hintTable": {
+       "headers": [],
+       "rows": [
+        [
+         {
+          "colspan": 1,
+          "hint": "(I) am"
+         }
+        ]
+       ]
+      }
+     },
+     {
+      "value": "."
+     }
+    ],
+    "tts": "https://d1vq87e9lcf771.cloudfront.net/la_v1/bdad46e99bf9b574e803623ce150f5c7",
+    "character": {
+     "url": "https://d2pur3iezf4d1j.cloudfront.net/images/b53f870ed38105349d4d83edf682d77f",
+     "image": {
+      "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/b53f870ed38105349d4d83edf682d77f",
+      "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/096d0b1f6280b962cd7080a7736dd2bb"
+     },
+     "gender": "MALE",
+     "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Coach_CORRECT_Cropped.json",
+     "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Coach_INCORRECT_Cropped.json",
+     "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Eddy_IDLE_Cropped.json",
+     "name": "EDDY",
+     "avatarIconImage": {
+      "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/eddy_avatar_icon.pdf",
+      "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/eddy_avatar_icon.svg"
+     }
+    },
+    "isSpeakerUniversal": false,
+    "type": "translate",
+    "id": "67a7deaf72e04d85831799e62e3bdf3a",
+    "challengeResponseTrackingProperties": {
+     "best_solution": "I am a man.",
+     "level_session_index": 0,
+     "num_tap_distractors": 1.0,
+     "highlighted_l1_weak_word_in_prompt": false,
+     "is_v2": true,
+     "cefr_level": "CEFR_UNKNOWN",
+     "is_adaptive": false,
+     "grading_graph_size": 2717,
+     "forward_sentence_id": "c15c02019de3e20d039216f1ce37975e",
+     "teaching_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "num_correct_answer_tokens": 4.0,
+     "generation_timestamp": 1791619951168,
+     "session_type": "lesson",
+     "has_non_adjacent_highlights": false,
+     "content_length": 8.0,
+     "tagged_kc_ids": [
+      "lex_12aa169ed2dba07256e4c586be1a18fb",
+      "lex_976ce7917a4a157e4cea576f0eb49a56"
+     ]
+    },
+    "metadata": {
+     "challenge_construction_insights": {
+      "num_tap_distractors": 1,
+      "content_length": 8,
+      "best_solution": "I am a man.",
+      "num_correct_answer_tokens": 4,
+      "is_adaptive": false,
+      "cefr_level": "CEFR_UNKNOWN",
+      "highlighted_l1_weak_word_in_prompt": false,
+      "tagged_kc_ids": [
+       "lex_12aa169ed2dba07256e4c586be1a18fb",
+       "lex_976ce7917a4a157e4cea576f0eb49a56"
+      ],
+      "teaching_kc_ids": [
+       "lex_12aa169ed2dba07256e4c586be1a18fb",
+       "lex_976ce7917a4a157e4cea576f0eb49a56"
+      ],
+      "content_versions": [],
+      "forward_sentence_id": "c15c02019de3e20d039216f1ce37975e",
+      "has_non_adjacent_highlights": false
+     },
+     "challenge_display_settings": {
+      "can_require_user_to_type": true,
+      "show_input_mode_toggle": false
+     },
+     "highlight": [
+      "Vir",
+      "sum"
+     ],
+     "sentence": "Vir sum.",
+     "solution_key": "c15c02019de3e20d039216f1ce37975e",
+     "source_language": "la",
+     "target_language": "en",
+     "tokens": [
+      "I",
+      "am",
+      "a",
+      "man"
+     ],
+     "translation": "I am a man.",
+     "weak_word_prompt_ranges": [],
+     "wrong_tokens": [
+      "father"
+     ],
+     "teaching_kc_ids": [
+      {
+       "legacy_id": "12aa169ed2dba07256e4c586be1a18fb",
+       "kc_type_str": "lex"
+      },
+      {
+       "legacy_id": "976ce7917a4a157e4cea576f0eb49a56",
+       "kc_type_str": "lex"
+      }
+     ],
+     "text": "Vir sum.",
+     "type": "translate",
+     "content_versions": [],
+     "lexeme_ids_to_update": [
+      "12aa169ed2dba07256e4c586be1a18fb",
+      "976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "specific_type": "tap",
+     "lexemes_to_update": [
+      "12aa169ed2dba07256e4c586be1a18fb",
+      "976ce7917a4a157e4cea576f0eb49a56"
+     ],
+     "generic_lexeme_map": {},
+     "num_comments": 0,
+     "learning_language": "la",
+     "from_language": "en",
+     "skill_tree_id": "ec3d15b44dee293bf53626fa20162262"
+    },
+    "newWords": [
+     "Vir",
+     "sum"
+    ],
+    "progressUpdates": [],
+    "sentenceId": "c15c02019de3e20d039216f1ce37975e",
+    "challengeGeneratorIdentifier": {
+     "specificType": "tap",
+     "generatorId": "c15c02019de3e20d039216f1ce37975e"
+    },
+    "canBeSkipped": false
+   }
+  ],
+  "speakOrListenReplacementIndices": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   0,
+   null
+  ]
+ },
+ "metadata": {
+  "id": "fGEZEak2QhEHomrb",
+  "session_screens": {},
+  "type": "lesson",
+  "language": "la",
+  "from_language": "en",
+  "skill_id": "4c97b07f23a4a3bcb4baec563b859dcf",
+  "skill_tree_id": "ec3d15b44dee293bf53626fa20162262",
+  "beginner": true,
+  "lesson_number": 1,
+  "level_index": 0,
+  "level_session_index": 0,
+  "experiments_with_treatment_contexts": {
+   "pers_bb_targets_perturbation_never_launch": [
+    "sg"
+   ]
+  },
+  "session_experiment_record": [
+   {
+    "name": "pers_bb_targets_perturbation_never_launch",
+    "condition": "experiment",
+    "treated_contexts": [
+     "sg"
+    ]
+   }
+  ],
+  "session_construction_insights": {
+   "expensive_insights": {
+    "challenge_pool_before_picking": [],
+    "rejected_challenges_info": [],
+    "picked_challenges_info": {
+     "challenges": [],
+     "parent_target_kcids": {},
+     "intentionally_covered_kcs": [],
+     "challenge_to_intentionally_covered_kcs": {},
+     "challenge_id_to_challenge_section": {},
+     "challenge_section_to_count": {}
+    }
+   },
+   "num_challenges_after_default_quality_score_filtering": 46,
+   "num_challenges_filtered_out_by_quality_score": 2,
+   "num_challenges_below_quality_score_thresholds": 2,
+   "target_kcpool_size": 7,
+   "num_challenges_generated_for_section": {},
+   "num_failed_listen_speak_replacements": 0
+  },
+  "show_best_translation_in_grading_ribbon": true
+ },
+ "ttsAnnotations": {},
+ "trackingProperties": {
+  "percent_target_kc_coverage": 1.0,
+  "skill_x_coord": 1,
+  "num_distinct_challenge_types_gt": 5,
+  "skill_tree_id": "ec3d15b44dee293bf53626fa20162262",
+  "data_version": "default",
+  "max_repeated_challenge_type_count": 5,
+  "birdbrain_target": 0.0,
+  "tree_level": 2,
+  "percent_practice_only_challenges": 0.0,
+  "num_practice_only_challenges": 0,
+  "lexemes_were_reordered": false,
+  "num_adaptive_challenges_gt_reverse_tap": 3,
+  "uses_birdbrain_sorting": true,
+  "type": "lesson",
+  "num_challenges_generated": 15,
+  "is_shorter_than_expected": false,
+  "num_challenges_gt_assist": 5,
+  "num_post_adaptive_challenges_gt": 0,
+  "num_challenges_gt_group_recall": 0,
+  "uses_birdbrain_picking": true,
+  "num_challenges_after_failure_rate_filter": 46,
+  "repeated_undirected_sentences_count": 0,
+  "learning_language": "la",
+  "num_challenges_gt_tap": 4,
+  "num_challenges_with_challenge_stats": 10,
+  "max_repeated_challenge_type": "assist",
+  "generation_timestamp": 1791619951168,
+  "target_kc_pool_size": 7,
+  "max_repeated_sentence_count": 1,
+  "max_repeated_challenge_count": 1,
+  "max_repeated_undirected_sentence_count": 1,
+  "num_low_quality_challenges": 0,
+  "sentences_count": 5,
+  "num_challenges_gt": 15,
+  "num_sensitive_content_filtered": 0,
+  "distinct_sentences_count": 5,
+  "num_challenges_filtered_by_failure_rate": 2,
+  "num_challenges_below_failure_rate_bar": 2,
+  "num_challenges_gt_section_warm_up": 0,
+  "num_adaptive_challenges_generated": 3,
+  "num_challenges_gt_listen_tap": 1,
+  "num_challenges_gt_section_workout": 0,
+  "max_repeated_sentence": "df834c4b0d16f71cef9532afec037a3f",
+  "uses_birdbrain": true,
+  "birdbrain_probability_median": 0.84884405,
+  "read_from_cache": false,
+  "num_adaptive_challenges_gt": 3,
+  "from_language": "en",
+  "percent_low_quality_challenges": 0.0,
+  "sum_content_length": 109,
+  "num_dynamic_challenges_gt": 0,
+  "birdbrain_probability_max": 0.94232994,
+  "percent_kc_coverage": 1.0,
+  "birdbrain_probability_min": 0.7926075,
+  "birdbrain_probability_avg": 0.8669394,
+  "max_consecutive_challenge_type_count": 2,
+  "expected_length": 15,
+  "offline": false,
+  "activity_uuid": "317148aa-e930-49f7-ba8e-1adf487e1db7",
+  "num_challenges_gt_section_final_push": 0,
+  "num_sensitivity_labels_of_user": 0,
+  "level_index": 0,
+  "avg_content_length": 7.266666666666667,
+  "num_failed_listen_speak_replacements": 0,
+  "level_session_index": 0,
+  "generation_app_version": "6.0.0",
+  "max_consecutive_challenge_type": "select",
+  "max_repeated_undirected_sentence": "df834c4b0d16f71cef9532afec037a3f",
+  "distinct_undirected_sentences_count": 5,
+  "skill_id": "4c97b07f23a4a3bcb4baec563b859dcf",
+  "grading_graph_sizes_sum": 5704,
+  "num_challenges_gt_name_example": 4,
+  "num_challenges_gt_group_speaking": 0,
+  "lesson_number": 1,
+  "num_challenges_gt_match": 1
+ },
+ "beginner": true,
+ "skillId": "4c97b07f23a4a3bcb4baec563b859dcf",
+ "sessionStartExperiments": [
+  "pers_bb_targets_perturbation_never_launch"
+ ],
+ "lessonIndex": 0,
+ "levelIndex": 0,
+ "levelSessionIndex": 0,
+ "challengeTimeTakenCutoff": 60000,
+ "explanations": {},
+ "progressUpdates": [],
+ "isV2": true,
+ "showBestTranslationInGradingRibbon": true,
+ "sessionExperimentRecord": [
+  {
+   "name": "pers_bb_targets_perturbation_never_launch",
+   "condition": "experiment",
+   "treated_contexts": [
+    "sg"
+   ]
+  }
+ ],
+ "experiments_with_treatment_contexts": {
+  "pers_bb_targets_perturbation_never_launch": [
+   "sg"
+  ]
+ }
+}

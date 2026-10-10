@@ -50,11 +50,40 @@ const char *TIPPEN[] = {
     "partialListen", 0
 };
 
+// Die Beschriftung eines Wahlfeldes. **Sie heisst nicht ueberall `text`:**
+// `select` (das Bildraetsel, mit dem jede erste Lektion anfaengt) nennt sie
+// `phrase`, die Zeichenaufgaben `character`. Wer nur `text` liest, zeigt
+// leere Kaestchen -- genau das war in der ersten Lateinlektion zu sehen.
 QString textVon(const QVariant &wahl)
 {
-    if (wahl.type() == QVariant::Map)
-        return wahl.toMap().value(QLatin1String("text")).toString();
-    return wahl.toString();
+    if (wahl.type() != QVariant::Map)
+        return wahl.toString();
+    const QVariantMap m = wahl.toMap();
+    static const char *namen[] = { "text", "phrase", "character", "word",
+                                   "transliteration", 0 };
+    for (int i = 0; namen[i]; ++i) {
+        const QString wert = m.value(QLatin1String(namen[i])).toString();
+        if (!wert.isEmpty())
+            return wert;
+    }
+    return QString();
+}
+
+// Aus der Bildadresse die PNG-Fassung machen. Was die Aufgaben nennen, ist
+// SVG (und bei den Figuren sogar PDF) -- Qt 4.7 zeichnet davon nichts.
+// Dieselbe Kennung unter `/images/png/` ist ein richtiges PNG (gemessen:
+// 200 image/png, auch ueber http).
+QVariant bildAdresse(const QVariant &url)
+{
+    QString s = url.toString();
+    if (s.isEmpty())
+        return QVariant(QString());
+    if (s.startsWith(QLatin1String("https://")))
+        s.replace(0, 5, QLatin1String("http"));
+    if (s.contains(QLatin1String("/images/"))
+        && !s.contains(QLatin1String("/images/png/")))
+        s.replace(QLatin1String("/images/"), QLatin1String("/images/png/"));
+    return s;
 }
 
 // Der Ton laeuft ueber gstreamer, und **gstreamer auf Harmattan kann kein
@@ -207,7 +236,8 @@ QVariantMap Lektion::darstellen(const QVariantMap &roh) const
     k.insert(QLatin1String("ton"), tonAdresse(roh.value(QLatin1String("tts"))));
     k.insert(QLatin1String("tonLangsam"),
              tonAdresse(roh.value(QLatin1String("slowTts"))));
-    k.insert(QLatin1String("bild"), roh.value(QLatin1String("pngUrl")));
+    k.insert(QLatin1String("bild"),
+             bildAdresse(roh.value(QLatin1String("pngUrl"))));
     k.insert(QLatin1String("loesungTon"),
              tonAdresse(roh.value(QLatin1String("solutionTts"))));
 
@@ -248,7 +278,9 @@ QVariantMap Lektion::darstellen(const QVariantMap &roh) const
         if (eintrag.type() == QVariant::Map) {
             const QVariantMap m = eintrag.toMap();
             w.insert(QLatin1String("ton"), tonAdresse(m.value(QLatin1String("tts"))));
-            w.insert(QLatin1String("bild"), m.value(QLatin1String("image")));
+            w.insert(QLatin1String("bild"),
+                     bildAdresse(m.value(QLatin1String("image"),
+                                         m.value(QLatin1String("svg")))));
             w.insert(QLatin1String("umschrift"),
                      m.value(QLatin1String("transliteration")));
         }

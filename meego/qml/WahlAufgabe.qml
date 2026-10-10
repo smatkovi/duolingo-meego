@@ -75,7 +75,7 @@ Item {
 
                 Rectangle {
                     width: spalte.width
-                    height: Math.max(72, zeile.height + 24)
+                    height: Math.max(modelData.bild ? 96 : 72, zeile.height + 24)
                     radius: 8
                     color: flaeche.gewaehlt === index ? "#1e5a7a" : "#262626"
                     border.color: flaeche.gewaehlt === index
@@ -89,10 +89,25 @@ Item {
                                   verticalCenter: parent.verticalCenter }
                         spacing: 12
 
+                        // `select` bringt zum Wort ein Bild mit -- und
+                        // zwar als SVG; gezeigt wird die PNG-Fassung
+                        // derselben Kennung (siehe src/lektion.cpp).
+                        Image {
+                            source: modelData.bild ? modelData.bild : ""
+                            visible: source != ""
+                            width: visible ? 72 : 0
+                            height: 72
+                            fillMode: Image.PreserveAspectFit
+                            smooth: true
+                            asynchronous: true
+                        }
+
                         Text {
-                            width: zeile.width - (modelData.umschrift ? 0 : 0)
+                            width: zeile.width - (modelData.bild ? 84 : 0)
                             text: modelData.text
                             wrapMode: Text.WordWrap
+                            verticalAlignment: Text.AlignVCenter
+                            height: parent.height
                             font.pixelSize: 26
                             color: "#ffffff"
                         }
