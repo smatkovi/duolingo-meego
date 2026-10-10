@@ -17,6 +17,7 @@ const char *FELDER =
 const char *ANMELDEN = "anmelden";
 const char *KONTO = "konto";
 const char *PASSWORTPOST = "passwortpost";
+const char *NACHSCHAU = "nachschau";
 
 }  // namespace
 
@@ -90,8 +91,12 @@ void Konto::anmelden(const QString &kennung, const QString &passwort)
                    QUuid::createUuid().toString().remove(QLatin1Char('{'))
                        .remove(QLatin1Char('}')));
     setzeLaeuft(true);
+    m_zuletztVersucht = kennung;
+    // Der Weg, den die Weboberflaeche heute geht. Den alten
+    // (/2017-06-30/login) gibt es noch, aber wenn sich etwas aendert,
+    // aendert es sich dort zuerst.
     m_netz->ruf(QLatin1String(ANMELDEN), QLatin1String("POST"),
-                QLatin1String("/2017-06-30/login?fields=jwt"),
+                QLatin1String("/2023-05-23/login?fields=jwt"),
                 Json::serialise(koerper), false);
 }
 
@@ -228,6 +233,28 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
         emit postUnterwegs();
         return;
     }
+    if (kennung == QLatin1String(NACHSCHAU)) {
+        setzeLaeuft(false);
+        const QVariantList treffer = daten.value(QLatin1String("users")).toList();
+        if (treffer.isEmpty()) {
+            emit anmeldungAbgelehnt(
+                tr("Zu %1 gibt es kein Konto. Vertippt?").arg(m_zuletztVersucht));
+            return;
+        }
+        const QVariantMap u = treffer.first().toMap();
+        if (u.value(QLatin1String("hasGoogleId")).toBool()
+            || u.value(QLatin1String("hasFacebookId")).toBool()) {
+            emit anmeldungAbgelehnt(
+                tr("Das Konto gibt es, es haengt aber an Google oder "
+                   "Facebook. Wenn du noch kein Passwort gesetzt hast: "
+                   "unten \"Mit Google angemeldet?\" und die Mail "
+                   "anfordern."));
+            return;
+        }
+        emit anmeldungAbgelehnt(tr("Das Konto gibt es -- dann stimmt das "
+                                   "Passwort nicht."));
+        return;
+    }
     if (kennung != QLatin1String(KONTO))
         return;
 
@@ -261,6 +288,11 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
 
 void Konto::fehler(const QString &kennung, int status, const QString &text)
 {
+    if (kennung == QLatin1String(NACHSCHAU)) {
+        setzeLaeuft(false);
+        emit anmeldungAbgelehnt(tr("Kennung oder Passwort stimmen nicht."));
+        return;
+    }
     if (kennung != QLatin1String(ANMELDEN) && kennung != QLatin1String(KONTO)
         && kennung != QLatin1String(PASSWORTPOST))
         return;
@@ -270,11 +302,33 @@ void Konto::fehler(const QString &kennung, int status, const QString &text)
         return;
     }
     if (kennung == QLatin1String(ANMELDEN)) {
-        if (status == 401 || status == 403)
-            emit anmeldungAbgelehnt(
-                tr("Kennung oder Passwort stimmen nicht."));
-        else
+        if (status != 401 && status != 403) {
+            // Alles andere ist nicht die Kennung: Netz weg, Dienst
+            // ueberlastet, zu viele Versuche. Dann den Satz des Servers
+            // zeigen und nicht stattdessen etwas ueber das Passwort sagen.
             emit anmeldungAbgelehnt(text);
+            return;
+        }
+        // Duolingo antwortet auf jede misslungene Anmeldung mit demselben
+        // Satz -- ob die Kennung nicht existiert, das Passwort falsch ist
+        // oder gar keines gesetzt wurde (Konto per Google angelegt), steht
+        // nicht darin. Also einmal nachsehen, was davon es ist.
+        if (!m_zuletztVersucht.isEmpty()) {
+            setzeLaeuft(true);
+            const QString feld = m_zuletztVersucht.contains(QLatin1Char('@'))
+                                     ? QLatin1String("email")
+                                     : QLatin1String("username");
+            QString wert = m_zuletztVersucht;
+            wert.replace(QLatin1String("@"), QLatin1String("%40"));
+            m_netz->ruf(QLatin1String(NACHSCHAU), QLatin1String("GET"),
+                        QString::fromLatin1("/2017-06-30/users?%1=%2&fields="
+                                            "users%%7Bid,username,hasGoogleId,"
+                                            "hasFacebookId%%7D")
+                            .arg(feld, wert),
+                        QByteArray(), false);
+            return;
+        }
+        emit anmeldungAbgelehnt(tr("Kennung oder Passwort stimmen nicht."));
         return;
     }
     emit fehlgeschlagen(text);

@@ -93,6 +93,7 @@ private:
     QString m_muttersprache;
     QVariantMap m_kurs;
     QVariantList m_pfad;
+    QString m_zuletztVersucht;   // fuer die Nachschau nach einem 401
     QList<QVariantMap> m_stufen;
 };
 
