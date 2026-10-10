@@ -1,0 +1,19 @@
+Package: duolingo
+Version: @VERSION@
+Architecture: armel
+Maintainer: Sebastian Matkovich <sebastian.matkovich@gmail.com>
+Depends: libqtcore4, libqtgui4, libqt4-network, libqt4-declarative, libmeegotouchcore0, qt-components, libdeclarative-multimedia
+Section: user/education
+Priority: optional
+Description: Duolingo for the N9 and N950
+ Lessons from your own Duolingo course: the path, the exercises and the
+ practice, with the progress written back to your account.
+ .
+ Not a port of the Android app and not made by Duolingo: an own client
+ against the same interface the web front-end uses. HTTPS goes through a
+ small Rust helper beside it, because Qt 4.7 on Harmattan cannot do TLS 1.2.
+ Exercises needing a microphone or handwriting, and stories, chess and
+ maths, are not in this edition.
+Maemo-Display-Name: Duolingo
+XB-Maemo-Icon-26:
+@ICON@

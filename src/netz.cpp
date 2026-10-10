@@ -1,0 +1,244 @@
+#include "netz.h"
+#include "json.h"
+
+#include <QCoreApplication>
+#include <QDateTime>
+#include <QDir>
+#include <QLocale>
+#include <QSettings>
+#include <QUrl>
+
+#if QT_VERSION >= 0x050000
+#include <QNetworkRequest>
+#include <QStandardPaths>
+#endif
+
+namespace {
+
+const char *BASIS = "https://www.duolingo.com";
+
+#if QT_VERSION < 0x050000
+// Der Rust-Holer macht auf Harmattan das Netz (Qt 4.7 kann kein TLS 1.2).
+const char *HOLER = "/opt/duolingo/bin/duo-holer";
+#endif
+
+// base64url ohne Polsterung, wie in einer Marke.
+QByteArray ausBase64Url(const QString &text)
+{
+    QString b = text;
+    b.replace(QLatin1Char('-'), QLatin1Char('+'));
+    b.replace(QLatin1Char('_'), QLatin1Char('/'));
+    while (b.size() % 4)
+        b.append(QLatin1Char('='));
+    return QByteArray::fromBase64(b.toLatin1());
+}
+
+}  // namespace
+
+Netz::Netz(QObject *eltern)
+    : QObject(eltern)
+{
+    // Ehrlich statt erfunden: wir geben uns nicht als Android-App aus.
+#if QT_VERSION >= 0x050000
+    m_benutzeragent = QString::fromLatin1("Duolingo-MeeGo/%1 Qt/%2 (Linux; Sailfish OS)")
+                          .arg(QLatin1String(APP_VERSION), QLatin1String(qVersion()));
+#else
+    m_benutzeragent = QString::fromLatin1("Duolingo-MeeGo/%1 Qt/%2 (Linux; MeeGo 1.2 Harmattan)")
+                          .arg(QLatin1String(APP_VERSION), QLatin1String(qVersion()));
+    #endif
+
+#if QT_VERSION >= 0x050000
+    m_netz = new QNetworkAccessManager(this);
+    connect(m_netz, SIGNAL(finished(QNetworkReply*)),
+            this, SLOT(fertig(QNetworkReply*)));
+#endif
+    markeLaden();
+}
+
+QString Netz::kennungAusMarke(const QString &jwt)
+{
+    const QStringList teile = jwt.split(QLatin1Char('.'));
+    if (teile.size() < 2)
+        return QString();
+    const QVariant inhalt = Json::parse(ausBase64Url(teile.at(1)));
+    const QVariant kennung = inhalt.toMap().value(QLatin1String("sub"));
+    if (!kennung.isValid())
+        return QString();
+    // Die Kennung ist eine grosse Zahl; als Gleitkomma gelesen verliert sie
+    // Stellen. Darum ueber qlonglong, und nur im Notfall ueber den Text.
+    bool ging = false;
+    const qlonglong zahl = kennung.toLongLong(&ging);
+    return ging ? QString::number(zahl) : kennung.toString();
+}
+
+void Netz::markeLaden()
+{
+    QSettings s;
+    m_marke = s.value(QLatin1String("konto/marke")).toString();
+    m_benutzerId = s.value(QLatin1String("konto/kennung")).toString();
+    if (!m_marke.isEmpty() && m_benutzerId.isEmpty())
+        m_benutzerId = kennungAusMarke(m_marke);
+}
+
+void Netz::markeSichern()
+{
+    QSettings s;
+    s.setValue(QLatin1String("konto/marke"), m_marke);
+    s.setValue(QLatin1String("konto/kennung"), m_benutzerId);
+    s.sync();
+}
+
+void Netz::marke(const QString &jwt)
+{
+    const bool vorher = angemeldet();
+    m_marke = jwt;
+    m_benutzerId = kennungAusMarke(jwt);
+    markeSichern();
+    if (vorher != angemeldet() || !jwt.isEmpty())
+        emit anmeldungGeaendert();
+}
+
+void Netz::abmelden()
+{
+    if (m_marke.isEmpty())
+        return;
+    m_marke.clear();
+    m_benutzerId.clear();
+    markeSichern();
+    emit anmeldungGeaendert();
+}
+
+void Netz::auswerten(const QString &kennung, int status,
+                     const QByteArray &koerper, const QStringList &kopf)
+{
+    // Die Anmeldung gibt die Marke im Antwortkopf zurueck, nicht im
+    // Koerper. Wer nur den Koerper liest, haelt eine geglueckte Anmeldung
+    // fuer ein leeres Ergebnis.
+    for (int i = 0; i < kopf.size(); ++i) {
+        const QString zeile = kopf.at(i);
+        if (zeile.startsWith(QLatin1String("jwt:"), Qt::CaseInsensitive))
+            marke(zeile.mid(4).trimmed());
+    }
+
+    if (status == 401) {
+        emit markeAbgelaufen();
+        emit fehler(kennung, status, tr("Die Anmeldung gilt nicht mehr."));
+        return;
+    }
+
+    QString grund;
+    const QVariant gelesen = Json::parse(koerper, &grund);
+    if (status < 200 || status >= 300) {
+        QString text = gelesen.toMap().value(QLatin1String("details")).toString();
+        if (text.isEmpty())
+            text = gelesen.toMap().value(QLatin1String("message")).toString();
+        if (text.isEmpty())
+            text = QString::fromUtf8(koerper.left(200));
+        if (status == 0)
+            text = kopf.join(QLatin1String("; "));
+        emit fehler(kennung, status, text);
+        return;
+    }
+
+    QVariantMap karte;
+    if (gelesen.type() == QVariant::List)
+        karte.insert(QLatin1String("liste"), gelesen);
+    else
+        karte = gelesen.toMap();
+    // 202 heisst bei der Abgabe: angenommen, aber noch nicht verrechnet.
+    karte.insert(QLatin1String("__status"), status);
+    emit antwort(kennung, karte);
+}
+
+#if QT_VERSION >= 0x050000
+
+void Netz::ruf(const QString &kennung, const QString &methode,
+               const QString &pfad, const QByteArray &koerper,
+               bool mitAnmeldung, const QString &idempotenz)
+{
+    QNetworkRequest a(QUrl(QLatin1String(BASIS) + pfad));
+    a.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/json"));
+    a.setRawHeader("User-Agent", m_benutzeragent.toUtf8());
+    a.setRawHeader("Accept", "application/json");
+    if (mitAnmeldung && !m_marke.isEmpty())
+        a.setRawHeader("Authorization", "Bearer " + m_marke.toUtf8());
+    if (!idempotenz.isEmpty())
+        a.setRawHeader("Idempotency-Key", idempotenz.toUtf8());
+
+    QNetworkReply *r;
+    if (methode == QLatin1String("PUT"))
+        r = m_netz->put(a, koerper);
+    else if (methode == QLatin1String("POST"))
+        r = m_netz->post(a, koerper);
+    else
+        r = m_netz->get(a);
+    r->setProperty("kennung", kennung);
+}
+
+void Netz::fertig(QNetworkReply *r)
+{
+    r->deleteLater();
+    const int status = r->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    QStringList kopf;
+    if (r->hasRawHeader("jwt"))
+        kopf << QLatin1String("jwt: ") + QString::fromUtf8(r->rawHeader("jwt"));
+    auswerten(r->property("kennung").toString(), status, r->readAll(), kopf);
+}
+
+#else  // Qt 4: das Netz macht der Rust-Holer.
+
+void Netz::ruf(const QString &kennung, const QString &methode,
+               const QString &pfad, const QByteArray &koerper,
+               bool mitAnmeldung, const QString &idempotenz)
+{
+    QProcess *p = new QProcess(this);
+    p->setProperty("kennung", kennung);
+    connect(p, SIGNAL(finished(int,QProcess::ExitStatus)),
+            this, SLOT(holerFertig(int,QProcess::ExitStatus)));
+
+    QStringList arg;
+    arg << QLatin1String(BASIS) + pfad;
+    arg << QLatin1String("--methode") << methode;
+    arg << QLatin1String("--agent") << m_benutzeragent;
+    arg << QLatin1String("--sprache")
+        << QLocale().name().replace(QLatin1Char('_'), QLatin1Char('-'));
+    if (mitAnmeldung && !m_marke.isEmpty())
+        arg << QLatin1String("--marke") << m_marke;
+    if (!idempotenz.isEmpty())
+        arg << QLatin1String("--idempotenz") << idempotenz;
+
+    p->start(QLatin1String(HOLER), arg);
+    if (!koerper.isEmpty())
+        p->write(koerper);
+    p->closeWriteChannel();
+}
+
+void Netz::holerFertig(int status, QProcess::ExitStatus art)
+{
+    Q_UNUSED(art)
+    QProcess *p = qobject_cast<QProcess *>(sender());
+    if (!p)
+        return;
+    p->deleteLater();
+
+    // Der Holer trennt sauber: Koerper auf die Standardausgabe, Zustand auf
+    // die Fehlerausgabe (`status: 200`, dazu `header: jwt: …`).
+    const QByteArray koerper = p->readAllStandardOutput();
+    int httpstatus = status == 0 ? 0 : -1;
+    QStringList kopf;
+    // Kein foreach: der Cross-GCC fuer Harmattan (GCC 14) laeuft Q_FOREACH
+    // nur einmal durch.
+    const QList<QByteArray> zeilen = p->readAllStandardError().split('\n');
+    for (int i = 0; i < zeilen.size(); ++i) {
+        const QString zeile = QString::fromUtf8(zeilen.at(i)).trimmed();
+        if (zeile.startsWith(QLatin1String("status: ")))
+            httpstatus = zeile.mid(8).toInt();
+        else if (zeile.startsWith(QLatin1String("header: ")))
+            kopf << zeile.mid(8);
+        else if (zeile.startsWith(QLatin1String("grund: ")))
+            kopf << zeile.mid(7);
+    }
+    auswerten(p->property("kennung").toString(), httpstatus, koerper, kopf);
+}
+
+#endif

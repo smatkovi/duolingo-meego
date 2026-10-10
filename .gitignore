@@ -1,0 +1,7 @@
+.wegwerf.json
+/build/
+__pycache__/
+doc/konto-rohdaten.json
+doc/abgabe-global_practice.json
+doc/abgabe-antwort.json
+doc/sitzung-fehler.json

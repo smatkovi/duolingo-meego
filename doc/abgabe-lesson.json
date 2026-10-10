@@ -1,0 +1,1190 @@
+{
+ "id": "G2cLb34ilVc3nPbE",
+ "learningLanguage": "es",
+ "fromLanguage": "en",
+ "type": "LESSON",
+ "sessionScreens": {},
+ "challenges": [
+  {
+   "prompt": "cat",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "phrase": "agua",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/2426e202da4d1488ed7b9d6d5be2f5b3",
+     "hint": "water"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/9aa862ebf2f8636383e54ce23d340db9",
+     "phrase": "gato",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/9aa862ebf2f8636383e54ce23d340db9",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/111ca1a6333c1d11a24a66ad40da3215",
+     "hint": "cat"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/bcabd1e0ad46cf5e8ee8339f6c5579d1",
+     "phrase": "papá",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/bcabd1e0ad46cf5e8ee8339f6c5579d1",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/028becd73d71b9549245d9b02dd8771e",
+     "hint": "dad"
+    }
+   ],
+   "correctIndex": 1,
+   "type": "select",
+   "id": "1d100e3b96c643e7a7dab852f7746c2c",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "gato",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "gato"
+    },
+    "highlight": [
+     "gato"
+    ],
+    "hint": "cat",
+    "phrase": "gato",
+    "solution_key": "",
+    "source_language": "es",
+    "specific_type": "name_example",
+    "language": "es",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "es",
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [
+    "gato"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": ""
+   },
+   "canBeSkipped": false,
+   "correct": true,
+   "guess": "gato",
+   "skipped": false,
+   "timeTaken": 4000,
+   "gradingResult": {
+    "correct": true,
+    "guess": "gato"
+   }
+  },
+  {
+   "prompt": "dog",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d8adb479aed80e6420f566afea110eb1",
+     "phrase": "perro",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d8adb479aed80e6420f566afea110eb1",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/a9489cff87e165a41f64eed7a85afd1f",
+     "hint": "dog"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/663d3893596e4841ad991ef1dc02ddbc",
+     "phrase": "mamá",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/663d3893596e4841ad991ef1dc02ddbc",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/e8319898c5713fd43aa69b5d9b48853b",
+     "hint": "mom"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "phrase": "agua",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/db125f511a83d46fbd6a9c88d6195664",
+     "hint": "water"
+    }
+   ],
+   "correctIndex": 0,
+   "type": "select",
+   "id": "3d552e696e9044f0a0a3b9d25cdc1ab8",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "perro",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "perro"
+    },
+    "highlight": [
+     "perro"
+    ],
+    "hint": "dog",
+    "phrase": "perro",
+    "solution_key": "",
+    "source_language": "es",
+    "specific_type": "name_example",
+    "language": "es",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "es",
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [
+    "perro"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": ""
+   },
+   "canBeSkipped": false,
+   "correct": true,
+   "guess": "perro",
+   "skipped": false,
+   "timeTaken": 4137,
+   "gradingResult": {
+    "correct": true,
+    "guess": "perro"
+   }
+  },
+  {
+   "prompt": "water",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d8adb479aed80e6420f566afea110eb1",
+     "phrase": "perro",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d8adb479aed80e6420f566afea110eb1",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/fd92fdb22bdf785b786e178c7008bd59",
+     "hint": "dog"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "phrase": "agua",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/db125f511a83d46fbd6a9c88d6195664",
+     "hint": "water"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/bcabd1e0ad46cf5e8ee8339f6c5579d1",
+     "phrase": "papá",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/bcabd1e0ad46cf5e8ee8339f6c5579d1",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/028becd73d71b9549245d9b02dd8771e",
+     "hint": "dad"
+    }
+   ],
+   "correctIndex": 1,
+   "type": "select",
+   "id": "1569434e7fe04877b2279c3a62b3150f",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "agua",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "agua"
+    },
+    "highlight": [
+     "agua"
+    ],
+    "hint": "water",
+    "phrase": "agua",
+    "solution_key": "",
+    "source_language": "es",
+    "specific_type": "name_example",
+    "language": "es",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "es",
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [
+    "agua"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": ""
+   },
+   "canBeSkipped": false,
+   "correct": true,
+   "guess": "agua",
+   "skipped": false,
+   "timeTaken": 4274,
+   "gradingResult": {
+    "correct": true,
+    "guess": "agua"
+   }
+  },
+  {
+   "prompt": "milk",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/645fa42dcea02c7e2970a1285e321562",
+     "phrase": "leche",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/645fa42dcea02c7e2970a1285e321562",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/167c49869663d15f070858f4ffee801c",
+     "hint": "milk"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/663d3893596e4841ad991ef1dc02ddbc",
+     "phrase": "mamá",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/663d3893596e4841ad991ef1dc02ddbc",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/e8319898c5713fd43aa69b5d9b48853b",
+     "hint": "mom"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/9aa862ebf2f8636383e54ce23d340db9",
+     "phrase": "gato",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/9aa862ebf2f8636383e54ce23d340db9",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/111ca1a6333c1d11a24a66ad40da3215",
+     "hint": "cat"
+    }
+   ],
+   "correctIndex": 0,
+   "type": "select",
+   "id": "f1c15843e6c346cfaf847ec078df3098",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "leche",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "leche"
+    },
+    "highlight": [
+     "leche"
+    ],
+    "hint": "milk",
+    "phrase": "leche",
+    "solution_key": "",
+    "source_language": "es",
+    "specific_type": "name_example",
+    "language": "es",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "es",
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [
+    "leche"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": ""
+   },
+   "canBeSkipped": false,
+   "correct": true,
+   "guess": "leche",
+   "skipped": false,
+   "timeTaken": 4411,
+   "gradingResult": {
+    "correct": true,
+    "guess": "leche"
+   }
+  },
+  {
+   "pairs": [
+    {
+     "learningToken": "gato",
+     "fromToken": "cat",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/23df34204a8f580aedd8d72ed39b5418"
+    },
+    {
+     "learningToken": "mamá",
+     "fromToken": "mom",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/e8319898c5713fd43aa69b5d9b48853b"
+    },
+    {
+     "learningToken": "leche",
+     "fromToken": "milk",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/167c49869663d15f070858f4ffee801c"
+    },
+    {
+     "learningToken": "perro",
+     "fromToken": "dog",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/fd92fdb22bdf785b786e178c7008bd59"
+    },
+    {
+     "learningToken": "agua",
+     "fromToken": "water",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/2426e202da4d1488ed7b9d6d5be2f5b3"
+    }
+   ],
+   "type": "match",
+   "id": "c4ec5dd7c3d549e7abec991aacb8c195",
+   "challengeResponseTrackingProperties": {
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {},
+    "highlight": [],
+    "learning_language": "es",
+    "memory_style": false,
+    "pairs": [
+     {
+      "learning_word": "gato",
+      "translation": "cat",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "mamá",
+      "translation": "mom",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "leche",
+      "translation": "milk",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "perro",
+      "translation": "dog",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "agua",
+      "translation": "water",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     }
+    ],
+    "solution_key": "",
+    "ui_language": "en",
+    "language": "es",
+    "type": "match",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "specific_type": "match",
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "match",
+    "generatorId": ""
+   },
+   "correct": true,
+   "guess": "",
+   "skipped": false,
+   "timeTaken": 4548,
+   "gradingResult": {
+    "correct": true,
+    "guess": ""
+   }
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/51d3bded9ecbd8bf6e9869041c437ba9",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/0f284113af41f7f7296263183701a13b"
+    },
+    "gender": "male",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Falstaff_CORRECT_Cropped_Tango.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Bear_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Falstaff_IDLE_Cropped.json",
+    "name": "FALSTAFF",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/falstaff_avatar_icon.svg"
+    }
+   },
+   "prompt": "dog",
+   "choices": [
+    "perro",
+    "gato",
+    "agua"
+   ],
+   "correctIndex": 0,
+   "options": [
+    {
+     "text": "perro",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/falstaffes/eeb2b6c0340d75ca727f8ed23f5c240a"
+    },
+    {
+     "text": "gato",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/falstaffes/b0a413f064703728bb80e82bf73b60c4"
+    },
+    {
+     "text": "agua",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/falstaffes/78bc690229f1838b1f957355b1403448"
+    }
+   ],
+   "type": "assist",
+   "id": "ae9ef8eb30534e2bb9820bb0741cff9e",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "perro",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "perro"
+    },
+    "highlight": [],
+    "learning_language": "es",
+    "other_options": [
+     "gato",
+     "agua"
+    ],
+    "solution_key": "",
+    "translation": "dog",
+    "ui_language": "en",
+    "word": "perro",
+    "language": "es",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": ""
+   },
+   "correct": true,
+   "guess": "perro",
+   "skipped": false,
+   "timeTaken": 4685,
+   "gradingResult": {
+    "correct": true,
+    "guess": "perro"
+   }
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/3f195e9533fc5e4f61a32eba3f03a8cf",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/3f195e9533fc5e4f61a32eba3f03a8cf",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/85c5ecb885f7073a3aebeb775946e329"
+    },
+    "gender": "female",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Kai_CORRECT_Cropped.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Kai_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Lin_IDLE_Cropped.json",
+    "name": "LIN",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/lin_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/lin_avatar_icon.svg"
+    }
+   },
+   "prompt": "water",
+   "choices": [
+    "leche",
+    "perro",
+    "agua"
+   ],
+   "correctIndex": 2,
+   "options": [
+    {
+     "text": "leche",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/lines/747bc4adb2fb30680855a8dc6657ed43"
+    },
+    {
+     "text": "perro",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/lines/94b9f2458b23c989784c3cc6c6270bc7"
+    },
+    {
+     "text": "agua",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/lines/2d010c6ab525111921c0f2c1f2f779eb"
+    }
+   ],
+   "type": "assist",
+   "id": "cf7377978c92480182c45d14a7708e5c",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "agua",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "agua"
+    },
+    "highlight": [],
+    "learning_language": "es",
+    "other_options": [
+     "leche",
+     "perro"
+    ],
+    "solution_key": "",
+    "translation": "water",
+    "ui_language": "en",
+    "word": "agua",
+    "language": "es",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": ""
+   },
+   "correct": true,
+   "guess": "agua",
+   "skipped": false,
+   "timeTaken": 4822,
+   "gradingResult": {
+    "correct": true,
+    "guess": "agua"
+   }
+  },
+  {
+   "prompt": "mom",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/663d3893596e4841ad991ef1dc02ddbc",
+     "phrase": "mamá",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/663d3893596e4841ad991ef1dc02ddbc",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/fc1de63db007df54a806256d6bfbbff3",
+     "hint": "mom"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/d8adb479aed80e6420f566afea110eb1",
+     "phrase": "perro",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/d8adb479aed80e6420f566afea110eb1",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/a9489cff87e165a41f64eed7a85afd1f",
+     "hint": "dog"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/9aa862ebf2f8636383e54ce23d340db9",
+     "phrase": "gato",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/9aa862ebf2f8636383e54ce23d340db9",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/23df34204a8f580aedd8d72ed39b5418",
+     "hint": "cat"
+    }
+   ],
+   "correctIndex": 0,
+   "type": "select",
+   "id": "9cd7f3c967344d178df0efb649bef459",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "mamá",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "mamá"
+    },
+    "highlight": [
+     "mamá"
+    ],
+    "hint": "mom",
+    "phrase": "mamá",
+    "solution_key": "",
+    "source_language": "es",
+    "specific_type": "name_example",
+    "language": "es",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "es",
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [
+    "mamá"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": ""
+   },
+   "canBeSkipped": false,
+   "correct": true,
+   "guess": "mamá",
+   "skipped": false,
+   "timeTaken": 4959,
+   "gradingResult": {
+    "correct": true,
+    "guess": "mamá"
+   }
+  },
+  {
+   "prompt": "dad",
+   "choices": [
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/bcabd1e0ad46cf5e8ee8339f6c5579d1",
+     "phrase": "papá",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/bcabd1e0ad46cf5e8ee8339f6c5579d1",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/87ad1997e4b7722870f7f647a1d3262e",
+     "hint": "dad"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/645fa42dcea02c7e2970a1285e321562",
+     "phrase": "leche",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/645fa42dcea02c7e2970a1285e321562",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/6c7ad12eba3d8f69d6081786c7ba09df",
+     "hint": "milk"
+    },
+    {
+     "image": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "phrase": "agua",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/7afea32bcf0e8c6f9d446ad4aad416be",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/penelope/2426e202da4d1488ed7b9d6d5be2f5b3",
+     "hint": "water"
+    }
+   ],
+   "correctIndex": 0,
+   "type": "select",
+   "id": "681dc9e7efcb4d85875b4578affd29d2",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "papá",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "papá"
+    },
+    "highlight": [
+     "papá"
+    ],
+    "hint": "dad",
+    "phrase": "papá",
+    "solution_key": "",
+    "source_language": "es",
+    "specific_type": "name_example",
+    "language": "es",
+    "type": "select",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "learning_language": "es",
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [
+    "papá"
+   ],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "name_example",
+    "generatorId": ""
+   },
+   "canBeSkipped": false,
+   "correct": true,
+   "guess": "papá",
+   "skipped": false,
+   "timeTaken": 5096,
+   "gradingResult": {
+    "correct": true,
+    "guess": "papá"
+   }
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/3f195e9533fc5e4f61a32eba3f03a8cf",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/3f195e9533fc5e4f61a32eba3f03a8cf",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/85c5ecb885f7073a3aebeb775946e329"
+    },
+    "gender": "female",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Lin_CORRECT_Cropped_Wink.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Kai_INCORRECT_Cropped.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Lin_IDLE_Cropped.json",
+    "name": "LIN",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/lin_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/lin_avatar_icon.svg"
+    }
+   },
+   "prompt": "dad",
+   "choices": [
+    "leche",
+    "papá",
+    "mamá"
+   ],
+   "correctIndex": 1,
+   "options": [
+    {
+     "text": "leche",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/lines/747bc4adb2fb30680855a8dc6657ed43"
+    },
+    {
+     "text": "papá",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/lines/78746dad87ec8e88c13cbad684cd3c9d"
+    },
+    {
+     "text": "mamá",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/lines/ea6f9be7a881400227c00545e27dfdea"
+    }
+   ],
+   "type": "assist",
+   "id": "75ec71319f864318b841654e678b5ad2",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "papá",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "papá"
+    },
+    "highlight": [],
+    "learning_language": "es",
+    "other_options": [
+     "leche",
+     "mamá"
+    ],
+    "solution_key": "",
+    "translation": "dad",
+    "ui_language": "en",
+    "word": "papá",
+    "language": "es",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": ""
+   },
+   "correct": true,
+   "guess": "papá",
+   "skipped": false,
+   "timeTaken": 5233,
+   "gradingResult": {
+    "correct": true,
+    "guess": "papá"
+   }
+  },
+  {
+   "character": {
+    "url": "https://d2pur3iezf4d1j.cloudfront.net/images/b24ffc3b19f1fc9ffbc108d1d3936dd8",
+    "image": {
+     "pdf": "https://d2pur3iezf4d1j.cloudfront.net/images/b24ffc3b19f1fc9ffbc108d1d3936dd8",
+     "svg": "https://d2pur3iezf4d1j.cloudfront.net/images/50af330449fbbaf257fc9868c4321586"
+    },
+    "gender": "female",
+    "correctAnimation": "https://simg-ssl.duolingo.com/lottie/Bea_CORRECT_Cropped_V2.json",
+    "incorrectAnimation": "https://simg-ssl.duolingo.com/lottie/Bea_INCORRECT_Cropped_V2.json",
+    "idleAnimation": "https://simg-ssl.duolingo.com/lottie/Bea_IDLE_Cropped_V2.json",
+    "name": "BEA",
+    "avatarIconImage": {
+     "pdf": "https://simg-ssl.duolingo.com/world-characters/avatars/bea_avatar_icon.pdf",
+     "svg": "https://simg-ssl.duolingo.com/world-characters/avatars/bea_avatar_icon.svg"
+    }
+   },
+   "prompt": "cat",
+   "choices": [
+    "perro",
+    "agua",
+    "gato"
+   ],
+   "correctIndex": 2,
+   "options": [
+    {
+     "text": "perro",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/beaes/5801f1b9aa135ebea7bf30429387da2e"
+    },
+    {
+     "text": "agua",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/beaes/c2954eaf9313df247626e07ec8d352ee"
+    },
+    {
+     "text": "gato",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/beaes/388e5f77288aeae50e57915b81ba6079"
+    }
+   ],
+   "type": "assist",
+   "id": "a5812f9aa19b44c3b3feab46d4961039",
+   "challengeResponseTrackingProperties": {
+    "best_solution": "gato",
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {
+     "best_solution": "gato"
+    },
+    "highlight": [],
+    "learning_language": "es",
+    "other_options": [
+     "perro",
+     "agua"
+    ],
+    "solution_key": "",
+    "translation": "cat",
+    "ui_language": "en",
+    "word": "gato",
+    "language": "es",
+    "type": "assist",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "specific_type": "assist",
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "assist",
+    "generatorId": ""
+   },
+   "correct": true,
+   "guess": "gato",
+   "skipped": false,
+   "timeTaken": 5370,
+   "gradingResult": {
+    "correct": true,
+    "guess": "gato"
+   }
+  },
+  {
+   "pairs": [
+    {
+     "learningToken": "mamá",
+     "fromToken": "mom",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/fc1de63db007df54a806256d6bfbbff3"
+    },
+    {
+     "learningToken": "perro",
+     "fromToken": "dog",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/fd92fdb22bdf785b786e178c7008bd59"
+    },
+    {
+     "learningToken": "gato",
+     "fromToken": "cat",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/23df34204a8f580aedd8d72ed39b5418"
+    },
+    {
+     "learningToken": "leche",
+     "fromToken": "milk",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/6c7ad12eba3d8f69d6081786c7ba09df"
+    },
+    {
+     "learningToken": "agua",
+     "fromToken": "water",
+     "tts": "https://d1vq87e9lcf771.cloudfront.net/miguel/db125f511a83d46fbd6a9c88d6195664"
+    }
+   ],
+   "type": "match",
+   "id": "34b1c49b6c204e12ad025617715aed4e",
+   "challengeResponseTrackingProperties": {
+    "level_session_index": 0,
+    "generation_timestamp": 1791613853406,
+    "session_type": "lesson",
+    "is_v2": true
+   },
+   "metadata": {
+    "challenge_construction_insights": {},
+    "highlight": [],
+    "learning_language": "es",
+    "memory_style": false,
+    "pairs": [
+     {
+      "learning_word": "mamá",
+      "translation": "mom",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "perro",
+      "translation": "dog",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "gato",
+      "translation": "cat",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "leche",
+      "translation": "milk",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     },
+     {
+      "learning_word": "agua",
+      "translation": "water",
+      "learning_word_kc_id": {
+       "legacy_id": "",
+       "kc_type_str": "lex"
+      }
+     }
+    ],
+    "solution_key": "",
+    "ui_language": "en",
+    "language": "es",
+    "type": "match",
+    "content_versions": [],
+    "lexeme_ids_to_update": [
+     ""
+    ],
+    "specific_type": "match",
+    "lexemes_to_update": [
+     ""
+    ],
+    "generic_lexeme_map": {},
+    "num_comments": 0,
+    "from_language": "en",
+    "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa"
+   },
+   "newWords": [],
+   "progressUpdates": [],
+   "challengeGeneratorIdentifier": {
+    "specificType": "match",
+    "generatorId": ""
+   },
+   "correct": true,
+   "guess": "",
+   "skipped": false,
+   "timeTaken": 5507,
+   "gradingResult": {
+    "correct": true,
+    "guess": ""
+   }
+  }
+ ],
+ "mistakesReplacementChallenges": [],
+ "adaptiveInterleavedChallenges": {
+  "challenges": [],
+  "speakOrListenReplacementIndices": []
+ },
+ "metadata": {
+  "id": "G2cLb34ilVc3nPbE",
+  "session_screens": {},
+  "type": "lesson",
+  "language": "es",
+  "from_language": "en",
+  "skill_id": "es_en__lexfocus_no_flashcards_1",
+  "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa",
+  "beginner": true,
+  "lesson_number": 1,
+  "level_index": 0,
+  "level_session_index": 0,
+  "experiments_with_treatment_contexts": {},
+  "session_experiment_record": [],
+  "session_construction_insights": {
+   "expensive_insights": {
+    "challenge_pool_before_picking": [],
+    "rejected_challenges_info": [],
+    "picked_challenges_info": {
+     "challenges": [],
+     "parent_target_kcids": {},
+     "intentionally_covered_kcs": [],
+     "challenge_to_intentionally_covered_kcs": {},
+     "challenge_id_to_challenge_section": {},
+     "challenge_section_to_count": {}
+    }
+   },
+   "num_challenges_after_default_quality_score_filtering": 0,
+   "num_challenges_filtered_out_by_quality_score": 0,
+   "num_challenges_below_quality_score_thresholds": 0,
+   "target_kcpool_size": 0,
+   "num_challenges_generated_for_section": {},
+   "num_failed_listen_speak_replacements": 0
+  },
+  "show_best_translation_in_grading_ribbon": true
+ },
+ "ttsAnnotations": {},
+ "trackingProperties": {
+  "skill_x_coord": 0,
+  "skill_tree_id": "b0a7479b048f0f6c8396ebad152ac9aa",
+  "data_version": "default",
+  "num_dynamic_challenges_gt": 0,
+  "tree_level": 0,
+  "lexemes_were_reordered": false,
+  "type": "lesson",
+  "num_challenges_generated": 12,
+  "num_challenges_gt_assist": 4,
+  "num_post_adaptive_challenges_gt": 0,
+  "num_challenges_gt_group_recall": 0,
+  "offline": false,
+  "num_challenges_after_failure_rate_filter": 0,
+  "activity_uuid": "28fa9839-3371-4bcc-83d1-4ece041a75eb",
+  "learning_language": "es",
+  "level_index": 0,
+  "generation_timestamp": 1791613853406,
+  "num_failed_listen_speak_replacements": 0,
+  "target_kc_pool_size": 0,
+  "level_session_index": 0,
+  "num_challenges_gt": 12,
+  "generation_app_version": "null",
+  "num_challenges_filtered_by_failure_rate": 0,
+  "num_challenges_below_failure_rate_bar": 0,
+  "num_adaptive_challenges_generated": 0,
+  "read_from_cache": false,
+  "num_adaptive_challenges_gt": 0,
+  "skill_id": "es_en__lexfocus_no_flashcards_1",
+  "grading_graph_sizes_sum": 0,
+  "from_language": "en",
+  "num_challenges_gt_name_example": 6,
+  "num_challenges_gt_group_speaking": 0,
+  "lesson_number": 1,
+  "num_challenges_gt_match": 2
+ },
+ "beginner": true,
+ "skillId": "es_en__lexfocus_no_flashcards_1",
+ "sessionStartExperiments": [],
+ "lessonIndex": 0,
+ "levelIndex": 0,
+ "levelSessionIndex": 0,
+ "challengeTimeTakenCutoff": 60000,
+ "explanations": {},
+ "progressUpdates": [],
+ "isV2": true,
+ "showBestTranslationInGradingRibbon": true,
+ "sessionExperimentRecord": [],
+ "experiments_with_treatment_contexts": {},
+ "levelId": "3a9eb4f1499249ae19cea20c11b82c0c",
+ "pathLevelSessionMetadata": {
+  "skillSessionConfigurationData": null,
+  "staticSessionConfigurationData": {
+   "sessionId": "es_en:lexfocus_no_flashcards_1"
+  }
+ },
+ "treeId": "b0a7479b048f0f6c8396ebad152ac9aa",
+ "startTime": 1791613793.577,
+ "endTime": 1791613853.577,
+ "enableBonusPoints": false,
+ "failed": false,
+ "heartsLeft": 5,
+ "maxInLessonStreak": 12,
+ "shouldLearnThings": true,
+ "xpPromised": 10
+}

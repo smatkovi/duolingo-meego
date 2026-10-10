@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Duolingo
+Exec=/opt/duolingo/bin/duolingo
+Icon=/usr/share/icons/hicolor/80x80/apps/duolingo.png
+X-Window-Icon=
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+Categories=Education;Languages;

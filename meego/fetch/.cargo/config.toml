@@ -1,0 +1,7 @@
+# Ohne diese Zeilen nimmt cargo den x86-Linker des Build-Rechners und bricht
+# mit "file in wrong format" bzw. "relocations in generic ELF (EM: 40)" ab.
+# rust-lld kommt mit der Rust-Toolchain; gelinkt wird statisch gegen Rusts
+# eigenes musl-libc.a.
+[target.armv7-unknown-linux-musleabi]
+linker = "rust-lld"
+rustflags = ["-C", "linker-flavor=ld.lld", "-C", "link-self-contained=yes"]
