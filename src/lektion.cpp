@@ -522,6 +522,34 @@ void Lektion::antwort(const QString &kennung, const QVariantMap &daten)
             return;
         }
         aufgabeZeigen();
+        // Die Toene der ganzen Lektion im Voraus holen, damit der
+        // Lautsprecherknopf sofort antwortet statt nach einer Sekunde.
+        QStringList toene;
+        for (int i = 0; i < m_aufgaben.size(); ++i) {
+            const QVariantMap sicht = darstellen(m_aufgaben.at(i).toMap());
+            const char *felder[] = { "ton", "tonLangsam", "loesungTon", 0 };
+            for (int f = 0; felder[f]; ++f) {
+                const QString a = sicht.value(QLatin1String(felder[f])).toString();
+                if (!a.isEmpty())
+                    toene << a;
+            }
+            const QVariantList wahlen = sicht.value(QLatin1String("wahlen")).toList();
+            for (int w = 0; w < wahlen.size(); ++w) {
+                const QString a = wahlen.at(w).toMap()
+                                      .value(QLatin1String("ton")).toString();
+                if (!a.isEmpty())
+                    toene << a;
+            }
+            const QVariantList links = sicht.value(QLatin1String("links")).toList();
+            for (int w = 0; w < links.size(); ++w) {
+                const QString a = links.at(w).toMap()
+                                      .value(QLatin1String("ton")).toString();
+                if (!a.isEmpty())
+                    toene << a;
+            }
+        }
+        if (!toene.isEmpty())
+            emit toeneVorladen(toene);
         return;
     }
     if (kennung != QLatin1String(ABGEBEN))

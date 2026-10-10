@@ -27,7 +27,12 @@ Item {
         Lautsprecher.spielen("" + knopf.quelle)
     }
 
-    onQuelleChanged: if (vonSelbst) abspielen()
+    onQuelleChanged: {
+        if (quelle != "")
+            Lautsprecher.vorladen("" + quelle)
+        if (vonSelbst)
+            abspielen()
+    }
 
     Rectangle {
         anchors.fill: parent

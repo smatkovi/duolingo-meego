@@ -166,6 +166,7 @@ public:
     bool flagge() const { return false; }
     Q_INVOKABLE void spielen(const QString &) {}
     Q_INVOKABLE void aus() {}
+    Q_INVOKABLE void vorladen(const QString &) {}
 signals:
     void spieltGeaendert();
 };

@@ -70,6 +70,8 @@ signals:
     void benotet(bool richtig, const QString &loesung);
     void abgegeben(int xp);
     void fehlgeschlagen(const QString &grund);
+    // Alle Toene dieser Lektion -- der Lautsprecher holt sie im Voraus.
+    void toeneVorladen(const QStringList &adressen);
 
 private slots:
     void antwort(const QString &kennung, const QVariantMap &daten);

@@ -57,6 +57,10 @@ int main(int argc, char *argv[])
     Schach schach(&netz, &konto);
     Lautsprecher lautsprecher;
 
+    // Die Toene einer Lektion holt der Lautsprecher, sobald sie da ist.
+    QObject::connect(&lektion, SIGNAL(toeneVorladen(QStringList)),
+                     &lautsprecher, SLOT(vorladenListe(QStringList)));
+
     QDeclarativeView sicht;
     QDeclarativeContext *zusammenhang = sicht.rootContext();
     zusammenhang->setContextProperty(QLatin1String("Netz"), &netz);
