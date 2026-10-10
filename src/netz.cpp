@@ -4,8 +4,10 @@
 #include <QCoreApplication>
 #include <QDateTime>
 #include <QDir>
+#include <QFile>
 #include <QLocale>
 #include <QSettings>
+#include <QTextStream>
 #include <QUrl>
 
 #if QT_VERSION >= 0x050000
@@ -31,6 +33,25 @@ QByteArray ausBase64Url(const QString &text)
     while (b.size() % 4)
         b.append(QLatin1Char('='));
     return QByteArray::fromBase64(b.toLatin1());
+}
+
+// Ein Merkzettel ueber jede Anfrage: Zeit, Weg, Pfad, Zustand. **Ohne
+// Koerper, ohne Marke, ohne Passwort** -- er soll sagen, *was* schiefging,
+// und nichts verraten. Ohne ihn bleibt eine misslungene Anmeldung am Telefon
+// eine Meldung ohne Spur, und man raet beim naechsten Mal wieder.
+void merken(const QString &zeile)
+{
+    const QString ordner = QDir::homePath() + QLatin1String("/.cache/duolingo");
+    QDir().mkpath(ordner);
+    QFile datei(ordner + QLatin1String("/netz.log"));
+    // Bei 40 kB von vorn anfangen; das Telefon hat wenig Platz.
+    if (datei.size() > 40000)
+        datei.remove();
+    if (!datei.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text))
+        return;
+    QTextStream aus(&datei);
+    aus << QDateTime::currentDateTime().toString(Qt::ISODate)
+        << QLatin1Char(' ') << zeile << QLatin1Char('\n');
 }
 
 }  // namespace
@@ -126,6 +147,8 @@ void Netz::abmelden()
 void Netz::auswerten(const QString &kennung, int status,
                      const QByteArray &koerper, const QStringList &kopf)
 {
+    merken(QString::fromLatin1("%1 -> %2, %3 Byte")
+               .arg(kennung).arg(status).arg(koerper.size()));
     // Die Anmeldung gibt die Marke im Antwortkopf zurueck, nicht im
     // Koerper. Wer nur den Koerper liest, haelt eine geglueckte Anmeldung
     // fuer ein leeres Ergebnis.
@@ -206,6 +229,9 @@ void Netz::ruf(const QString &kennung, const QString &methode,
                const QString &pfad, const QByteArray &koerper,
                bool mitAnmeldung, const QString &idempotenz)
 {
+    merken(QString::fromLatin1("%1: %2 %3 (%4 Byte Koerper)")
+               .arg(kennung, methode, pfad.left(60))
+               .arg(koerper.size()));
     QProcess *p = new QProcess(this);
     p->setProperty("kennung", kennung);
     connect(p, SIGNAL(finished(int,QProcess::ExitStatus)),
