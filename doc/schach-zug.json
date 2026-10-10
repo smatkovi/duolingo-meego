@@ -1,0 +1,22 @@
+{
+ "checkmateHelperConfig": null,
+ "eloRating": null,
+ "match": {
+  "blackPlayerClock": null,
+  "boardFen": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1",
+  "endCondition": null,
+  "id": "bot|1791619893|dkgeb2eo",
+  "moveHistory": [],
+  "moveTimestamps": [],
+  "offlineMoves": [],
+  "outcome": null,
+  "playerColor": "white",
+  "status": "active",
+  "whitePlayerClock": null
+ },
+ "matchEndReaction": null,
+ "opponentMove": null,
+ "preReaction": null,
+ "reaction": null,
+ "userMoveHintConfig": null
+}
