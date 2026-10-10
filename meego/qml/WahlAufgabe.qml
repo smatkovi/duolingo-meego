@@ -13,6 +13,9 @@ Item {
     function reihe() { return gewaehlt >= 0 ? [gewaehlt] : [] }
     function text() { return "" }
 
+    // Neue Aufgabe, nichts angetippt.
+    onAufgabeChanged: gewaehlt = -1
+
     Flickable {
         anchors.fill: parent
         contentHeight: spalte.height + 32

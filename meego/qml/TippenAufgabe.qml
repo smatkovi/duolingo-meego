@@ -12,6 +12,9 @@ Item {
     function reihe() { return [] }
     function text() { return feld.text }
 
+    // Neue Aufgabe, leeres Feld.
+    onAufgabeChanged: feld.text = ""
+
     Flickable {
         anchors.fill: parent
         contentHeight: spalte.height + 32

@@ -110,6 +110,14 @@ Page {
 
             Button {
                 width: parent.width
+                visible: Konto.angemeldet
+                text: Konto.kurse.length > 1
+                      ? qsTr("Kurs wechseln") : qsTr("Kurse")
+                onClicked: pageStack.push(Qt.resolvedUrl("KursePage.qml"))
+            }
+
+            Button {
+                width: parent.width
                 visible: !Konto.angemeldet
                 text: qsTr("Anmelden")
                 onClicked: pageStack.push(Qt.resolvedUrl("AnmeldenPage.qml"))
@@ -133,6 +141,11 @@ Page {
     Menu {
         id: menue
         MenuLayout {
+            MenuItem {
+                text: qsTr("Kurs wechseln")
+                visible: Konto.angemeldet
+                onClicked: pageStack.push(Qt.resolvedUrl("KursePage.qml"))
+            }
             MenuItem {
                 text: qsTr("Ueber")
                 onClicked: pageStack.push(Qt.resolvedUrl("UeberPage.qml"))

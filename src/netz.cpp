@@ -11,6 +11,7 @@
 #include <QUrl>
 
 #if QT_VERSION >= 0x050000
+#include <QBuffer>
 #include <QNetworkRequest>
 #include <QStandardPaths>
 #endif
@@ -215,6 +216,9 @@ void Netz::ruf(const QString &kennung, const QString &methode,
         r = m_netz->put(a, koerper);
     else if (methode == QLatin1String("POST"))
         r = m_netz->post(a, koerper);
+    else if (methode == QLatin1String("PATCH"))
+        r = m_netz->sendCustomRequest(a, "PATCH", new QBuffer(
+                new QByteArray(koerper), m_netz));
     else
         r = m_netz->get(a);
     r->setProperty("kennung", kennung);

@@ -48,6 +48,8 @@ class StubKonto : public QObject
     Q_PROPERTY(QString lernsprache READ text NOTIFY geaendert)
     Q_PROPERTY(QString muttersprache READ text NOTIFY geaendert)
     Q_PROPERTY(QVariantList pfad READ liste NOTIFY geaendert)
+    Q_PROPERTY(QVariantList kurse READ liste NOTIFY geaendert)
+    Q_PROPERTY(QVariantList angebote READ liste NOTIFY angeboteGeaendert)
 public:
     bool flagge() const { return false; }
     int zahl() const { return 0; }
@@ -60,9 +62,13 @@ public:
     Q_INVOKABLE void auffrischen() {}
     Q_INVOKABLE QVariantMap stufe(int) const { return QVariantMap(); }
     Q_INVOKABLE int naechsteStufe() const { return -1; }
+    Q_INVOKABLE void kursWechseln(const QString &) {}
+    Q_INVOKABLE void angeboteHolen() {}
     Q_INVOKABLE QString spracheName(const QString &) const { return QString(); }
 signals:
     void geaendert();
+    void angeboteGeaendert();
+    void kursGewechselt();
     void laeuftGeaendert();
     void angemeldetWorden();
     void postUnterwegs();

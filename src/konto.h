@@ -30,6 +30,11 @@ class Konto : public QObject
     // Der Pfad, flach: je Eintrag eine Stufe mit Einheit, Zustand und
     // Fortschritt. Mehr braucht eine Liste auf 480 Pixel nicht.
     Q_PROPERTY(QVariantList pfad READ pfad NOTIFY geaendert)
+    // Die belegten Kurse, je Eintrag Kennung, Titel, Sprache, XP.
+    Q_PROPERTY(QVariantList kurse READ kurse NOTIFY geaendert)
+    // Was sich sonst noch lernen laesst -- die Sprachen, die es zur
+    // eigenen Muttersprache gibt (aus /config).
+    Q_PROPERTY(QVariantList angebote READ angebote NOTIFY angeboteGeaendert)
 
 public:
     explicit Konto(Netz *netz, QObject *eltern = 0);
@@ -45,6 +50,8 @@ public:
     QString lernsprache() const { return m_lernsprache; }
     QString muttersprache() const { return m_muttersprache; }
     QVariantList pfad() const { return m_pfad; }
+    QVariantList kurse() const { return m_kurse; }
+    QVariantList angebote() const { return m_angebote; }
     QVariantMap kurs() const { return m_kurs; }
 
     Q_INVOKABLE void anmelden(const QString &kennung, const QString &passwort);
@@ -62,12 +69,20 @@ public:
     Q_INVOKABLE QVariantMap stufe(int nummer) const;
     // Die naechste Stufe, die dran ist (fuer den grossen Knopf).
     Q_INVOKABLE int naechsteStufe() const;
+    // Auf einen anderen Kurs umschalten -- einen belegten oder einen
+    // neuen. `kursId` ist die Kennung aus `kurse`, bei einem neuen Kurs
+    // die Form DUOLINGO_<LERN>_<MUTTER>.
+    Q_INVOKABLE void kursWechseln(const QString &kursId);
+    // Die Liste der moeglichen Kurse holen (einmal, dann gemerkt).
+    Q_INVOKABLE void angeboteHolen();
 
     // Der volle Name einer Sprache, soweit wir ihn kennen ("es" -> Spanisch).
     Q_INVOKABLE static QString spracheName(const QString &kuerzel);
 
 signals:
     void geaendert();
+    void angeboteGeaendert();
+    void kursGewechselt();
     void laeuftGeaendert();
     void angemeldetWorden();
     void postUnterwegs();
@@ -81,6 +96,7 @@ private slots:
 private:
     void setzeLaeuft(bool wert);
     void pfadLesen(const QVariantMap &kurs);
+    void kurseLesen(const QVariantList &rohe);
 
     Netz *m_netz;
     bool m_laeuft;
@@ -93,6 +109,8 @@ private:
     QString m_muttersprache;
     QVariantMap m_kurs;
     QVariantList m_pfad;
+    QVariantList m_kurse;
+    QVariantList m_angebote;
     QString m_zuletztVersucht;   // fuer die Nachschau nach einem 401
     QList<QVariantMap> m_stufen;
 };

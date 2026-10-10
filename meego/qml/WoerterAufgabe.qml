@@ -18,6 +18,9 @@ Item {
     function reihe() { return gewaehlt }
     function text() { return "" }
 
+    // Neue Aufgabe, leere Zeile.
+    onAufgabeChanged: gewaehlt = []
+
     function nehmen(nummer) {
         var neu = gewaehlt
         neu.push(nummer)

@@ -11,13 +11,15 @@ namespace {
 // der Pfad allein ist schon gross genug fuer eine Mobilfunkleitung.
 const char *FELDER =
     "id,username,name,streak,totalXp,health,fromLanguage,learningLanguage,"
-    "currentCourse%7Bid,title,fromLanguage,learningLanguage,xp,healthEnabled,"
-    "pathSectioned%7D";
+    "courses,currentCourse%7Bid,title,fromLanguage,learningLanguage,xp,"
+    "healthEnabled,pathSectioned%7D";
 
 const char *ANMELDEN = "anmelden";
 const char *KONTO = "konto";
 const char *PASSWORTPOST = "passwortpost";
 const char *NACHSCHAU = "nachschau";
+const char *WECHSELN = "kurswechsel";
+const char *ANGEBOTE = "angebote";
 
 }  // namespace
 
@@ -141,6 +143,54 @@ void Konto::auffrischen()
                     .arg(m_netz->benutzerId(), QLatin1String(FELDER)));
 }
 
+void Konto::kursWechseln(const QString &kursId)
+{
+    if (kursId.isEmpty() || !angemeldet())
+        return;
+    // Genau das, was die Weboberflaeche schickt: die Kennung des Kurses
+    // und die Muttersprache. Mit einer Kennung, die man noch nicht belegt
+    // hat, faengt derselbe Aufruf den Kurs neu an.
+    QVariantMap koerper;
+    koerper.insert(QLatin1String("currentCourseId"), kursId);
+    koerper.insert(QLatin1String("fromLanguage"),
+                   m_muttersprache.isEmpty() ? QLatin1String("en")
+                                             : m_muttersprache);
+    setzeLaeuft(true);
+    m_netz->ruf(QLatin1String(WECHSELN), QLatin1String("PATCH"),
+                QString::fromLatin1("/2023-05-23/users/%1?fields=currentCourse"
+                                    "%%7Bid%%7D").arg(m_netz->benutzerId()),
+                Json::serialise(koerper));
+}
+
+void Konto::angeboteHolen()
+{
+    if (!m_angebote.isEmpty())
+        return;
+    m_netz->ruf(QLatin1String(ANGEBOTE), QLatin1String("GET"),
+                QLatin1String("/2017-06-30/config"), QByteArray(), false);
+}
+
+void Konto::kurseLesen(const QVariantList &rohe)
+{
+    m_kurse.clear();
+    const QString laufend = m_kurs.value(QLatin1String("id")).toString();
+    for (int i = 0; i < rohe.size(); ++i) {
+        const QVariantMap k = rohe.at(i).toMap();
+        QVariantMap zeile;
+        const QString kennung = k.value(QLatin1String("id")).toString();
+        zeile.insert(QLatin1String("id"), kennung);
+        QString titel = k.value(QLatin1String("title")).toString();
+        if (titel.isEmpty())
+            titel = spracheName(k.value(QLatin1String("learningLanguage")).toString());
+        zeile.insert(QLatin1String("titel"), titel);
+        zeile.insert(QLatin1String("sprache"),
+                     k.value(QLatin1String("learningLanguage")));
+        zeile.insert(QLatin1String("xp"), k.value(QLatin1String("xp")).toInt());
+        zeile.insert(QLatin1String("laufend"), kennung == laufend);
+        m_kurse.append(zeile);
+    }
+}
+
 void Konto::pfadLesen(const QVariantMap &kurs)
 {
     m_pfad.clear();
@@ -233,6 +283,32 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
         emit postUnterwegs();
         return;
     }
+    if (kennung == QLatin1String(WECHSELN)) {
+        setzeLaeuft(false);
+        emit kursGewechselt();
+        auffrischen();
+        return;
+    }
+    if (kennung == QLatin1String(ANGEBOTE)) {
+        // /config nennt zu jeder Muttersprache die lernbaren Sprachen.
+        const QVariantMap alle = daten.value(QLatin1String("courses")).toMap();
+        const QString meine = m_muttersprache.isEmpty()
+                                  ? QLatin1String("en") : m_muttersprache;
+        const QVariantList sprachen = alle.value(meine).toList();
+        m_angebote.clear();
+        for (int i = 0; i < sprachen.size(); ++i) {
+            const QString kuerzel = sprachen.at(i).toString();
+            QVariantMap zeile;
+            zeile.insert(QLatin1String("sprache"), kuerzel);
+            zeile.insert(QLatin1String("titel"), spracheName(kuerzel));
+            zeile.insert(QLatin1String("id"),
+                         QString::fromLatin1("DUOLINGO_%1_%2")
+                             .arg(kuerzel.toUpper(), meine.toUpper()));
+            m_angebote.append(zeile);
+        }
+        emit angeboteGeaendert();
+        return;
+    }
     if (kennung == QLatin1String(NACHSCHAU)) {
         setzeLaeuft(false);
         const QVariantList treffer = daten.value(QLatin1String("users")).toList();
@@ -283,6 +359,7 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
     if (m_kurs.value(QLatin1String("healthEnabled")).toBool())
         m_herzenZaehlen = true;
     pfadLesen(m_kurs);
+    kurseLesen(daten.value(QLatin1String("courses")).toList());
     emit geaendert();
 }
 
@@ -293,6 +370,13 @@ void Konto::fehler(const QString &kennung, int status, const QString &text)
         emit anmeldungAbgelehnt(tr("Kennung oder Passwort stimmen nicht."));
         return;
     }
+    if (kennung == QLatin1String(WECHSELN)) {
+        setzeLaeuft(false);
+        emit fehlgeschlagen(tr("Der Kurs liess sich nicht wechseln: %1").arg(text));
+        return;
+    }
+    if (kennung == QLatin1String(ANGEBOTE))
+        return;
     if (kennung != QLatin1String(ANMELDEN) && kennung != QLatin1String(KONTO)
         && kennung != QLatin1String(PASSWORTPOST))
         return;

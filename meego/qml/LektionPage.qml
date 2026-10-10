@@ -13,6 +13,10 @@ Page {
     tools: werkzeuge
 
     property bool rueckmeldung: false
+    // Welche Aufgabe gerade in der Flaeche steht. Ohne das wuerde jede
+    // Aenderung an Lektion die Aufgabe neu setzen -- auch das Benoten --
+    // und damit das gerade Angetippte wieder wegraeumen.
+    property int gezeigte: -1
     property bool warRichtig: false
     property string loesung: ""
 
@@ -33,7 +37,20 @@ Page {
             fehlerdialog.message = grund
             fehlerdialog.open()
         }
-        onGeaendert: seite.rueckmeldung = false
+        onGeaendert: {
+            // **Die Aufgabe nachreichen, nicht nur beim Laden.** Folgen
+            // zwei Aufgaben derselben Darstellung aufeinander, bleibt der
+            // Loader auf derselben Datei stehen, `onLoaded` kommt nicht
+            // noch einmal -- und dann stand die alte Aufgabe ueber der
+            // neuen. Nur beim Wechsel, nicht bei jeder Regung: sonst
+            // raeumt das Benoten das Angetippte weg.
+            if (Lektion.nummer !== seite.gezeigte) {
+                seite.rueckmeldung = false
+                seite.gezeigte = Lektion.nummer
+                if (aufgabenflaeche.item)
+                    aufgabenflaeche.item.aufgabe = Lektion.aufgabe
+            }
+        }
     }
 
     Component.onDestruction: Lektion.abbrechen()
@@ -97,7 +114,10 @@ Page {
             if (d === "wahl") return "WahlAufgabe.qml"
             return ""
         }
-        onLoaded: item.aufgabe = Lektion.aufgabe
+        onLoaded: {
+            item.aufgabe = Lektion.aufgabe
+            seite.gezeigte = Lektion.nummer
+        }
     }
 
     // Am Ende: die Abrechnung und der Knopf zum Abschicken.
