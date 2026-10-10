@@ -138,8 +138,12 @@ void Konto::auffrischen()
     if (!angemeldet())
         return;
     setzeLaeuft(true);
+    // Die neue Basis, nicht die alte: bei den Faechern ohne Sprache
+    // (Schach, Rechnen, Musik) gibt `/2017-06-30/users/{id}` fuer
+    // `currentCourse` **null** zurueck, `/2023-05-23` den ganzen Pfad.
+    // Bei den Sprachkursen antworten beide gleich (nachgemessen).
     m_netz->ruf(QLatin1String(KONTO), QLatin1String("GET"),
-                QString::fromLatin1("/2017-06-30/users/%1?fields=%2")
+                QString::fromLatin1("/2023-05-23/users/%1?fields=%2")
                     .arg(m_netz->benutzerId(), QLatin1String(FELDER)));
 }
 
@@ -156,9 +160,13 @@ void Konto::kursWechseln(const QString &kursId)
                    m_muttersprache.isEmpty() ? QLatin1String("en")
                                              : m_muttersprache);
     setzeLaeuft(true);
+    // Zusammengesetzt statt mit arg(): in einer Vorlage fuer arg() ist
+    // **`%7B` schon eine Platzhalternummer** (`%7`), und ein verdoppeltes
+    // `%%` entschaerft bei Qt gar nichts -- es blieb woertlich in der
+    // Adresse stehen und der Server antwortete mit 400.
     m_netz->ruf(QLatin1String(WECHSELN), QLatin1String("PATCH"),
-                QString::fromLatin1("/2023-05-23/users/%1?fields=currentCourse"
-                                    "%%7Bid%%7D").arg(m_netz->benutzerId()),
+                QLatin1String("/2023-05-23/users/") + m_netz->benutzerId()
+                    + QLatin1String("?fields=currentCourse%7Bid%7D"),
                 Json::serialise(koerper));
 }
 
@@ -296,6 +304,21 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
                                   ? QLatin1String("en") : m_muttersprache;
         const QVariantList sprachen = alle.value(meine).toList();
         m_angebote.clear();
+        // Die drei Faecher ohne Muttersprache stehen nicht in /config --
+        // ihre Kennungen sind im Web-Buendel fest verdrahtet.
+        static const char *faecher[][2] = {
+            {"CHESS_CH", QT_TR_NOOP("Schach")},
+            {"MATH_BT", QT_TR_NOOP("Rechnen")},
+            {"MUSIC_MT", QT_TR_NOOP("Musik")},
+            {0, 0}
+        };
+        for (int i = 0; faecher[i][0]; ++i) {
+            QVariantMap zeile;
+            zeile.insert(QLatin1String("sprache"), QString());
+            zeile.insert(QLatin1String("titel"), tr(faecher[i][1]));
+            zeile.insert(QLatin1String("id"), QLatin1String(faecher[i][0]));
+            m_angebote.append(zeile);
+        }
         for (int i = 0; i < sprachen.size(); ++i) {
             const QString kuerzel = sprachen.at(i).toString();
             QVariantMap zeile;
@@ -405,10 +428,10 @@ void Konto::fehler(const QString &kennung, int status, const QString &text)
             QString wert = m_zuletztVersucht;
             wert.replace(QLatin1String("@"), QLatin1String("%40"));
             m_netz->ruf(QLatin1String(NACHSCHAU), QLatin1String("GET"),
-                        QString::fromLatin1("/2017-06-30/users?%1=%2&fields="
-                                            "users%%7Bid,username,hasGoogleId,"
-                                            "hasFacebookId%%7D")
-                            .arg(feld, wert),
+                        QLatin1String("/2017-06-30/users?") + feld
+                            + QLatin1Char('=') + wert
+                            + QLatin1String("&fields=users%7Bid,username,"
+                                            "hasGoogleId,hasFacebookId%7D"),
                         QByteArray(), false);
             return;
         }
