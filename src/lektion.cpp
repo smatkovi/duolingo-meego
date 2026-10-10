@@ -1,5 +1,6 @@
 #include "lektion.h"
 #include "benoter.h"
+#include "rechner.h"
 #include "json.h"
 #include "konto.h"
 #include "netz.h"
@@ -27,6 +28,11 @@ const char *ARTEN[] = {
     "selectTranscription", "syllableTap", "syllableListenTap", "tapCloze",
     "tapComplete", "tapDescribe", "translate", "transliterate",
     "transliterationAssist", "typeCloze", "typeComplete", "writeComprehension",
+    // Die Rechenarten. Die Weboberflaeche haengt sie an jede Anforderung
+    // an; in einem Sprachkurs kommen sie einfach nicht vor.
+    "mathProductSelect", "mathMatch", "mathMultiSelect", "mathPatternTable",
+    "mathTypeFill", "mathIntegerNumberLineFill", "mathEstimateNumberLine",
+    "mathExpressionBuild", "mathFactorTree", "mathFractionFill",
     0
 };
 
@@ -213,6 +219,21 @@ void Lektion::starten(const QString &art, int stufennummer)
                            stufe.value(QLatin1String("subtype")).toString()
                                == QLatin1String("grammar"));
             koerper.insert(QLatin1String("showGrammarSkillSplash"), false);
+        } else if (stufenart.startsWith(QLatin1String("math"))) {
+            // Rechnen: die Stufe bringt ihre Sitzungsbeschreibung mit,
+            // `metadata` ist Pflicht (ohne sie: 500).
+            const QVariantList beiwerke =
+                daten.value(QLatin1String("sessionMetadatas")).toList();
+            const int fertig =
+                stufe.value(QLatin1String("finishedSessions")).toInt();
+            if (!beiwerke.isEmpty())
+                koerper.insert(QLatin1String("metadata"),
+                               beiwerke.at(fertig < beiwerke.size() ? fertig : 0));
+            koerper.insert(QLatin1String("skillId"),
+                           daten.value(QLatin1String("skillId")));
+            koerper.insert(QLatin1String("levelIndex"),
+                           daten.value(QLatin1String("crownLevelIndex"), 0).toInt());
+            koerper.insert(QLatin1String("type"), QLatin1String("MATH_LESSON"));
         } else if (stufenart == QLatin1String("practice")) {
             koerper.insert(QLatin1String("skillIds"),
                            daten.value(QLatin1String("skillIds")));
@@ -245,6 +266,15 @@ QVariantMap Lektion::darstellen(const QVariantMap &roh) const
     QVariantMap k;
     const QString art = roh.value(QLatin1String("type")).toString();
     k.insert(QLatin1String("art"), art);
+
+    // Rechnen hat mit Saetzen nichts zu tun: eigene Zerlegung, eigene
+    // Benotung (src/rechner.h).
+    if (Rechner::istRechnen(roh)) {
+        QVariantMap r = Rechner::darstellen(roh);
+        r.insert(QLatin1String("art"), art);
+        r.insert(QLatin1String("darstellung"), QLatin1String("rechnen"));
+        return r;
+    }
     k.insert(QLatin1String("frage"), roh.value(QLatin1String("prompt")));
     k.insert(QLatin1String("uebersetzung"),
              roh.value(QLatin1String("solutionTranslation")));
@@ -383,7 +413,9 @@ void Lektion::antworten(const QVariantList &reihe, const QString &text)
         antwortText = teile.join(QLatin1String(" "));
     }
 
-    const bool richtig = Benoter::benoten(roh, antwortText, gedrueckt);
+    const bool richtig = Rechner::istRechnen(roh)
+                             ? Rechner::benoten(roh, reihe, text)
+                             : Benoter::benoten(roh, antwortText, gedrueckt);
 
     roh.insert(QLatin1String("correct"), richtig);
     roh.insert(QLatin1String("guess"), antwortText);
@@ -407,7 +439,9 @@ void Lektion::antworten(const QVariantList &reihe, const QString &text)
             --m_herzen;
     }
     emit geaendert();
-    emit benotet(richtig, Benoter::musterloesung(roh));
+    emit benotet(richtig, Rechner::istRechnen(roh)
+                              ? Rechner::loesung(roh)
+                              : Benoter::musterloesung(roh));
 }
 
 void Lektion::auslassen()

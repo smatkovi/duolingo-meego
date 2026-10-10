@@ -112,6 +112,7 @@ Page {
             if (d === "paare") return "PaareAufgabe.qml"
             if (d === "tippen") return "TippenAufgabe.qml"
             if (d === "wahl") return "WahlAufgabe.qml"
+            if (d === "rechnen") return "RechnenAufgabe.qml"
             return ""
         }
         onLoaded: {

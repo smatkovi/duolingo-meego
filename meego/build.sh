@@ -26,6 +26,7 @@ mkdir -p "$OUT"
 
 APP_SRC="src/benoter.cpp \
  src/bot.cpp \
+ src/rechner.cpp \
  src/core/Position.cpp \
  src/format.cpp \
  src/json.cpp \
@@ -98,6 +99,18 @@ test)
     APP_SRC="src/benoter.cpp src/json.cpp meego/tests/benoter_test.cpp"
     MOC_HEADERS=""
     ;;
+rechnen)
+    # Die Probe fuer die Rechenaufgaben.
+    CXX=${CXX:-g++}
+    PROBEQT=${PROBEQT:-$HOME/QtSDK/Desktop/Qt/4.8.1/gcc}
+    MOC=$PROBEQT/bin/moc
+    QTINC=$PROBEQT/include
+    CXXFLAGS="$COMMON_FLAGS $CXX_ONLY -I$QTINC -I$QTINC/QtCore"
+    LDFLAGS="-L$PROBEQT/lib -Wl,-rpath,$PROBEQT/lib"
+    LIBS="-lQtCore"
+    APP_SRC="src/rechner.cpp src/json.cpp meego/tests/rechner_test.cpp"
+    MOC_HEADERS=""
+    ;;
 schach)
     # Die Schachprobe: Brett, Zuege, Gegner -- ganz ohne Qt.
     CXX=${CXX:-g++}
@@ -109,7 +122,7 @@ schach)
     MOC_HEADERS=""
     ;;
 *)
-    echo "Aufruf: $0 arm|check|test|schach" >&2; exit 2 ;;
+    echo "Aufruf: $0 arm|check|test|schach|rechnen" >&2; exit 2 ;;
 esac
 
 MK=$OUT/Makefile
@@ -143,6 +156,11 @@ fi
 
 if [ "$MODE" = "test" ]; then
     "$OUT/duolingo" "$HERE"/doc/sitzung-*.json "$HERE"/doc/abgabe-*.json
+    exit $?
+fi
+
+if [ "$MODE" = "rechnen" ]; then
+    "$OUT/duolingo" "$HERE/doc/sitzung-rechnen.json"
     exit $?
 fi
 

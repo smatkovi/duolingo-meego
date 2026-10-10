@@ -252,9 +252,11 @@ void Konto::pfadLesen(const QVariantMap &kurs)
                 // Was diese Fassung zeichnen kann. Geschichten, Truhen und
                 // Rechnen bleiben in der Liste sichtbar, aber grau.
                 const bool schach = art.startsWith(QLatin1String("chess"));
+                const bool rechnen = art.startsWith(QLatin1String("math"));
                 zeile.insert(QLatin1String("fach"),
                              schach ? QLatin1String("schach")
-                                    : QLatin1String("sprache"));
+                                    : (rechnen ? QLatin1String("rechnen")
+                                               : QLatin1String("sprache")));
                 zeile.insert(QLatin1String("machbar"),
                              art == QLatin1String("skill")
                                  || art == QLatin1String("practice")
@@ -263,7 +265,10 @@ void Konto::pfadLesen(const QVariantMap &kurs)
                                  || art == QLatin1String("chess_practice")
                                  || art == QLatin1String("chess_puzzles")
                                  || art == QLatin1String("chess_unit_review")
-                                 || art == QLatin1String("chess_match"));
+                                 || art == QLatin1String("chess_match")
+                                 || art == QLatin1String("math_skill")
+                                 || art == QLatin1String("math_match_practice")
+                                 || art == QLatin1String("math_unit_review"));
                 m_pfad.append(zeile);
                 m_stufen.append(stufe);
             }
