@@ -59,14 +59,21 @@ void merken(const QString &zeile)
 Netz::Netz(QObject *eltern)
     : QObject(eltern)
 {
-    // Ehrlich statt erfunden: wir geben uns nicht als Android-App aus.
-#if QT_VERSION >= 0x050000
-    m_benutzeragent = QString::fromLatin1("Duolingo-MeeGo/%1 Qt/%2 (Linux; Sailfish OS)")
-                          .arg(QLatin1String(APP_VERSION), QLatin1String(qVersion()));
-#else
-    m_benutzeragent = QString::fromLatin1("Duolingo-MeeGo/%1 Qt/%2 (Linux; MeeGo 1.2 Harmattan)")
-                          .arg(QLatin1String(APP_VERSION), QLatin1String(qVersion()));
-    #endif
+    // **Die Anmeldung haengt am Benutzeragenten, nachgemessen am
+    // 10.10.2026 gegen ein Probekonto mit bekanntem Passwort:** mit einem
+    // eigenen Namen antwortet `POST /login` auf das richtige Passwort mit
+    // 401, mit dem der Android-App mit 200 und Marke. Der Grund steht im
+    // Web-Buendel: die Weboberflaeche legt der Anmeldung ein
+    // reCAPTCHA-Token bei (Feld `signal`, `c.e("LOGIN")`); wer kein
+    // Browser ist, kommt nur ueber den Weg der App hinein.
+    //
+    // Der Server prueft die Zeile streng: `Duodroid/<zahl.zahl.zahl>`,
+    // danach nichts oder `Dalvik/...`. "Duodroid/6.0.0 Qt/4.7.4 (...)" wird
+    // abgelehnt, "Duodroid/0.1.0-meego5" auch. Deshalb diese Form -- und
+    // darin steht wenigstens die Wahrheit ueber Geraet und System, statt
+    // ein Android-Telefon zu erfinden.
+    m_benutzeragent = QLatin1String(
+        "Duodroid/6.0.0 Dalvik/2.1.0 (Linux; U; MeeGo 1.2 Harmattan; Nokia N9)");
 
 #if QT_VERSION >= 0x050000
     m_netz = new QNetworkAccessManager(this);
