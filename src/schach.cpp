@@ -1,6 +1,7 @@
 #include "schach.h"
 #include "bot.h"
 #include "json.h"
+#include "konto.h"
 #include "netz.h"
 
 #include <QDateTime>
@@ -12,6 +13,7 @@ namespace {
 const char *PARTIE_NEU = "schach-neu";
 const char *PARTIE_ZUG = "schach-zug";
 const char *PARTIE_STAND = "schach-stand";
+const char *LEKTION = "schach-lektion";
 
 QString feldName(int feld)
 {
@@ -34,10 +36,11 @@ int feldNummer(const QString &name)
 
 }  // namespace
 
-Schach::Schach(Netz *netz, QObject *eltern)
-    : QObject(eltern), m_netz(netz), m_meineFarbeWeiss(true), m_laeuft(false),
-      m_gewaehlt(-1), m_elo(0), m_siege(0), m_niederlagen(0), m_remis(0),
-      m_abschnitt(1), m_beendetGemeldet(false)
+Schach::Schach(Netz *netz, Konto *konto, QObject *eltern)
+    : QObject(eltern), m_netz(netz), m_konto(konto), m_meineFarbeWeiss(true),
+      m_laeuft(false), m_gewaehlt(-1), m_elo(0), m_siege(0), m_niederlagen(0),
+      m_remis(0), m_abschnitt(1), m_beendetGemeldet(false), m_nummer(0),
+      m_schritt(0)
 {
     connect(m_netz, SIGNAL(antwort(QString,QVariantMap)),
             this, SLOT(antwort(QString,QVariantMap)));
@@ -61,6 +64,8 @@ void Schach::setzeMeldung(const QString &text)
     emit meldungGeaendert();
 }
 
+// In der Lektion gibt es keine Partie beim Dienst -- trotzdem steht ein
+// Brett da, also zaehlt auch das als "offen".
 QString Schach::fen() const
 {
     return QString::fromStdString(m_stellung.fen());
@@ -99,6 +104,8 @@ QVariantList Schach::felder() const
 
 bool Schach::ichAmZug() const
 {
+    if (m_modus == QLatin1String("lektion"))
+        return !m_erwartet.isEmpty() && m_schritt < m_erwartet.size();
     return offen() && !vorbei() && m_stellung.whiteToMove() == m_meineFarbeWeiss;
 }
 
@@ -124,6 +131,8 @@ QStringList Schach::zugliste() const
 
 QString Schach::stand() const
 {
+    if (m_modus == QLatin1String("lektion"))
+        return tr("Aufgabe %1 von %2").arg(aufgabeNummer()).arg(aufgabenZahl());
     if (!offen())
         return QString();
     switch (m_stellung.outcome()) {
@@ -165,6 +174,141 @@ void Schach::partieStarten(int abschnitt)
                 Json::serialise(koerper));
 }
 
+void Schach::lektionStarten(int stufennummer)
+{
+    if (!m_netz->angemeldet() || !m_konto)
+        return;
+    const QVariantMap stufe = m_konto->stufe(stufennummer);
+    if (stufe.isEmpty()) {
+        setzeMeldung(tr("Diese Stufe gibt es nicht."));
+        return;
+    }
+    const QVariantMap daten =
+        stufe.value(QLatin1String("pathLevelClientData")).toMap();
+    const QVariantList beiwerke =
+        daten.value(QLatin1String("sessionMetadatas")).toList();
+    QVariant beiwerk;
+    if (!beiwerke.isEmpty()) {
+        const int fertig = stufe.value(QLatin1String("finishedSessions")).toInt();
+        beiwerk = beiwerke.at(fertig < beiwerke.size() ? fertig : 0);
+    }
+
+    QVariantList arten;
+    arten.append(QLatin1String("chessMatch"));
+    arten.append(QLatin1String("chessMiniMatch"));
+
+    QVariantMap koerper;
+    koerper.insert(QLatin1String("challengeTypes"), arten);
+    koerper.insert(QLatin1String("fromLanguage"),
+                   m_konto->muttersprache().isEmpty()
+                       ? QLatin1String("en") : m_konto->muttersprache());
+    koerper.insert(QLatin1String("isV2"), true);
+    koerper.insert(QLatin1String("juicy"), true);
+    koerper.insert(QLatin1String("type"), QLatin1String("CHESS_SESSION"));
+    koerper.insert(QLatin1String("metadata"), beiwerk);
+    koerper.insert(QLatin1String("levelId"), stufe.value(QLatin1String("id")));
+    koerper.insert(QLatin1String("levelSessionIndex"),
+                   stufe.value(QLatin1String("finishedSessions")).toInt());
+    koerper.insert(QLatin1String("pathLevelSessionMetadata"),
+                   stufe.value(QLatin1String("pathLevelSessionMetadata")));
+
+    m_partie.clear();
+    m_partieId.clear();
+    m_aufgaben.clear();
+    m_nummer = 0;
+    m_modus = QLatin1String("lektion");
+    setzeLaeuft(true);
+    setzeMeldung(QString());
+    emit stellungGeaendert();
+    m_netz->ruf(QLatin1String(LEKTION), QLatin1String("POST"),
+                QLatin1String("/2023-05-23/sessions"), Json::serialise(koerper));
+}
+
+QString Schach::erwarteterZug() const
+{
+    if (m_schritt < 0 || m_schritt >= m_erwartet.size())
+        return QString();
+    return m_erwartet.at(m_schritt);
+}
+
+void Schach::aufgabeZeigen()
+{
+    if (m_nummer >= m_aufgaben.size()) {
+        m_modus.clear();
+        m_erwartet.clear();
+        emit stellungGeaendert();
+        emit lektionFertig();
+        return;
+    }
+    const QVariantMap aufgabe = m_aufgaben.at(m_nummer).toMap();
+    const QVariantMap puzzle =
+        aufgabe.value(QLatin1String("chessPuzzleInfo")).toMap();
+
+    m_stellung.setFen(aufgabe.value(QLatin1String("fen")).toString().toStdString());
+    m_meineFarbeWeiss = m_stellung.whiteToMove();
+
+    // `correctMoves` ist die verlangte Zugfolge, durch Leerzeichen
+    // getrennt: "e1e6 e6b6" heisst erst Turm nach e6, dann nach b6.
+    m_erwartet.clear();
+    const QVariantList folgen = puzzle.value(QLatin1String("correctMoves")).toList();
+    if (!folgen.isEmpty())
+        m_erwartet = folgen.first().toString().split(QLatin1Char(' '),
+                                                     QString::SkipEmptyParts);
+    m_gegnerzuege.clear();
+    const QVariantList gegner = puzzle.value(QLatin1String("enemyMoves")).toList();
+    for (int i = 0; i < gegner.size(); ++i)
+        m_gegnerzuege << gegner.at(i).toString();
+    m_schritt = 0;
+
+    // Der Satz des Lehrers. Die Sprachausgabe liegt bei; sie laeuft ueber
+    // http, wie alles andere auch.
+    m_lehrersatz.clear();
+    m_lehrerton.clear();
+    const char *quellen[] = { "instructionsSpeechBubbleContent",
+                              "hintUsedInstructionsSpeechBubbleContent", 0 };
+    for (int q = 0; quellen[q] && m_lehrersatz.isEmpty(); ++q) {
+        const QVariantList blasen =
+            puzzle.value(QLatin1String(quellen[q])).toList();
+        if (blasen.isEmpty())
+            continue;
+        const QVariantMap erste = blasen.first().toMap();
+        m_lehrersatz = erste.value(QLatin1String("text")).toString();
+        QString ton = erste.value(QLatin1String("ttsUrl")).toString();
+        if (ton.startsWith(QLatin1String("https://")))
+            ton.replace(0, 5, QLatin1String("http"));
+        m_lehrerton = ton;
+    }
+    // Die Sterne stehen als fremde Bauern auf dem Brett; der Satz erklaert
+    // es. Sternchen im Text sind Hervorhebungen und gehoeren nicht hin.
+    m_lehrersatz.remove(QLatin1String("**"));
+
+    m_gewaehlt = -1;
+    m_ziele.clear();
+    emit lehrersatzGeaendert();
+    emit stellungGeaendert();
+    emit auswahlGeaendert();
+}
+
+void Schach::weiterInDerLektion()
+{
+    aufgabeZeigen();
+}
+
+void Schach::gegnerInDerLektion()
+{
+    // Der Gegenzug, den die Aufgabe vorschreibt -- nicht gerechnet,
+    // sondern abgeschrieben: in einer Lektion soll genau das passieren,
+    // was der Lehrer angekuendigt hat.
+    const int i = m_schritt - 1;
+    if (i < 0 || i >= m_gegnerzuege.size())
+        return;
+    const QString zug = m_gegnerzuege.at(i);
+    if (zug.isEmpty())
+        return;
+    if (m_stellung.play(zug.toStdString()))
+        emit stellungGeaendert();
+}
+
 void Schach::partieVerlassen()
 {
     m_partie.clear();
@@ -172,7 +316,16 @@ void Schach::partieVerlassen()
     m_gewaehlt = -1;
     m_ziele.clear();
     m_beendetGemeldet = false;
+    m_modus.clear();
+    m_aufgaben.clear();
+    m_erwartet.clear();
+    m_gegnerzuege.clear();
+    m_nummer = 0;
+    m_schritt = 0;
+    m_lehrersatz.clear();
+    m_lehrerton.clear();
     m_stellung.reset();
+    emit lehrersatzGeaendert();
     emit stellungGeaendert();
     emit auswahlGeaendert();
 }
@@ -206,6 +359,34 @@ void Schach::feldAntippen(int feld)
     // Zweiter Tipper: das Ziel.
     const QString von = feldName(m_gewaehlt);
     const QString nach = feldName(feld);
+
+    if (m_modus == QLatin1String("lektion")) {
+        const QString verlangt = erwarteterZug();
+        const QString gezogen = von + nach;
+        // Die Umwandlung haengt im verlangten Zug schon dran ("e7e8q").
+        if (!verlangt.startsWith(gezogen)) {
+            m_gewaehlt = -1;
+            m_ziele.clear();
+            emit auswahlGeaendert();
+            emit zugAbgelehnt(tr("Nicht dieser Zug."));
+            return;
+        }
+        if (!m_stellung.play(verlangt.toStdString()))
+            return;
+        ++m_schritt;
+        m_gewaehlt = -1;
+        m_ziele.clear();
+        emit auswahlGeaendert();
+        emit stellungGeaendert();
+        if (m_schritt <= m_gegnerzuege.size())
+            QTimer::singleShot(400, this, SLOT(gegnerInDerLektion()));
+        if (m_schritt >= m_erwartet.size()) {
+            // Aufgabe geschafft -- weiter zur naechsten.
+            ++m_nummer;
+            QTimer::singleShot(700, this, SLOT(weiterInDerLektion()));
+        }
+        return;
+    }
     if (m_stellung.needsPromotion(m_gewaehlt, feld)) {
         m_offeneUmwandlungVon = von;
         m_offeneUmwandlungNach = nach;
@@ -352,6 +533,19 @@ void Schach::antwort(const QString &kennung, const QVariantMap &daten)
         emit bilanzGeaendert();
         return;
     }
+    if (kennung == QLatin1String(LEKTION)) {
+        setzeLaeuft(false);
+        m_aufgaben = daten.value(QLatin1String("challenges")).toList();
+        m_nummer = 0;
+        if (m_aufgaben.isEmpty()) {
+            m_modus.clear();
+            setzeMeldung(tr("Diese Lektion kam ohne Aufgaben."));
+            emit stellungGeaendert();
+            return;
+        }
+        aufgabeZeigen();
+        return;
+    }
     if (kennung != QLatin1String(PARTIE_NEU) && kennung != QLatin1String(PARTIE_ZUG))
         return;
     setzeLaeuft(false);
@@ -386,7 +580,8 @@ void Schach::fehler(const QString &kennung, int status, const QString &text)
 {
     if (kennung != QLatin1String(PARTIE_NEU)
         && kennung != QLatin1String(PARTIE_ZUG)
-        && kennung != QLatin1String(PARTIE_STAND))
+        && kennung != QLatin1String(PARTIE_STAND)
+        && kennung != QLatin1String(LEKTION))
         return;
     setzeLaeuft(false);
     if (kennung == QLatin1String(PARTIE_STAND))

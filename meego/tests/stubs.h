@@ -127,6 +127,11 @@ class StubSchach : public QObject
     Q_PROPERTY(int niederlagen READ zahl NOTIFY bilanzGeaendert)
     Q_PROPERTY(int remis READ zahl NOTIFY bilanzGeaendert)
     Q_PROPERTY(bool vorbei READ flagge NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString modus READ text NOTIFY stellungGeaendert)
+    Q_PROPERTY(int aufgabeNummer READ zahl NOTIFY stellungGeaendert)
+    Q_PROPERTY(int aufgabenZahl READ zahl NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString lehrersatz READ text NOTIFY lehrersatzGeaendert)
+    Q_PROPERTY(QString lehrerton READ text NOTIFY lehrersatzGeaendert)
 public:
     bool flagge() const { return false; }
     int zahl() const { return 0; }
@@ -135,6 +140,7 @@ public:
     QVariantList liste() const { return QVariantList(); }
     Q_INVOKABLE void standHolen() {}
     Q_INVOKABLE void partieStarten(int) {}
+    Q_INVOKABLE void lektionStarten(int) {}
     Q_INVOKABLE void feldAntippen(int) {}
     Q_INVOKABLE void umwandeln(const QString &) {}
     Q_INVOKABLE void aufgeben() {}
@@ -147,6 +153,9 @@ signals:
     void bilanzGeaendert();
     void umwandlungNoetig();
     void partieZuEnde(const QString &ausgang);
+    void lehrersatzGeaendert();
+    void zugAbgelehnt(const QString &hinweis);
+    void lektionFertig();
 };
 
 #endif // STUBS_H

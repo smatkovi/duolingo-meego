@@ -62,11 +62,14 @@ Page {
                     elide: Text.ElideRight
                     font.pixelSize: 16
                     color: "#9e9e9e"
-                    text: qsTr("Einheit %1 · %2 von %3")
-                          .arg(modelData.einheit)
-                          .arg(modelData.fertig)
-                          .arg(modelData.gesamt)
-                          + (modelData.machbar ? "" : " · " + modelData.art)
+                    text: modelData.pruefung
+                          ? qsTr("Einheit %1 · Test zum Ueberspringen")
+                            .arg(modelData.einheit)
+                          : qsTr("Einheit %1 · %2 von %3")
+                            .arg(modelData.einheit)
+                            .arg(modelData.fertig)
+                            .arg(modelData.gesamt)
+                            + (modelData.machbar ? "" : " · " + modelData.art)
                 }
             }
 
@@ -75,8 +78,16 @@ Page {
                 anchors.fill: parent
                 enabled: modelData.machbar && modelData.offen
                 onClicked: {
-                    pageStack.push(Qt.resolvedUrl("LektionPage.qml"))
-                    Lektion.stufeStarten(modelData.nummer)
+                    if (modelData.fach === "schach") {
+                        pageStack.push(Qt.resolvedUrl("SchachPage.qml"))
+                        if (modelData.art === "chess_match")
+                            Schach.partieStarten(modelData.abschnitt)
+                        else
+                            Schach.lektionStarten(modelData.nummer)
+                    } else {
+                        pageStack.push(Qt.resolvedUrl("LektionPage.qml"))
+                        Lektion.stufeStarten(modelData.nummer)
+                    }
                 }
             }
 

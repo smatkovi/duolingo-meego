@@ -235,19 +235,35 @@ void Konto::pfadLesen(const QVariantMap &kurs)
                 zeile.insert(QLatin1String("titel"), titel);
                 zeile.insert(QLatin1String("art"), art);
                 zeile.insert(QLatin1String("zustand"), zustand);
+                // Eine gesperrte Einheit traegt den Zustand `unit_test`:
+                // dort bietet Duolingo den Test an, mit dem man sie
+                // ueberspringt. Das ist die Einstufung mitten im Pfad --
+                // 21 solche Stellen allein im Lateinkurs.
+                const bool pruefung = zustand == QLatin1String("unit_test");
+                zeile.insert(QLatin1String("pruefung"), pruefung);
                 zeile.insert(QLatin1String("offen"),
-                             zustand == QLatin1String("active")
+                             pruefung
+                                 || zustand == QLatin1String("active")
                                  || zustand == QLatin1String("unlocked"));
                 zeile.insert(QLatin1String("fertig"),
                              stufe.value(QLatin1String("finishedSessions")).toInt());
                 zeile.insert(QLatin1String("gesamt"),
                              stufe.value(QLatin1String("totalSessions")).toInt());
-                // Was diese Fassung zeichnen kann. Geschichten, Schach und
+                // Was diese Fassung zeichnen kann. Geschichten, Truhen und
                 // Rechnen bleiben in der Liste sichtbar, aber grau.
+                const bool schach = art.startsWith(QLatin1String("chess"));
+                zeile.insert(QLatin1String("fach"),
+                             schach ? QLatin1String("schach")
+                                    : QLatin1String("sprache"));
                 zeile.insert(QLatin1String("machbar"),
                              art == QLatin1String("skill")
                                  || art == QLatin1String("practice")
-                                 || art == QLatin1String("unit_review"));
+                                 || art == QLatin1String("unit_review")
+                                 || art == QLatin1String("chess_skill")
+                                 || art == QLatin1String("chess_practice")
+                                 || art == QLatin1String("chess_puzzles")
+                                 || art == QLatin1String("chess_unit_review")
+                                 || art == QLatin1String("chess_match"));
                 m_pfad.append(zeile);
                 m_stufen.append(stufe);
             }

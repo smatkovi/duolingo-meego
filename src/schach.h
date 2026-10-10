@@ -30,6 +30,7 @@
 #endif
 
 class Netz;
+class Konto;
 
 class Schach : public QObject
 {
@@ -52,12 +53,22 @@ class Schach : public QObject
     Q_PROPERTY(int niederlagen READ niederlagen NOTIFY bilanzGeaendert)
     Q_PROPERTY(int remis READ remis NOTIFY bilanzGeaendert)
     Q_PROPERTY(bool vorbei READ vorbei NOTIFY stellungGeaendert)
+    // "partie" oder "lektion" -- oder leer, wenn nichts laeuft.
+    Q_PROPERTY(QString modus READ modus NOTIFY stellungGeaendert)
+    Q_PROPERTY(int aufgabeNummer READ aufgabeNummer NOTIFY stellungGeaendert)
+    Q_PROPERTY(int aufgabenZahl READ aufgabenZahl NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString lehrersatz READ lehrersatz NOTIFY lehrersatzGeaendert)
+    Q_PROPERTY(QString lehrerton READ lehrerton NOTIFY lehrersatzGeaendert)
 
 public:
-    explicit Schach(Netz *netz, QObject *eltern = 0);
+    explicit Schach(Netz *netz, Konto *konto, QObject *eltern = 0);
 
     bool laeuft() const { return m_laeuft; }
-    bool offen() const { return !m_partie.isEmpty(); }
+    // Offen ist das Brett bei einer Partie wie in einer Lektion.
+    bool offen() const
+    {
+        return !m_partie.isEmpty() || m_modus == QLatin1String("lektion");
+    }
     QString fen() const;
     QVariantList felder() const;
     QVariantList ziele() const { return m_ziele; }
@@ -73,11 +84,18 @@ public:
     int niederlagen() const { return m_niederlagen; }
     int remis() const { return m_remis; }
     bool vorbei() const;
+    QString modus() const { return m_modus; }
+    int aufgabeNummer() const { return m_nummer + 1; }
+    int aufgabenZahl() const { return m_aufgaben.size(); }
+    QString lehrersatz() const { return m_lehrersatz; }
+    QString lehrerton() const { return m_lehrerton; }
 
     // Bilanz und laufende Partien holen.
     Q_INVOKABLE void standHolen();
     // Eine neue Partie gegen den Rechner.
     Q_INVOKABLE void partieStarten(int abschnitt = 1);
+    // Eine Lektion aus dem Schachkurs (Nummer aus Konto::pfad).
+    Q_INVOKABLE void lektionStarten(int stufennummer);
     // Ein Feld antippen: erst die eigene Figur, dann das Ziel.
     Q_INVOKABLE void feldAntippen(int feld);
     // Umwandlung beantworten ("q", "r", "b", "n").
@@ -94,9 +112,15 @@ signals:
     // Eine Umwandlung steht an; die Oberflaeche fragt nach der Figur.
     void umwandlungNoetig();
     void partieZuEnde(const QString &ausgang);
+    void lehrersatzGeaendert();
+    // In der Lektion: der Zug war nicht der verlangte.
+    void zugAbgelehnt(const QString &hinweis);
+    void lektionFertig();
 
 private slots:
     void antwort(const QString &kennung, const QVariantMap &daten);
+    void gegnerInDerLektion();
+    void weiterInDerLektion();
     void fehler(const QString &kennung, int status, const QString &text);
     void gegnerZiehen();
 
@@ -105,8 +129,11 @@ private:
     void setzeMeldung(const QString &text);
     void zugAbschicken(const QString &uci, const QString &san);
     void standPruefen();
+    void aufgabeZeigen();
+    QString erwarteterZug() const;
 
     Netz *m_netz;
+    Konto *m_konto;
     schach::core::Position m_stellung;
     QVariantMap m_partie;        // was der Dienst ueber die Partie sagt
     QString m_partieId;
@@ -123,6 +150,16 @@ private:
     int m_remis;
     int m_abschnitt;
     bool m_beendetGemeldet;
+
+    // Lektion: die Aufgaben der Sitzung und die Zugfolge, die verlangt ist.
+    QString m_modus;
+    QVariantList m_aufgaben;
+    int m_nummer;
+    QStringList m_erwartet;      // die Zuege der laufenden Aufgabe (UCI)
+    QStringList m_gegnerzuege;   // was der Gegner dazwischen zieht
+    int m_schritt;               // wie weit die Folge gespielt ist
+    QString m_lehrersatz;
+    QString m_lehrerton;
 };
 
 #endif // SCHACH_H

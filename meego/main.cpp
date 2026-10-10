@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     Netz netz;
     Konto konto(&netz);
     Lektion lektion(&netz, &konto);
-    Schach schach(&netz);
+    Schach schach(&netz, &konto);
 
     QDeclarativeView sicht;
     QDeclarativeContext *zusammenhang = sicht.rootContext();

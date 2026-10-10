@@ -11,9 +11,20 @@ Page {
     Component.onCompleted: Schach.standHolen()
     Component.onDestruction: Schach.partieVerlassen()
 
+    property string hinweis: ""
+
     Connections {
         target: Schach
         onUmwandlungNoetig: umwandlung.open()
+        onZugAbgelehnt: {
+            seite.hinweis = hinweis
+            hinweisUhr.restart()
+        }
+        onLektionFertig: {
+            ende.message = qsTr("Lektion geschafft.")
+            ende.open()
+        }
+        onLehrersatzGeaendert: seite.hinweis = ""
         onPartieZuEnde: {
             ende.message = qsTr("%1.").arg(ausgang)
             ende.open()
@@ -43,11 +54,46 @@ Page {
         }
     }
 
+    // Der Satz des Lehrers steht ueber dem Brett -- in der Lektion ist er
+    // die halbe Aufgabe ("Der Turm zieht gerade. Schlag die Sterne.").
+    Item {
+        id: lehrer
+        anchors { top: kopf.bottom; left: parent.left; right: parent.right }
+        height: Schach.modus === "lektion" && Schach.lehrersatz !== ""
+                ? satz.height + 20 : 0
+        visible: height > 0
+
+        Ton {
+            id: lehrerton
+            anchors { left: parent.left; leftMargin: 12
+                      verticalCenter: parent.verticalCenter }
+            quelle: Schach.lehrerton
+            groesse: 40
+            vonSelbst: true
+        }
+        Text {
+            id: satz
+            anchors { left: lehrerton.right; leftMargin: 12
+                      right: parent.right; rightMargin: 12
+                      verticalCenter: parent.verticalCenter }
+            text: Schach.lehrersatz
+            wrapMode: Text.WordWrap
+            font.pixelSize: 20
+            color: "#c8c8c8"
+        }
+    }
+
     Brett {
         id: brett
-        anchors { top: kopf.bottom; left: parent.left; right: parent.right
+        anchors { top: lehrer.bottom; left: parent.left; right: parent.right
                   bottom: fuss.top; margins: 8 }
         visible: Schach.offen
+    }
+
+    Timer {
+        id: hinweisUhr
+        interval: 2000
+        onTriggered: seite.hinweis = ""
     }
 
     // Vor der ersten Partie: ein Knopf und ein Wort dazu.
@@ -92,8 +138,9 @@ Page {
                       verticalCenter: parent.verticalCenter }
             elide: Text.ElideLeft
             font.pixelSize: 18
-            color: "#9e9e9e"
-            text: Schach.zugliste.join(" ")
+            color: seite.hinweis !== "" ? "#ff8a8a" : "#9e9e9e"
+            text: seite.hinweis !== "" ? seite.hinweis
+                                       : Schach.zugliste.join(" ")
         }
     }
 
@@ -129,7 +176,7 @@ Page {
         }
         ToolIcon {
             iconId: "toolbar-delete"
-            visible: Schach.offen
+            visible: Schach.offen && Schach.modus === "partie"
             onClicked: aufgeben.open()
         }
     }

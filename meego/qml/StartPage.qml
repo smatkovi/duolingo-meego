@@ -83,7 +83,16 @@ Page {
                 text: qsTr("Weiter im Kurs")
                 onClicked: {
                     var nummer = Konto.naechsteStufe()
-                    if (nummer >= 0) {
+                    if (nummer < 0)
+                        return
+                    var zeile = Konto.pfad[nummer]
+                    if (zeile.fach === "schach") {
+                        pageStack.push(Qt.resolvedUrl("SchachPage.qml"))
+                        if (zeile.art === "chess_match")
+                            Schach.partieStarten(zeile.abschnitt)
+                        else
+                            Schach.lektionStarten(nummer)
+                    } else {
                         pageStack.push(Qt.resolvedUrl("LektionPage.qml"))
                         Lektion.stufeStarten(nummer)
                     }

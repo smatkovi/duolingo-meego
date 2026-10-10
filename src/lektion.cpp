@@ -17,13 +17,17 @@ const char *ABGEBEN = "sitzung-abgeben";
 // Client selbst (doc/BEFUND.md). Draussen bleiben alle Arten mit Mikrofon,
 // Zeichenbrett, Schach und Rechnen.
 const char *ARTEN[] = {
-    "assist", "characterIntro", "characterMatch", "characterSelect",
-    "completeReverseTranslation", "definition", "form", "gapFill", "judge",
-    "listen", "listenComplete", "listenMatch", "listenTap", "match", "name",
+    "assist", "characterIntro", "characterMatch", "characterPuzzle",
+    "characterSelect", "completeReverseTranslation", "definition", "dialogue",
+    "extendedListenMatch", "extendedMatch", "form", "freeResponse", "gapFill",
+    "judge", "listen", "listenComplete", "listenComprehension",
+    "listenIsolation", "listenMatch", "listenTap", "match", "name",
     "partialListen", "partialReverseTranslate", "readComprehension",
-    "reverseAssist", "select", "selectPronunciation", "selectTranscription",
-    "syllableTap", "syllableListenTap", "tapCloze", "tapComplete",
-    "tapDescribe", "translate", "typeCloze", "typeComplete", 0
+    "reverseAssist", "sameDifferent", "select", "selectPronunciation",
+    "selectTranscription", "syllableTap", "syllableListenTap", "tapCloze",
+    "tapComplete", "tapDescribe", "translate", "transliterate",
+    "transliterationAssist", "typeCloze", "typeComplete", "writeComprehension",
+    0
 };
 
 bool darunter(const char **liste, const QString &was)
@@ -38,16 +42,19 @@ bool darunter(const char **liste, const QString &was)
 const char *WOERTER[] = {
     "translate", "listenTap", "tapComplete", "completeReverseTranslation",
     "syllableTap", "syllableListenTap", "tapCloze", "partialReverseTranslate",
-    "tapDescribe", 0
+    "tapDescribe", "characterPuzzle", 0
 };
 
 // Zwei Spalten zusammenbringen.
-const char *PAARE[] = { "match", "listenMatch", "characterMatch", 0 };
+const char *PAARE[] = {
+    "match", "listenMatch", "characterMatch", "extendedMatch",
+    "extendedListenMatch", 0
+};
 
 // Frei eintippen -- diese Arten bringen keine Wahlfelder mit.
 const char *TIPPEN[] = {
     "name", "listen", "listenComplete", "typeComplete", "typeCloze",
-    "partialListen", 0
+    "partialListen", "writeComprehension", "transliterate", "freeResponse", 0
 };
 
 // Die Beschriftung eines Wahlfeldes. **Sie heisst nicht ueberall `text`:**
@@ -186,7 +193,15 @@ void Lektion::starten(const QString &art, int stufennummer)
                        stufe.value(QLatin1String("pathLevelSessionMetadata")));
 
         const QString stufenart = stufe.value(QLatin1String("type")).toString();
-        if (stufenart == QLatin1String("skill")) {
+        const QString zustand = stufe.value(QLatin1String("state")).toString();
+        if (zustand == QLatin1String("unit_test")) {
+            // Der Test, mit dem sich eine gesperrte Einheit ueberspringen
+            // laesst. Er braucht nur die Faehigkeiten der Einheit; die
+            // Stufenart darunter ist egal.
+            koerper.insert(QLatin1String("skillIds"),
+                           daten.value(QLatin1String("skillIds")));
+            koerper.insert(QLatin1String("type"), QLatin1String("UNIT_TEST"));
+        } else if (stufenart == QLatin1String("skill")) {
             koerper.insert(QLatin1String("skillId"),
                            daten.value(QLatin1String("skillId")));
             koerper.insert(QLatin1String("levelIndex"),

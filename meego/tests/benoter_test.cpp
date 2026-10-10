@@ -47,6 +47,14 @@ int main(int argc, char *argv[])
 
         for (int i = 0; i < aufgaben.size(); ++i) {
             const QVariantMap aufgabe = aufgaben.at(i).toMap();
+            const QString art = aufgabe.value("type").toString();
+            // Schach und Rechnen werden nicht vom Sprachbenoter benotet:
+            // sie haben eigene Regeln (Zugfolge, Formelbaum). Ihre
+            // Rohdaten liegen im selben Ordner, gehoeren hier aber nicht
+            // her.
+            if (art == "star" || art.startsWith("math")
+                || art.startsWith("chess"))
+                continue;
 
             // Die ganze Benotung, so wie die Oberflaeche sie aufruft: eine
             // vollkommene Antwort muss als richtig durchgehen, eine
