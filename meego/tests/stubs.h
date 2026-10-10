@@ -2,6 +2,7 @@
 #define STUBS_H
 
 #include <QObject>
+#include <QStringList>
 #include <QVariantList>
 #include <QVariantMap>
 
@@ -104,6 +105,48 @@ signals:
     void benotet(bool richtig, const QString &loesung);
     void abgegeben(int xp);
     void fehlgeschlagen(const QString &grund);
+};
+
+class StubSchach : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(bool laeuft READ flagge NOTIFY laeuftGeaendert)
+    Q_PROPERTY(bool offen READ flagge NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString fen READ text NOTIFY stellungGeaendert)
+    Q_PROPERTY(QVariantList felder READ liste NOTIFY stellungGeaendert)
+    Q_PROPERTY(QVariantList ziele READ liste NOTIFY auswahlGeaendert)
+    Q_PROPERTY(int gewaehlt READ zahl NOTIFY auswahlGeaendert)
+    Q_PROPERTY(bool untenWeiss READ flagge NOTIFY stellungGeaendert)
+    Q_PROPERTY(bool ichAmZug READ flagge NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString letzterZug READ text NOTIFY stellungGeaendert)
+    Q_PROPERTY(QStringList zugliste READ worte NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString stand READ text NOTIFY stellungGeaendert)
+    Q_PROPERTY(QString meldung READ text NOTIFY meldungGeaendert)
+    Q_PROPERTY(int elo READ zahl NOTIFY bilanzGeaendert)
+    Q_PROPERTY(int siege READ zahl NOTIFY bilanzGeaendert)
+    Q_PROPERTY(int niederlagen READ zahl NOTIFY bilanzGeaendert)
+    Q_PROPERTY(int remis READ zahl NOTIFY bilanzGeaendert)
+    Q_PROPERTY(bool vorbei READ flagge NOTIFY stellungGeaendert)
+public:
+    bool flagge() const { return false; }
+    int zahl() const { return 0; }
+    QString text() const { return QString(); }
+    QStringList worte() const { return QStringList(); }
+    QVariantList liste() const { return QVariantList(); }
+    Q_INVOKABLE void standHolen() {}
+    Q_INVOKABLE void partieStarten(int) {}
+    Q_INVOKABLE void feldAntippen(int) {}
+    Q_INVOKABLE void umwandeln(const QString &) {}
+    Q_INVOKABLE void aufgeben() {}
+    Q_INVOKABLE void partieVerlassen() {}
+signals:
+    void laeuftGeaendert();
+    void stellungGeaendert();
+    void auswahlGeaendert();
+    void meldungGeaendert();
+    void bilanzGeaendert();
+    void umwandlungNoetig();
+    void partieZuEnde(const QString &ausgang);
 };
 
 #endif // STUBS_H

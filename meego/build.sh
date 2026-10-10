@@ -5,6 +5,7 @@
 #   meego/build.sh arm     das Programm fuers Geraet -> build/meego/arm/duolingo
 #   meego/build.sh check   den QML-Pruefer gegen das Desktop-Qt-4 des SDK
 #   meego/build.sh test    die Probe fuer den Benoter (laeuft ohne Geraet)
+#   meego/build.sh schach  die Probe fuer Brett, Zuege und Gegner
 #
 # Der ARM-Bau braucht die GCC-Cross-Toolchain (XGCC) und das MADDE-Sysroot
 # (SYSROOT); moc und lrelease kommen aus dem Qt 4.7.4 des Simulators, also
@@ -24,22 +25,29 @@ OUT=$HERE/build/meego/$MODE
 mkdir -p "$OUT"
 
 APP_SRC="src/benoter.cpp \
+ src/bot.cpp \
+ src/core/Position.cpp \
  src/format.cpp \
  src/json.cpp \
  src/konto.cpp \
  src/lektion.cpp \
  src/netz.cpp \
+ src/schach.cpp \
  meego/main.cpp"
 
 # Kopfdateien mit einem Q_OBJECT darin.
-MOC_HEADERS="src/konto.h src/lektion.h src/netz.h"
+MOC_HEADERS="src/konto.h src/lektion.h src/netz.h src/schach.h"
 
-INCLUDES="-I$HERE -I$HERE/src -I$HERE/meego"
+INCLUDES="-I$HERE -I$HERE/src -I$HERE/src/core -I$HERE/meego \
+ -I$HERE/third_party/chess-library"
 DEFINES="-DAPP_VERSION='\"$VERSION\"' -DQT_NO_DEBUG"
 
 COMMON_FLAGS="-O2 -Wall -Wno-deprecated-declarations -Wno-unused-parameter \
  $DEFINES $INCLUDES"
-CXX_ONLY="-std=gnu++98"
+# C++17, weil die Schachbibliothek (third_party/chess-library) es braucht.
+# Qt 4.7 laesst sich damit uebersetzen, wenn man ihm die alten Schluesselwoerter
+# nachsieht -- dieselben Schalter wie in harbour-schachlehrer.
+CXX_ONLY="-std=gnu++17 -Wno-register -Wno-nonnull"
 
 QT4_MODULES="QtCore QtGui QtNetwork QtDeclarative"
 
@@ -90,8 +98,18 @@ test)
     APP_SRC="src/benoter.cpp src/json.cpp meego/tests/benoter_test.cpp"
     MOC_HEADERS=""
     ;;
+schach)
+    # Die Schachprobe: Brett, Zuege, Gegner -- ganz ohne Qt.
+    CXX=${CXX:-g++}
+    CXXFLAGS="-O2 -Wall $DEFINES $INCLUDES $CXX_ONLY"
+    LDFLAGS=""
+    LIBS=""
+    MOC=true
+    APP_SRC="src/bot.cpp src/core/Position.cpp meego/tests/schach_test.cpp"
+    MOC_HEADERS=""
+    ;;
 *)
-    echo "Aufruf: $0 arm|check" >&2; exit 2 ;;
+    echo "Aufruf: $0 arm|check|test|schach" >&2; exit 2 ;;
 esac
 
 MK=$OUT/Makefile
@@ -117,6 +135,11 @@ MK=$OUT/Makefile
 } > "$MK"
 
 make -C "$OUT" -f Makefile -j"$JOBS" duolingo
+
+if [ "$MODE" = "schach" ]; then
+    "$OUT/duolingo"
+    exit $?
+fi
 
 if [ "$MODE" = "test" ]; then
     "$OUT/duolingo" "$HERE"/doc/sitzung-*.json "$HERE"/doc/abgabe-*.json

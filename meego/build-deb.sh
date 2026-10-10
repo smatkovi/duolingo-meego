@@ -42,6 +42,9 @@ cp "$FETCH" "$STAGE/opt/duolingo/bin/duo-holer"
 chmod 755 "$STAGE/opt/duolingo/bin/duolingo" "$STAGE/opt/duolingo/bin/duo-holer"
 
 cp -a "$PKG/qml" "$STAGE/opt/duolingo/qml"
+# Die Schachfiguren (cburnett, BSD-3-Clause -- siehe figuren/HERKUNFT.md).
+mkdir -p "$STAGE/opt/duolingo/figuren"
+cp "$HERE/figuren/"*.svg "$STAGE/opt/duolingo/figuren/"
 if [ -d "$OUT/arm/translations" ]; then
     cp -a "$OUT/arm/translations" "$STAGE/opt/duolingo/translations"
 fi

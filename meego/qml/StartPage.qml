@@ -111,6 +111,13 @@ Page {
             Button {
                 width: parent.width
                 visible: Konto.angemeldet
+                text: qsTr("Schach")
+                onClicked: pageStack.push(Qt.resolvedUrl("SchachPage.qml"))
+            }
+
+            Button {
+                width: parent.width
+                visible: Konto.angemeldet
                 text: Konto.kurse.length > 1
                       ? qsTr("Kurs wechseln") : qsTr("Kurse")
                 onClicked: pageStack.push(Qt.resolvedUrl("KursePage.qml"))

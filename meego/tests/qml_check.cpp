@@ -34,9 +34,11 @@ int main(int argc, char *argv[])
     StubNetz netz;
     StubKonto konto;
     StubLektion lektion;
+    StubSchach schach;
     engine.rootContext()->setContextProperty("Netz", &netz);
     engine.rootContext()->setContextProperty("Konto", &konto);
     engine.rootContext()->setContextProperty("Lektion", &lektion);
+    engine.rootContext()->setContextProperty("Schach", &schach);
     engine.rootContext()->setContextProperty("Fassung", QString("0.1.0"));
 
     const QDir directory(arguments.at(1));

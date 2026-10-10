@@ -17,6 +17,7 @@
 #include "konto.h"
 #include "lektion.h"
 #include "netz.h"
+#include "schach.h"
 
 #ifndef APP_VERSION
 #define APP_VERSION "0.0.0"
@@ -52,12 +53,14 @@ int main(int argc, char *argv[])
     Netz netz;
     Konto konto(&netz);
     Lektion lektion(&netz, &konto);
+    Schach schach(&netz);
 
     QDeclarativeView sicht;
     QDeclarativeContext *zusammenhang = sicht.rootContext();
     zusammenhang->setContextProperty(QLatin1String("Netz"), &netz);
     zusammenhang->setContextProperty(QLatin1String("Konto"), &konto);
     zusammenhang->setContextProperty(QLatin1String("Lektion"), &lektion);
+    zusammenhang->setContextProperty(QLatin1String("Schach"), &schach);
     zusammenhang->setContextProperty(QLatin1String("Fassung"),
                                      QString(QLatin1String(APP_VERSION)));
 

@@ -38,8 +38,25 @@ zieht noch nicht zurueck. Da fehlt also noch ein Feld oder ein zweiter
 Aufruf; die Schachoberflaeche der Weboberflaeche liegt in einem eigenen
 Buendelstueck, das noch nicht gelesen ist.
 
-## Was es zu bauen gaebe
+## Was daraus geworden ist (0.2.0)
 
-Ein Brett, das FEN zeichnet und Zuege abschickt -- und genau das gibt es
-schon: `~/ps/harbour-schachlehrer`. Der Rest ist diese Handvoll Aufrufe.
-Kein Vergleich mit der Lektionsmaschine; eher ein Nachmittag als ein Projekt.
+* `src/core/Position` und `third_party/chess-library` kommen aus
+  `~/ps/harbour-schachlehrer` -- dasselbe Brett, das dort gegen feste
+  Stellungen geprueft ist. Die Figuren ebenso (cburnett, BSD-3-Clause).
+* `src/schach.cpp` spricht mit dem Dienst, `meego/qml/Brett.qml` zeichnet,
+  `SchachPage.qml` haelt es zusammen.
+* **Den Gegenzug rechnet das Telefon** (`src/bot.cpp`): Alpha-Beta ueber
+  zwei bis vier Halbzuege, Material plus ein paar Felder. Kein Stockfish --
+  Duolingos Bots fangen bei 200 Elo an, und ein 40-MB-Netz hat auf einem N9
+  nichts verloren. Die Probe (`meego/build.sh schach`) prueft die Umrechnung
+  FEN -> 64 Felder, dass der Gegner nur Erlaubtes zieht, dass eine Partie zu
+  Ende kommt und dass er ein Matt in einem Zug findet.
+* Elo und Bilanz kommen vom Dienst, jeder Zug geht dorthin zurueck.
+
+**Was daran unsicher ist:** ob Duolingos eigener Bot wirklich im Client
+rechnet. Dafuer spricht, dass der Server auf einen Zug nichts zurueckzieht
+und dass er die Saetze fuer unmoegliche Zuege gleich beim Anlegen der Partie
+mitschickt (die braucht nur, wer selbst gegen den Bot zeichnet). Dagegen
+spricht nichts Gemessenes -- aber das Buendelstueck mit der Schachoberflaeche
+ist noch nicht gefunden. Solange das offen ist, gilt: **unser Gegner ist
+nicht ihr Gegner**, auch wenn die Partie in derselben Bilanz landet.
