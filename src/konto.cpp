@@ -16,6 +16,7 @@ const char *FELDER =
 
 const char *ANMELDEN = "anmelden";
 const char *KONTO = "konto";
+const char *PASSWORTPOST = "passwortpost";
 
 }  // namespace
 
@@ -92,6 +93,25 @@ void Konto::anmelden(const QString &kennung, const QString &passwort)
     m_netz->ruf(QLatin1String(ANMELDEN), QLatin1String("POST"),
                 QLatin1String("/2017-06-30/login?fields=jwt"),
                 Json::serialise(koerper), false);
+}
+
+void Konto::passwortAnfordern(const QString &adresse)
+{
+    QVariantMap koerper;
+    koerper.insert(QLatin1String("email"), adresse);
+    setzeLaeuft(true);
+    m_netz->ruf(QLatin1String(PASSWORTPOST), QLatin1String("POST"),
+                QLatin1String("/2023-05-23/password-reset"),
+                Json::serialise(koerper), false);
+}
+
+bool Konto::markeEinspielen(const QString &jwt)
+{
+    if (!m_netz->einspielen(jwt))
+        return false;
+    emit angemeldetWorden();
+    auffrischen();
+    return true;
 }
 
 void Konto::abmelden()
@@ -203,6 +223,11 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
         }
         return;
     }
+    if (kennung == QLatin1String(PASSWORTPOST)) {
+        setzeLaeuft(false);
+        emit postUnterwegs();
+        return;
+    }
     if (kennung != QLatin1String(KONTO))
         return;
 
@@ -236,9 +261,14 @@ void Konto::antwort(const QString &kennung, const QVariantMap &daten)
 
 void Konto::fehler(const QString &kennung, int status, const QString &text)
 {
-    if (kennung != QLatin1String(ANMELDEN) && kennung != QLatin1String(KONTO))
+    if (kennung != QLatin1String(ANMELDEN) && kennung != QLatin1String(KONTO)
+        && kennung != QLatin1String(PASSWORTPOST))
         return;
     setzeLaeuft(false);
+    if (kennung == QLatin1String(PASSWORTPOST)) {
+        emit fehlgeschlagen(text);
+        return;
+    }
     if (kennung == QLatin1String(ANMELDEN)) {
         if (status == 401 || status == 403)
             emit anmeldungAbgelehnt(

@@ -54,6 +54,10 @@ public:
     // Marke und Kennung aus der Anmeldung uebernehmen. Die Kennung steht
     // als `sub` in der Marke selbst -- ein Aufruf weniger.
     void marke(const QString &jwt);
+    // Eine anderswo erworbene Marke von Hand eintragen -- der Weg fuer
+    // Konten, die mit Google angelegt wurden und kein Passwort haben.
+    // Gibt false zurueck, wenn das keine Marke ist.
+    Q_INVOKABLE bool einspielen(const QString &jwt);
     Q_INVOKABLE void abmelden();
     QString benutzeragent() const { return m_benutzeragent; }
 

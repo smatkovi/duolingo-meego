@@ -25,6 +25,7 @@ class StubNetz : public QObject
 public:
     bool flagge() const { return false; }
     QString text() const { return QString(); }
+    Q_INVOKABLE bool einspielen(const QString &) { return false; }
     Q_INVOKABLE void abmelden() {}
 signals:
     void anmeldungGeaendert();
@@ -53,6 +54,8 @@ public:
     QString text() const { return QString(); }
     QVariantList liste() const { return QVariantList(); }
     Q_INVOKABLE void anmelden(const QString &, const QString &) {}
+    Q_INVOKABLE void passwortAnfordern(const QString &) {}
+    Q_INVOKABLE bool markeEinspielen(const QString &) { return false; }
     Q_INVOKABLE void abmelden() {}
     Q_INVOKABLE void auffrischen() {}
     Q_INVOKABLE QVariantMap stufe(int) const { return QVariantMap(); }
@@ -62,6 +65,7 @@ signals:
     void geaendert();
     void laeuftGeaendert();
     void angemeldetWorden();
+    void postUnterwegs();
     void anmeldungAbgelehnt(const QString &grund);
     void fehlgeschlagen(const QString &grund);
 };

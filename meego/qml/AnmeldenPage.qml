@@ -80,6 +80,11 @@ Page {
                 color: "#ff6b6b"
             }
 
+            Button {
+                text: qsTr("Mit Google angemeldet?")
+                onClicked: pageStack.push(Qt.resolvedUrl("EinspielenPage.qml"))
+            }
+
             Text {
                 width: parent.width
                 wrapMode: Text.WordWrap

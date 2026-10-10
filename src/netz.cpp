@@ -98,6 +98,21 @@ void Netz::marke(const QString &jwt)
         emit anmeldungGeaendert();
 }
 
+bool Netz::einspielen(const QString &jwt)
+{
+    QString sauber = jwt.trimmed();
+    // Wer den Keks aus dem Browser kopiert, hat leicht `jwt_token=` davor.
+    const int gleich = sauber.indexOf(QLatin1Char('='));
+    if (gleich > 0 && gleich < 20)
+        sauber = sauber.mid(gleich + 1).trimmed();
+    if (sauber.endsWith(QLatin1Char(';')))
+        sauber.chop(1);
+    if (sauber.count(QLatin1Char('.')) != 2 || kennungAusMarke(sauber).isEmpty())
+        return false;
+    marke(sauber);
+    return true;
+}
+
 void Netz::abmelden()
 {
     if (m_marke.isEmpty())

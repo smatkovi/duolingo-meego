@@ -48,6 +48,13 @@ public:
     QVariantMap kurs() const { return m_kurs; }
 
     Q_INVOKABLE void anmelden(const QString &kennung, const QString &passwort);
+    // Eine Mail zum Passwortsetzen anfordern. Der Weg fuer Konten, die mit
+    // Google angelegt wurden: sie haben kein Passwort, koennen aber eines
+    // bekommen -- die Google-Anmeldung bleibt daneben bestehen.
+    Q_INVOKABLE void passwortAnfordern(const QString &adresse);
+    // Eine von Hand eingetragene Marke uebernehmen und gleich nachsehen,
+    // ob sie gilt.
+    Q_INVOKABLE bool markeEinspielen(const QString &jwt);
     Q_INVOKABLE void abmelden();
     // Konto und Pfad neu holen -- nach dem Start, nach einer Lektion.
     Q_INVOKABLE void auffrischen();
@@ -63,6 +70,7 @@ signals:
     void geaendert();
     void laeuftGeaendert();
     void angemeldetWorden();
+    void postUnterwegs();
     void anmeldungAbgelehnt(const QString &grund);
     void fehlgeschlagen(const QString &grund);
 
