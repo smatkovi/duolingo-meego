@@ -21,11 +21,36 @@ gelesen, nichts geraten. Die Werkzeuge, die es erzeugt haben, stehen dabei.
   `android-api-cf.duolingo.com` antworten gleich.
 * **Zwei Basen**: `/2017-06-30` fuer Konto und Anmeldung, `/2023-05-23`
   fuer Sitzungen (im Buendel: `qn = ue("/2023-05-23")`).
-* **Anmeldung**: `POST /2017-06-30/login?fields=jwt` mit
-  `{identifier, password, distinctId}`. Keine Pruefungsaufgabe. **Die Marke
-  kommt im Antwortkopf `jwt`**, nicht im Koerper -- wer nur den Koerper
-  liest, haelt eine geglueckte Anmeldung fuer leer. Die Benutzerkennung
-  steht als `sub` in der Marke.
+* **Anmeldung**: `POST /2023-05-23/login?fields=jwt` mit
+  `{identifier, password, distinctId}`. **Die Marke kommt im Antwortkopf
+  `jwt`**, nicht im Koerper -- wer nur den Koerper liest, haelt eine
+  geglueckte Anmeldung fuer leer. Die Benutzerkennung steht als `sub` in
+  der Marke.
+* **Und sie haengt am Benutzeragenten** (10.10.2026 an einem Probekonto mit
+  bekanntem Passwort gemessen, `tools/anmeldung-matrix.py`):
+
+  | Agentenzeile | Antwort |
+  |---|---|
+  | `Duodroid/6.0.0` | **200, Marke** |
+  | `Duodroid/6.0.0 Dalvik/2.1.0 (Linux; U; MeeGo 1.2 Harmattan; Nokia N9)` | **200, Marke** |
+  | `Duodroid/6.0.0 Qt/4.7.4 (…)` | 401 |
+  | `Duodroid/0.1.0-meego5` | 401 |
+  | eigener Name, Chrome, Chrome + Origin/Referer | 401 |
+
+  Der Grund steht im Buendel: die Weboberflaeche legt der Anmeldung ein
+  **reCAPTCHA-Enterprise-Token** bei -- Feld **`signal`**, aus
+  `c.e("LOGIN")`. Wer kein Browser ist, kommt nur ueber den Weg der App
+  hinein, und der Server prueft die Zeile streng:
+  `Duodroid/<zahl.zahl.zahl>`, danach nichts oder `Dalvik/…`.
+  **Alle anderen Antworten sehen gleich aus**: derselbe 401 mit demselben
+  Satz, ob Kennung falsch, Passwort falsch, kein Passwort gesetzt oder
+  Agentenzeile verkehrt. Ohne ein Konto zum Gegenhalten ist da nichts zu
+  unterscheiden.
+* **Ein Probekonto mit Passwort** bekommt man ohne reCAPTCHA: frisches
+  Wegwerfkonto, dann `PATCH /2023-05-23/users/{id}` erst mit `username`,
+  dann mit `email`+`password`+`name`. Nur das Passwort allein aendern geht
+  nicht (`IDENTITY_INVALID` / `PASSWORD_INCORRECT`), und beides in einem Zug
+  am ganz frischen Konto gibt 403.
 * **Ohne Konto geht auch etwas**: `POST /2023-05-23/users` mit
   `{distinctId, fromLanguage, learningLanguage, timezone}` legt den
   Besucher an, den die Weboberflaeche fuer "ohne Anmeldung ausprobieren"
