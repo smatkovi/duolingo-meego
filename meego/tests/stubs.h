@@ -158,4 +158,16 @@ signals:
     void lektionFertig();
 };
 
+class StubLautsprecher : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(bool spielt READ flagge NOTIFY spieltGeaendert)
+public:
+    bool flagge() const { return false; }
+    Q_INVOKABLE void spielen(const QString &) {}
+    Q_INVOKABLE void aus() {}
+signals:
+    void spieltGeaendert();
+};
+
 #endif // STUBS_H

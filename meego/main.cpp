@@ -15,6 +15,7 @@
 #include <QTranslator>
 
 #include "konto.h"
+#include "lautsprecher.h"
 #include "lektion.h"
 #include "netz.h"
 #include "schach.h"
@@ -54,6 +55,7 @@ int main(int argc, char *argv[])
     Konto konto(&netz);
     Lektion lektion(&netz, &konto);
     Schach schach(&netz, &konto);
+    Lautsprecher lautsprecher;
 
     QDeclarativeView sicht;
     QDeclarativeContext *zusammenhang = sicht.rootContext();
@@ -61,6 +63,7 @@ int main(int argc, char *argv[])
     zusammenhang->setContextProperty(QLatin1String("Konto"), &konto);
     zusammenhang->setContextProperty(QLatin1String("Lektion"), &lektion);
     zusammenhang->setContextProperty(QLatin1String("Schach"), &schach);
+    zusammenhang->setContextProperty(QLatin1String("Lautsprecher"), &lautsprecher);
     zusammenhang->setContextProperty(QLatin1String("Fassung"),
                                      QString(QLatin1String(APP_VERSION)));
 

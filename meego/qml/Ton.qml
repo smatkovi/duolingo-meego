@@ -1,9 +1,12 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
-import QtMultimediaKit 1.1
 
-// Ein Lautsprecherknopf. Harmattans Multimedia heisst QtMultimediaKit 1.1
-// (QtMobility), nicht QtMultimedia.
+// Ein Lautsprecherknopf.
+//
+// Gespielt wird nicht mit dem QML-Bauteil `Audio` aus QtMultimediaKit --
+// das liess sich druecken und blieb stumm --, sondern mit gstreamer
+// selbst, ueber `Lautsprecher` (src/lautsprecher.h). Der Weg ist am Geraet
+// nachgemessen.
 //
 // Die Adresse kommt schon als `http` an -- umgeschrieben in src/lektion.cpp,
 // weil gstreamer auf diesem Geraet kein TLS kann.
@@ -18,16 +21,10 @@ Item {
     height: groesse
     visible: quelle != ""
 
-    Audio {
-        id: spieler
-        source: knopf.quelle
-    }
-
     function abspielen() {
         if (knopf.quelle == "")
             return
-        spieler.stop()
-        spieler.play()
+        Lautsprecher.spielen("" + knopf.quelle)
     }
 
     onQuelleChanged: if (vonSelbst) abspielen()

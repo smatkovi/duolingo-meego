@@ -2,7 +2,7 @@ Package: duolingo
 Version: @VERSION@
 Architecture: armel
 Maintainer: Sebastian Matkovich <sebastian.matkovich@gmail.com>
-Depends: libqtcore4, libqtgui4, libqt4-network, libqt4-declarative, libmeegotouchcore0, qt-components, libqtm-multimedia
+Depends: libqtcore4, libqtgui4, libqt4-network, libqt4-declarative, libmeegotouchcore0, qt-components, gstreamer0.10-tools
 Section: user/education
 Priority: optional
 Description: Duolingo for the N9 and N950

@@ -31,13 +31,15 @@ APP_SRC="src/benoter.cpp \
  src/format.cpp \
  src/json.cpp \
  src/konto.cpp \
+ src/lautsprecher.cpp \
  src/lektion.cpp \
  src/netz.cpp \
  src/schach.cpp \
  meego/main.cpp"
 
 # Kopfdateien mit einem Q_OBJECT darin.
-MOC_HEADERS="src/konto.h src/lektion.h src/netz.h src/schach.h"
+MOC_HEADERS="src/konto.h src/lautsprecher.h src/lektion.h src/netz.h \
+ src/schach.h"
 
 INCLUDES="-I$HERE -I$HERE/src -I$HERE/src/core -I$HERE/meego \
  -I$HERE/third_party/chess-library"
