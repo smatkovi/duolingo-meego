@@ -53,10 +53,15 @@ Buendelstueck, das noch nicht gelesen ist.
   Ende kommt und dass er ein Matt in einem Zug findet.
 * Elo und Bilanz kommen vom Dienst, jeder Zug geht dorthin zurueck.
 
-**Was daran unsicher ist:** ob Duolingos eigener Bot wirklich im Client
-rechnet. Dafuer spricht, dass der Server auf einen Zug nichts zurueckzieht
-und dass er die Saetze fuer unmoegliche Zuege gleich beim Anlegen der Partie
-mitschickt (die braucht nur, wer selbst gegen den Bot zeichnet). Dagegen
-spricht nichts Gemessenes -- aber das Buendelstueck mit der Schachoberflaeche
-ist noch nicht gefunden. Solange das offen ist, gilt: **unser Gegner ist
-nicht ihr Gegner**, auch wenn die Partie in derselben Bilanz landet.
+**Dass der Gegner im Client rechnet, ist belegt**, nicht nur vermutet:
+`tools/buendelstueck-suchen.py` hat das Buendelstueck 8287 gefunden (400 kB,
+aus Kotlin uebersetzt), und darin steht die Bewertungsklasse mit
+`bestMove`, `centipawnEval`, `mateIn`, `evalCategory`, `evalText`. Dazu
+passt, dass der Server auf einen Zug nichts zurueckzieht und die Saetze
+fuer unmoegliche Zuege schon beim Anlegen der Partie mitschickt -- die
+braucht nur, wer selbst gegen den Bot zeichnet.
+
+Was bleibt: **unser Gegner ist nicht ihr Gegner.** Er rechnet nach
+denselben Regeln, aber nicht mit derselben Bewertung, und die Partie landet
+trotzdem in derselben Bilanz. Wie Duolingo die Spielstaerke je Abschnitt
+einstellt, steht noch nicht fest.
