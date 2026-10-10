@@ -1,0 +1,678 @@
+{
+ "fromLanguage": "en",
+ "type": "CHESS_LESSON",
+ "feedbackProperties": {
+  "contentId": "Skill:rookBishopMovement_26e5e33af9aa"
+ },
+ "id": "1181db5d-2fad-470a-b8d3-64b96aa8a29a",
+ "challenges": [
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "e1e6 e6b6"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [
+     "e1e6 blue"
+    ],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **rook** moves in straight lines. Capture the stars.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/198510af065c478a9b379fd7e4a146e2",
+      "visemes": "100\t0\t78\n105\t78\t31\n112\t109\t210\n118\t320\t101\n104\t421\t179\n115\t601\t109\n101\t710\t46\n105\t757\t39\n102\t796\t132\n120\t929\t70\n103\t1000\t78\n104\t1078\t78\n112\t1156\t218\n105\t1375\t93\n113\t1468\t171\n107\t1640\t62\n100\t1703\t476\n101\t2179\t156\n105\t2335\t62\n115\t2398\t93\n101\t2492\t140\n105\t2632\t93\n115\t2726\t109\n107\t2835\t54\n112\t2890\t359\n115\t3250\t265\n100\t3515\t125"
+     }
+    ],
+    "illegalMoveContent": [
+     {
+      "illegalMoveCategory": "check",
+      "illegalMoveInstructorModel": {
+       "text": "That square is under attack. Your king can’t go there.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/1ae37365d71407e088ba1e4c695dca67",
+       "visemes": "116\t0\t117\n101\t117\t78\n105\t195\t46\n113\t242\t101\n118\t343\t62\n110\t406\t70\n101\t476\t85\n120\t562\t109\n103\t671\t31\n113\t703\t93\n102\t796\t54\n105\t851\t39\n105\t890\t31\n120\t921\t85\n102\t1007\t46\n105\t1054\t101\n101\t1156\t195\n118\t1351\t171\n103\t1671\t85\n104\t1757\t54\n120\t1812\t46\n118\t1859\t125\n103\t1984\t54\n118\t2039\t148\n118\t2187\t70\n101\t2257\t109\n105\t2367\t39\n105\t2406\t39\n118\t2445\t93\n104\t2539\t132\n116\t2671\t70\n101\t2742\t78\n120\t2820\t78\n100\t2898\t301"
+      },
+      "illegalMoveType": "king_moved_to_an_attacked_square"
+     },
+     {
+      "illegalMoveCategory": "check",
+      "illegalMoveInstructorModel": {
+       "text": "Your king is still in check! You must get it to safety first.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/bf5b4f28377a7dc3196a1603b4da1988",
+       "visemes": "103\t0\t93\n104\t93\t93\n120\t187\t46\n118\t234\t109\n103\t343\t70\n118\t414\t171\n103\t585\t31\n113\t617\t39\n113\t656\t101\n105\t757\t46\n103\t804\t62\n108\t867\t85\n103\t953\t39\n105\t992\t85\n115\t1078\t132\n101\t1210\t179\n118\t1390\t156\n103\t1929\t78\n104\t2007\t70\n107\t2078\t101\n102\t2179\t85\n113\t2265\t101\n105\t2367\t70\n118\t2437\t62\n101\t2500\t62\n105\t2562\t62\n103\t2625\t39\n105\t2664\t39\n105\t2703\t46\n102\t2750\t54\n113\t2804\t156\n103\t2960\t109\n109\t3070\t62\n105\t3132\t54\n105\t3187\t78\n109\t3265\t117\n120\t3382\t187\n113\t3570\t140\n105\t3710\t117\n100\t3828\t11"
+      },
+      "illegalMoveType": "leaving_king_in_check"
+     },
+     {
+      "illegalMoveCategory": "check",
+      "illegalMoveInstructorModel": {
+       "text": "That piece is shielding your king. It can’t move there.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/7c6a302b-7a47-47b3-8260-2991e0a9c0f9",
+       "visemes": "116\t0\t93\n101\t93\t101\n105\t195\t62\n107\t257\t117\n105\t375\t140\n113\t515\t101\n103\t617\t62\n113\t679\t39\n115\t718\t156\n105\t875\t78\n108\t953\t70\n105\t1023\t54\n103\t1078\t31\n118\t1109\t70\n103\t1179\t70\n104\t1250\t54\n120\t1304\t70\n118\t1375\t140\n103\t1515\t85\n118\t1601\t234\n103\t2257\t78\n105\t2335\t78\n118\t2414\t85\n101\t2500\t132\n105\t2632\t31\n105\t2664\t70\n107\t2734\t78\n104\t2812\t109\n109\t2921\t70\n116\t2992\t85\n101\t3078\t31\n120\t3109\t234\n100\t3343\t176"
+      },
+      "illegalMoveType": "pinned_piece_move"
+     },
+     {
+      "illegalMoveCategory": "castling",
+      "illegalMoveInstructorModel": {
+       "text": "Your king can’t castle while in check.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/3130c96fdedce9dc1d89e4d5b90b1a4b",
+       "visemes": "103\t0\t109\n104\t109\t78\n120\t187\t46\n118\t234\t132\n103\t367\t148\n118\t515\t148\n118\t664\t85\n101\t750\t140\n105\t890\t31\n105\t921\t39\n118\t960\t93\n101\t1054\t132\n113\t1187\t93\n102\t1281\t54\n108\t1335\t140\n110\t1476\t70\n103\t1546\t62\n108\t1609\t93\n103\t1703\t46\n105\t1750\t85\n115\t1835\t132\n101\t1968\t156\n118\t2125\t179\n100\t2304\t15"
+      },
+      "illegalMoveType": "castling_while_in_check"
+     },
+     {
+      "illegalMoveCategory": "castling",
+      "illegalMoveInstructorModel": {
+       "text": "Your king can’t castle through an attacked square.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/5df74e8455e90e30c4d08bec70a0c938",
+       "visemes": "103\t32\t125\n104\t157\t62\n120\t219\t62\n118\t282\t117\n103\t399\t117\n118\t516\t156\n118\t672\t93\n101\t766\t140\n105\t907\t31\n105\t938\t46\n118\t985\t101\n101\t1086\t132\n113\t1219\t101\n102\t1321\t39\n108\t1360\t85\n116\t1446\t85\n120\t1532\t70\n104\t1602\t85\n102\t1688\t23\n105\t1711\t54\n102\t1766\t62\n105\t1828\t93\n101\t1922\t132\n118\t2055\t70\n105\t2125\t39\n113\t2164\t85\n118\t2250\t70\n110\t2321\t78\n101\t2399\t101\n120\t2500\t250\n100\t2750\t129"
+      },
+      "illegalMoveType": "castling_through_attacked_square"
+     },
+     {
+      "illegalMoveCategory": "castling",
+      "illegalMoveInstructorModel": {
+       "text": "Your king already moved, so it can’t castle anymore.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/f5891da864fdf787824771750bfe0081",
+       "visemes": "103\t0\t132\n104\t132\t54\n120\t187\t46\n118\t234\t164\n103\t398\t85\n118\t484\t109\n104\t593\t109\n108\t703\t39\n120\t742\t93\n101\t835\t46\n105\t882\t46\n105\t929\t70\n107\t1000\t93\n104\t1093\t218\n109\t1312\t62\n105\t1375\t109\n113\t1585\t101\n104\t1687\t109\n103\t1796\t62\n105\t1859\t54\n118\t1914\t109\n101\t2023\t117\n105\t2140\t31\n105\t2171\t39\n118\t2210\t101\n101\t2312\t125\n113\t2437\t93\n102\t2531\t46\n108\t2578\t109\n101\t2687\t23\n105\t2710\t46\n105\t2757\t39\n107\t2796\t85\n104\t2882\t187\n120\t3070\t117\n100\t3187\t172"
+      },
+      "illegalMoveType": "castling_king_already_moved"
+     },
+     {
+      "illegalMoveCategory": "castling",
+      "illegalMoveInstructorModel": {
+       "text": "That rook already moved, so it can no longer castle.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/183507ff9e46adc1230b3408f30cb618",
+       "visemes": "116\t0\t93\n101\t93\t101\n105\t195\t62\n120\t257\t148\n104\t406\t85\n118\t492\t109\n104\t601\t78\n108\t679\t46\n120\t726\t93\n101\t820\t39\n105\t859\t46\n105\t906\t70\n107\t976\t101\n104\t1078\t234\n109\t1312\t46\n105\t1359\t203\n113\t1562\t101\n104\t1664\t125\n103\t1789\t31\n105\t1820\t39\n118\t1859\t101\n101\t1960\t46\n105\t2007\t70\n105\t2078\t70\n104\t2148\t117\n108\t2265\t93\n104\t2359\t101\n118\t2460\t54\n118\t2515\t62\n120\t2578\t62\n118\t2640\t125\n101\t2765\t125\n113\t2890\t93\n102\t2984\t39\n108\t3023\t203\n100\t3226\t133"
+      },
+      "illegalMoveType": "castling_rook_already_moved"
+     },
+     {
+      "illegalMoveCategory": "castling",
+      "illegalMoveInstructorModel": {
+       "text": "Your king and rook need a clear path to castle.",
+       "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/EN%20Oscar/9e1dd482aaedf1e73e7aebec02e624a7",
+       "visemes": "103\t32\t140\n104\t172\t62\n120\t235\t70\n118\t305\t171\n103\t477\t54\n118\t532\t218\n101\t750\t70\n105\t821\t62\n105\t883\t54\n120\t938\t132\n104\t1071\t148\n118\t1219\t140\n105\t1461\t46\n105\t1508\t78\n105\t1586\t39\n102\t1625\t62\n118\t1688\t132\n108\t1821\t39\n103\t1860\t85\n120\t1946\t78\n107\t2024\t109\n101\t2133\t179\n116\t2313\t109\n105\t2422\t78\n104\t2500\t54\n118\t2555\t85\n101\t2641\t148\n113\t2789\t101\n102\t2891\t46\n108\t2938\t164\n100\t3102\t177"
+      },
+      "illegalMoveType": "castling_path_not_clear"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "The **rook** moves in straight lines. Capture the stars.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/198510af065c478a9b379fd7e4a146e2",
+      "visemes": "100\t0\t78\n105\t78\t31\n112\t109\t210\n118\t320\t101\n104\t421\t179\n115\t601\t109\n101\t710\t46\n105\t757\t39\n102\t796\t132\n120\t929\t70\n103\t1000\t78\n104\t1078\t78\n112\t1156\t218\n105\t1375\t93\n113\t1468\t171\n107\t1640\t62\n100\t1703\t476\n101\t2179\t156\n105\t2335\t62\n115\t2398\t93\n101\t2492\t140\n105\t2632\t93\n115\t2726\t109\n107\t2835\t54\n112\t2890\t359\n115\t3250\t265\n100\t3515\t125"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **rook** moves in straight lines. Capture the stars.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/198510af065c478a9b379fd7e4a146e2",
+      "visemes": "100\t0\t78\n105\t78\t31\n112\t109\t210\n118\t320\t101\n104\t421\t179\n115\t601\t109\n101\t710\t46\n105\t757\t39\n102\t796\t132\n120\t929\t70\n103\t1000\t78\n104\t1078\t78\n112\t1156\t218\n105\t1375\t93\n113\t1468\t171\n107\t1640\t62\n100\t1703\t476\n101\t2179\t156\n105\t2335\t62\n115\t2398\t93\n101\t2492\t140\n105\t2632\t93\n115\t2726\t109\n107\t2835\t54\n112\t2890\t359\n115\t3250\t265\n100\t3515\t125"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": []
+   },
+   "fen": "8/8/1p2p3/8/8/8/8/4R3 w - - 0 1",
+   "id": "217fdba4",
+   "indicatorType": "NEW_PIECE",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "c3d3 d3d6 d6g6"
+    ],
+    "enemyMoves": [],
+    "finalCorrectSpeechBubbleContent": {
+     "text": "The rook looks like the tower of a castle.",
+     "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ab2a4b4b5626f1143c77a2b5b9b91eeb",
+     "visemes": "100\t0\t78\n105\t78\t39\n104\t117\t242\n105\t359\t62\n112\t421\t101\n115\t523\t117\n112\t640\t117\n118\t757\t93\n101\t851\t46\n105\t898\t117\n101\t1015\t281\n109\t1296\t62\n101\t1359\t39\n118\t1398\t117\n101\t1515\t109\n115\t1625\t117\n104\t1742\t70\n101\t1812\t171\n100\t1984\t171"
+    },
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **rook** moves in straight lines. Capture the stars.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/198510af065c478a9b379fd7e4a146e2",
+      "visemes": "100\t0\t78\n105\t78\t31\n112\t109\t210\n118\t320\t101\n104\t421\t179\n115\t601\t109\n101\t710\t46\n105\t757\t39\n102\t796\t132\n120\t929\t70\n103\t1000\t78\n104\t1078\t78\n112\t1156\t218\n105\t1375\t93\n113\t1468\t171\n107\t1640\t62\n100\t1703\t476\n101\t2179\t156\n105\t2335\t62\n115\t2398\t93\n101\t2492\t140\n105\t2632\t93\n115\t2726\t109\n107\t2835\t54\n112\t2890\t359\n115\t3250\t265\n100\t3515\t125"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "The **rook** moves in straight lines. Capture the stars.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/198510af065c478a9b379fd7e4a146e2",
+      "visemes": "100\t0\t78\n105\t78\t31\n112\t109\t210\n118\t320\t101\n104\t421\t179\n115\t601\t109\n101\t710\t46\n105\t757\t39\n102\t796\t132\n120\t929\t70\n103\t1000\t78\n104\t1078\t78\n112\t1156\t218\n105\t1375\t93\n113\t1468\t171\n107\t1640\t62\n100\t1703\t476\n101\t2179\t156\n105\t2335\t62\n115\t2398\t93\n101\t2492\t140\n105\t2632\t93\n115\t2726\t109\n107\t2835\t54\n112\t2890\t359\n115\t3250\t265\n100\t3515\t125"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **rook** moves in straight lines. Capture the stars.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/198510af065c478a9b379fd7e4a146e2",
+      "visemes": "100\t0\t78\n105\t78\t31\n112\t109\t210\n118\t320\t101\n104\t421\t179\n115\t601\t109\n101\t710\t46\n105\t757\t39\n102\t796\t132\n120\t929\t70\n103\t1000\t78\n104\t1078\t78\n112\t1156\t218\n105\t1375\t93\n113\t1468\t171\n107\t1640\t62\n100\t1703\t476\n101\t2179\t156\n105\t2335\t62\n115\t2398\t93\n101\t2492\t140\n105\t2632\t93\n115\t2726\t109\n107\t2835\t54\n112\t2890\t359\n115\t3250\t265\n100\t3515\t125"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": []
+   },
+   "fen": "8/8/3p2p1/8/8/2Rp4/8/8 w - - 0 1",
+   "id": "0940f6c9",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "d6c6 c6g6 g6g3"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "Now capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/d70e3fd0d623648b91b650334c489d4c",
+      "visemes": "105\t0\t109\n112\t109\t164\n112\t273\t148\n118\t421\t117\n101\t539\t93\n105\t632\t85\n115\t718\t70\n101\t789\t93\n105\t882\t125\n115\t1007\t125\n107\t1132\t46\n112\t1179\t132\n114\t1312\t179\n113\t1492\t93\n101\t1585\t54\n105\t1640\t171\n104\t1812\t125\n103\t1937\t109\n105\t2046\t109\n105\t2156\t335\n113\t2492\t132\n105\t2625\t54"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "d6c6 c6g6 g6g3"
+    ]
+   },
+   "fen": "8/8/2pR2p1/8/8/6p1/8/8 w - - 0 1",
+   "id": "701be393",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "c6c2 c2g2 g2h2"
+    ],
+    "enemyMoves": [],
+    "finalCorrectSpeechBubbleContent": {
+     "text": "The rook can move any number of squares on a straight line.",
+     "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c1dc102af2b516ac4a91247d0cb1c949",
+     "visemes": "105\t70\t39\n104\t109\t257\n105\t367\t125\n118\t492\t70\n101\t562\t46\n105\t609\t296\n101\t906\t70\n105\t976\t39\n101\t1015\t62\n105\t1078\t62\n101\t1140\t78\n105\t1218\t70\n104\t1289\t148\n115\t1437\t93\n104\t1531\t23\n118\t1554\t46\n104\t1601\t62\n101\t1664\t156\n113\t1820\t85\n101\t1906\t54\n105\t1960\t62\n115\t2023\t117\n107\t2140\t39\n114\t2179\t78\n103\t2257\t70\n118\t2328\t93\n112\t2421\t117\n114\t2539\t148\n105\t2687\t125"
+    },
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "Now capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/d70e3fd0d623648b91b650334c489d4c",
+      "visemes": "105\t0\t109\n112\t109\t164\n112\t273\t148\n118\t421\t117\n101\t539\t93\n105\t632\t85\n115\t718\t70\n101\t789\t93\n105\t882\t125\n115\t1007\t125\n107\t1132\t46\n112\t1179\t132\n114\t1312\t179\n113\t1492\t93\n101\t1585\t54\n105\t1640\t171\n104\t1812\t125\n103\t1937\t109\n105\t2046\t109\n105\t2156\t335\n113\t2492\t132\n105\t2625\t54"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "c6h6 h6h2 h2g2",
+     "c6g6 g6g2 g2h2",
+     "c6c2 c2g2 g2h2"
+    ]
+   },
+   "fen": "8/8/2R5/8/8/8/6pp/8 w - - 0 1",
+   "id": "ac3c301b",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "f2c5 c5e7"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [
+     "f2c5 blue"
+    ],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **bishop** moves diagonally.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c6fd9c594dc22b975f880b80ed52b831",
+      "visemes": "100\t0\t78\n105\t78\t140\n101\t218\t46\n115\t265\t117\n101\t382\t54\n105\t437\t140\n104\t578\t242\n113\t820\t85\n105\t906\t31\n101\t937\t281\n105\t1218\t46\n101\t1265\t31\n107\t1296\t46\n114\t1343\t140\n101\t1484\t187\n100\t1671\t218"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "The **bishop** moves diagonally.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c6fd9c594dc22b975f880b80ed52b831",
+      "visemes": "100\t0\t78\n105\t78\t140\n101\t218\t46\n115\t265\t117\n101\t382\t54\n105\t437\t140\n104\t578\t242\n113\t820\t85\n105\t906\t31\n101\t937\t281\n105\t1218\t46\n101\t1265\t31\n107\t1296\t46\n114\t1343\t140\n101\t1484\t187\n100\t1671\t218"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **bishop** moves diagonally.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c6fd9c594dc22b975f880b80ed52b831",
+      "visemes": "100\t0\t78\n105\t78\t140\n101\t218\t46\n115\t265\t117\n101\t382\t54\n105\t437\t140\n104\t578\t242\n113\t820\t85\n105\t906\t31\n101\t937\t281\n105\t1218\t46\n101\t1265\t31\n107\t1296\t46\n114\t1343\t140\n101\t1484\t187\n100\t1671\t218"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": []
+   },
+   "fen": "8/4p3/8/2p5/8/8/5B2/8 w - - 0 1",
+   "id": "dd8eda6f",
+   "indicatorType": "NEW_PIECE",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "d3e2 e2g4 g4e6"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **bishop** moves diagonally.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c6fd9c594dc22b975f880b80ed52b831",
+      "visemes": "100\t0\t78\n105\t78\t140\n101\t218\t46\n115\t265\t117\n101\t382\t54\n105\t437\t140\n104\t578\t242\n113\t820\t85\n105\t906\t31\n101\t937\t281\n105\t1218\t46\n101\t1265\t31\n107\t1296\t46\n114\t1343\t140\n101\t1484\t187\n100\t1671\t218"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "The **bishop** moves diagonally.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c6fd9c594dc22b975f880b80ed52b831",
+      "visemes": "100\t0\t78\n105\t78\t140\n101\t218\t46\n115\t265\t117\n101\t382\t54\n105\t437\t140\n104\t578\t242\n113\t820\t85\n105\t906\t31\n101\t937\t281\n105\t1218\t46\n101\t1265\t31\n107\t1296\t46\n114\t1343\t140\n101\t1484\t187\n100\t1671\t218"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "The **bishop** moves diagonally.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/c6fd9c594dc22b975f880b80ed52b831",
+      "visemes": "100\t0\t78\n105\t78\t140\n101\t218\t46\n115\t265\t117\n101\t382\t54\n105\t437\t140\n104\t578\t242\n113\t820\t85\n105\t906\t31\n101\t937\t281\n105\t1218\t46\n101\t1265\t31\n107\t1296\t46\n114\t1343\t140\n101\t1484\t187\n100\t1671\t218"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": []
+   },
+   "fen": "8/8/4p3/8/6p1/3B4/4p3/8 w - - 0 1",
+   "id": "7e0210f2",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "c2f5 f5g6 g6e8"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "c2f5 f5g6 g6e8"
+    ]
+   },
+   "fen": "4p3/8/6p1/5p2/8/8/2B5/8 w - - 0 1",
+   "id": "c50f8fea",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "d2b4 b4d6 d6e7"
+    ],
+    "enemyMoves": [],
+    "finalCorrectSpeechBubbleContent": {
+     "text": "You move with grace.",
+     "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/705ce714573db9b5b60b3fc55539aa86",
+     "visemes": "100\t0\t54\n103\t54\t109\n104\t164\t101\n105\t265\t257\n109\t523\t85\n104\t609\t70\n105\t679\t85\n118\t765\t101\n114\t867\t85\n101\t953\t148\n113\t1101\t265"
+    },
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "d2g5 g5e7 e7d6",
+     "d2f4 f4d6 d6e7",
+     "d2b4 b4d6 d6e7"
+    ]
+   },
+   "fen": "8/4p3/3p4/8/8/8/3B4/8 w - - 0 1",
+   "id": "96a7946e",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "f1f5 f5a5 a1c3"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "With your rook and bishop, capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/60d2df9cd077d4a10e0027d91e0d674b",
+      "visemes": "100\t0\t78\n104\t78\t78\n113\t156\t93\n103\t250\t46\n112\t296\t70\n104\t367\t203\n118\t570\t70\n101\t640\t39\n105\t679\t187\n115\t867\t125\n101\t992\t85\n105\t1078\t210\n100\t1289\t257\n118\t1546\t85\n101\t1632\t125\n105\t1757\t62\n115\t1820\t78\n101\t1898\t93\n116\t1992\t62\n101\t2054\t31\n113\t2085\t125\n105\t2210\t39\n101\t2250\t320\n113\t2570\t101\n101\t2671\t54\n105\t2726\t78\n113\t2804\t109\n104\t2914\t125\n103\t3039\t93\n105\t3132\t125\n105\t3257\t320\n113\t3578\t195"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "f1f5 f5a5 a1c3",
+     "f1f5 a1c3 f5a5",
+     "f1f5 a1c3 c3a5",
+     "a1c3 c3a5 f1f5",
+     "a1c3 f1f5 f5a5",
+     "a1c3 f1f5 c3a5"
+    ]
+   },
+   "fen": "8/8/8/p4p2/8/2p5/8/B4R2 w - - 0 1",
+   "id": "59201c1b",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "a5a1 g3d6 d6b4"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "With your rook and bishop, capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/60d2df9cd077d4a10e0027d91e0d674b",
+      "visemes": "100\t0\t78\n104\t78\t78\n113\t156\t93\n103\t250\t46\n112\t296\t70\n104\t367\t203\n118\t570\t70\n101\t640\t39\n105\t679\t187\n115\t867\t125\n101\t992\t85\n105\t1078\t210\n100\t1289\t257\n118\t1546\t85\n101\t1632\t125\n105\t1757\t62\n115\t1820\t78\n101\t1898\t93\n116\t1992\t62\n101\t2054\t31\n113\t2085\t125\n105\t2210\t39\n101\t2250\t320\n113\t2570\t101\n101\t2671\t54\n105\t2726\t78\n113\t2804\t109\n104\t2914\t125\n103\t3039\t93\n105\t3132\t125\n105\t3257\t320\n113\t3578\t195"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "a5a1 g3d6 d6b4",
+     "g3d6 d6b4 a5a1",
+     "g3d6 a5a1 d6b4"
+    ]
+   },
+   "fen": "8/8/3p4/R7/1p6/6B1/8/p7 w - - 0 1",
+   "id": "5b479af9",
+   "type": "star"
+  },
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "e1g3 g3e5 h1h7"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "With your rook and bishop, capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/60d2df9cd077d4a10e0027d91e0d674b",
+      "visemes": "100\t0\t78\n104\t78\t78\n113\t156\t93\n103\t250\t46\n112\t296\t70\n104\t367\t203\n118\t570\t70\n101\t640\t39\n105\t679\t187\n115\t867\t125\n101\t992\t85\n105\t1078\t210\n100\t1289\t257\n118\t1546\t85\n101\t1632\t125\n105\t1757\t62\n115\t1820\t78\n101\t1898\t93\n116\t1992\t62\n101\t2054\t31\n113\t2085\t125\n105\t2210\t39\n101\t2250\t320\n113\t2570\t101\n101\t2671\t54\n105\t2726\t78\n113\t2804\t109\n104\t2914\t125\n103\t3039\t93\n105\t3132\t125\n105\t3257\t320\n113\t3578\t195"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "h1h7 e1g3 g3e5",
+     "e1g3 g3e5 h1h7",
+     "e1g3 h1h7 g3e5"
+    ]
+   },
+   "fen": "8/7p/8/4p3/8/6p1/8/4B2R w - - 0 1",
+   "id": "de2000a1",
+   "type": "star"
+  }
+ ],
+ "adaptiveChallenges": [
+  {
+   "chessPuzzleInfo": {
+    "correctMoves": [
+     "e1g3 g3e5 h1h7"
+    ],
+    "enemyMoves": [],
+    "finalHighlight": "",
+    "highlight": [],
+    "hintUsedInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "incorrectHighlight": [],
+    "incorrectMoves": [],
+    "incorrectSpeechBubbleContent": [],
+    "instructionsSpeechBubbleContent": [
+     {
+      "text": "I’m sure I’ve prepared you for this…",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/aef0ddc4337063ddeb4aed621c56736e",
+      "visemes": "102\t0\t109\n107\t109\t62\n115\t171\t109\n104\t281\t85\n120\t367\t62\n103\t429\t85\n109\t515\t70\n107\t585\t70\n120\t656\t31\n105\t687\t39\n107\t726\t78\n101\t804\t101\n120\t906\t62\n105\t968\t39\n103\t1007\t62\n104\t1070\t62\n109\t1132\t101\n120\t1234\t46\n116\t1281\t62\n103\t1343\t117\n113\t1460\t179\n100\t1640\t266"
+     }
+    ],
+    "kcs": [
+     "starMoves"
+    ],
+    "maxMoves": 3,
+    "moveEvaluationsForPositions": {},
+    "previousMistakeInstructionsSpeechBubbleContent": [
+     {
+      "text": "Capture the stars in *3 moves*.",
+      "ttsUrl": "https://dyvwhs7jlfw68.cloudfront.net/EN%20Oscar/ec34ae17f3b9e97b1cc240930aa534f5",
+      "visemes": "100\t0\t46\n118\t46\t62\n101\t109\t125\n105\t234\t78\n115\t312\t62\n101\t375\t85\n105\t460\t54\n101\t515\t46\n115\t562\t125\n107\t687\t46\n112\t734\t210\n114\t945\t117\n102\t1062\t78\n101\t1140\t62\n105\t1203\t148\n104\t1351\t125\n103\t1476\t109\n107\t1585\t93\n104\t1679\t257\n100\t1937\t78\n113\t2015\t148\n105\t2164\t62\n100\t2226\t109"
+     }
+    ],
+    "suboptimalMoves": [],
+    "suboptimalSpeechBubbleContent": [],
+    "validPaths": [
+     "h1h7 e1g3 g3e5",
+     "e1g3 g3e5 h1h7",
+     "e1g3 h1h7 g3e5"
+    ]
+   },
+   "fen": "8/7p/8/4p3/8/6p1/8/4B2R w - - 0 1",
+   "id": "de2000a1",
+   "indicatorType": "HARD_PUZZLE",
+   "type": "star"
+  }
+ ],
+ "metadata": {
+  "chessJson": "{\"contentId\":\"Skill:rookBishopMovement_26e5e33af9aa\",\"cacheKey\":\"20251105.153060a5ccb4\",\"sessionStartTreatmentExperimentNames\":[\"chess_add_more_missing_topics_section_1_v2\"],\"type\":\"CHESS_LESSON\"}",
+  "progressActionJson": "{\"type\":\"chess_lesson\",\"body\":{\"curriculumNodeId\":\"Skill:rookBishopMovement\"}}"
+ },
+ "trackingProperties": {
+  "activity_uuid": "7221897e-da3f-40a1-a84d-d887f838328f"
+ }
+}
