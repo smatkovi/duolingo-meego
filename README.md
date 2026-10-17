@@ -14,6 +14,10 @@ Was nicht: alles mit Mikrofon oder Zeichenbrett, Geschichten, DuoRadio,
 Schach und Rechnen. Der Server schickt diese Aufgaben gar nicht erst -- beim
 Anfordern einer Lektion sagt der Client, welche Arten er zeichnen kann.
 
+Repo: `smatkovi/duolingo-meego` (privat -- oeffentlich machen geht mit
+`gh repo edit --visibility public`, andersherum nicht so leicht). Die
+Pakete haengen am Release.
+
 ## Bauen
 
 Alles Schwere laeuft auf dem Baurechner (Cross-Toolchain, MADDE-Sysroot,
@@ -41,6 +45,8 @@ starten.
     tools/sitzung-abgeben.py       # den ganzen Durchlauf durchspielen
     tools/benoter-pruefen.py       # die Benotung gegen echte Rohdaten
     tools/icon-bauen.py            # das Startersymbol in die Squircle-Form
+    tools/repo-anlegen.sh          # das Repo auf GitHub anlegen (gh laeuft auf arch)
+    tools/release-hochladen.sh     # ein .deb ans Release haengen
 
 **Nie mit dem eigenen Konto ausprobieren.** Benotet wird im Client, der
 Server glaubt es -- ein Fehler verdirbt den echten Kursfortschritt. Die
