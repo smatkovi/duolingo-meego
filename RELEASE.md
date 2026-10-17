@@ -1,5 +1,7 @@
 # Duolingo fuer MeeGo Harmattan
 
+<img src="https://raw.githubusercontent.com/smatkovi/duolingo-meego/master/meego/icons/icon-320.png" width="96" align="right" alt="Startersymbol">
+
 Ein eigener Duolingo-Client fuer das Nokia N9 und N950 -- kein Teil von
 Duolingo, keine Portierung der Android-App, sondern dieselbe Schnittstelle,
 die die Weboberflaeche benutzt, hinter einer com.nokia.meego-Oberflaeche.

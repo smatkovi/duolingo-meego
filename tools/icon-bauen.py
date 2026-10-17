@@ -4,8 +4,10 @@
 
     tools/icon-bauen.py [--quelle meego/icons/quelle.png]
 
-Geschrieben werden `meego/icons/icon-80.png` (Starter) und `icon-64.png`
-(base64 im control, `XB-Maemo-Icon-26`).
+Geschrieben werden `meego/icons/icon-80.png` (Starter), `icon-64.png`
+(base64 im control, `XB-Maemo-Icon-26`) und `icon-320.png` -- letzteres
+nicht fuers Telefon, sondern fuer die Seite des Repos: 80 Pixel sehen dort
+aus wie ein Daumenabdruck.
 
 Die Form ist die **Squircle-Silhouette der Standard-Apps** -- nicht
 nachgebaut, sondern der Alphakanal eines Blanco-Icons
@@ -81,7 +83,19 @@ def main():
     os.makedirs(meego, exist_ok=True)
     subprocess.check_call([sys.executable, SQUIRCLE, "--out", meego,
                            "--fill", sauber, "--inset", "1.0"])
-    for name in ("icon-80.png", "icon-64.png"):
+
+    # Dasselbe noch einmal gross. Nicht aus dem 80er hochskaliert -- die
+    # Kurve franst dabei aus --, sondern direkt aus dem Werkzeug, das
+    # innen ohnehin mit 320 arbeitet.
+    gross = os.path.join(meego, "icon-320.png")
+    subprocess.check_call([
+        sys.executable, "-c",
+        "import sys;sys.path.insert(0, %r);import squircle;"
+        "squircle.build(None, None, None, None, False, 0.62, False, False,"
+        " %r, 1.0).save(%r)"
+        % (os.path.dirname(SQUIRCLE), sauber, gross)])
+
+    for name in ("icon-80.png", "icon-64.png", "icon-320.png"):
         pfad = os.path.join(meego, name)
         print("%s: %s" % (name, Image.open(pfad).size))
 
